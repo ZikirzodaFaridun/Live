@@ -1,0 +1,3071 @@
+<html class="bx-core bx-win bx-no-touch bx-no-retina bx-chrome"><head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+				
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+<style type="text/css">.bx-composite-btn {background: url(/bitrix/images/main/composite/sprite-1x.png) no-repeat right 0 #e94524;border-radius: 15px;color: #fff !important;display: inline-block;line-height: 30px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;font-size: 12px !important;font-weight: bold !important;height: 31px !important;padding: 0 42px 0 17px !important;vertical-align: middle !important;text-decoration: none !important;}@media screen   and (min-device-width: 1200px)   and (max-device-width: 1600px)   and (-webkit-min-device-pixel-ratio: 2)  and (min-resolution: 192dpi) {.bx-composite-btn {background-image: url(/bitrix/images/main/composite/sprite-2x.png);background-size: 42px 124px;}}.bx-composite-btn-fixed {position: absolute;top: -45px;right: 15px;z-index: 10;}.bx-btn-white {background-position: right 0;color: #fff !important;}.bx-btn-black {background-position: right -31px;color: #000 !important;}.bx-btn-red {background-position: right -62px;color: #555 !important;}.bx-btn-grey {background-position: right -93px;color: #657b89 !important;}.bx-btn-border {border: 1px solid #d4d4d4;height: 29px !important;line-height: 29px !important;}.bx-composite-loading {display: block;width: 40px;height: 40px;background: url(/bitrix/images/main/composite/loading.gif);}</style>
+<script async="" src="//nuipogoda.ru/informer/nuipogoda.js"></script><script type="text/javascript" async="" src="https://bitrix.info/ba.js"></script><script type="text/javascript" data-skip-moving="true">(function(w, d) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','banner':{'url':'http://www.1c-bitrix.ru/composite/','text':'Быстро с 1С-Битрикс','bgcolor':'#E94524','style':'white'},'storageBlocks':[],'dynamicBlocks':{'rRprES':'27358b9bd237'},'AUTO_UPDATE':true,'AUTO_UPDATE_TTL':'120','version':'2'};var inv = false;if (v.AUTO_UPDATE === false){if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0){var lm = Date.parse(d.lastModified);if (!isNaN(lm)){var td = new Date().getTime();if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td){w.frameRequestStart = false;w.preventAutoUpdate = true;return;}inv = true;}}else{w.frameRequestStart = false;w.preventAutoUpdate = true;return;}}var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("X-Bitrix-Composite", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");if (inv){r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");}try { r.setRequestHeader("BX-REF", d.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready && b){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}w.frameRequestFail = f;return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();var p = w.performance;if (p && p.addEventListener && p.getEntries && p.setResourceTimingBufferSize){var e = 'resourcetimingbufferfull';var h = function() {if (w.BX && w.BX.frameCache && w.BX.frameCache.frameDataInserted){p.removeEventListener(e, h);}else {p.setResourceTimingBufferSize(p.getEntries().length + 50);}};p.addEventListener(e, h);}})(window, document);</script>
+
+
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.css?170357840324720" type="text/css" rel="stylesheet">
+<link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.css?17035783862555" type="text/css" rel="stylesheet">
+<link href="/bitrix/js/main/popup/dist/main.popup.bundle.css?170357871529861" type="text/css" rel="stylesheet">
+<link href="/bitrix/cache/css/s1/simai.school4art/template_9a4d69e820f33078dbfe189d66f7a4e3/template_9a4d69e820f33078dbfe189d66f7a4e3_v1.css?1727088323490701" type="text/css" data-template-style="true" rel="stylesheet">
+<link href="/bitrix/panel/main/popup.css?170357864022696" type="text/css" data-template-style="true" rel="stylesheet">
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1703578718486439"></script>
+
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'18000','UTF_MODE':'Y','SITE_ID':'s1','SITE_DIR':'/'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/simai.school4art/kernel_main/kernel_main_v1.js?1727089604238258"></script>
+<script type="text/javascript" src="/bitrix/js/ui/dexie/dist/dexie3.bundle.js?1703578388188902"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?157622102710430"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.js?170357871817037"></script>
+<script type="text/javascript" src="/bitrix/js/main/popup/dist/main.popup.bundle.js?1703578712117166"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/pageobject/pageobject.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/core/core_fx.js','/bitrix/js/main/session.js','/bitrix/js/main/date/main.date.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/utils.js','/bitrix/js/main/core/core_dd.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/1jquery.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/html5shiv.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/jquery-ui.min.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/jquery.easing.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/jquery.hoverup.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/jquery.metadata.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/jquery.stellar.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/respond.min.js','/bitrix/templates/simai.school4art/framework/include/01_main/01_jquery/wp.app.js','/bitrix/templates/simai.school4art/framework/include/01_main/02 bootstrap/bootstrap.min.js','/bitrix/templates/simai.school4art/framework/include/02_assets/bootstrap-mobile-menu/wp.app.js','/bitrix/templates/simai.school4art/framework/include/02_assets/fancybox/jquery.fancybox.pack.js','/bitrix/templates/simai.school4art/framework/include/02_assets/hover-dropdown/bootstrap-hover-dropdown.min.js','/bitrix/templates/simai.school4art/framework/include/02_assets/layerslider/js/greensock.js','/bitrix/templates/simai.school4art/framework/include/02_assets/layerslider/js/layerslider.kreaturamedia.jquery.js','/bitrix/templates/simai.school4art/framework/include/02_assets/layerslider/js/layerslider.transitions.js','/bitrix/templates/simai.school4art/framework/include/02_assets/milestone-counter/jquery.countTo.js','/bitrix/templates/simai.school4art/framework/include/02_assets/mixitup/jquery.mixitup.init.js','/bitrix/templates/simai.school4art/framework/include/02_assets/mixitup/jquery.mixitup.js','/bitrix/templates/simai.school4art/framework/include/02_assets/page-scroller/jquery.ui.totop.min.js','/bitrix/templates/simai.school4art/framework/include/02_assets/responsive-mobile-nav/js/jquery.dlmenu.autofill.js','/bitrix/templates/simai.school4art/framework/include/02_assets/responsive-mobile-nav/js/jquery.dlmenu.js','/bitrix/templates/simai.school4art/framework/include/02_assets/waypoints/waypoints.min.js']);</script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/components/simai/template.special/templates/simai.school4art/style.css','/bitrix/templates/simai.school4art/template_styles.css','/bitrix/templates/simai.school4art/framework/include/01_main/02 bootstrap/bootstrap.min.css','/bitrix/templates/simai.school4art/framework/include/02_assets/fancybox/jquery.fancybox.css','/bitrix/templates/simai.school4art/framework/include/02_assets/layerslider/css/layerslider.css','/bitrix/templates/simai.school4art/framework/include/03_icons/flag-icon/css/flag-icon.min.css','/bitrix/templates/simai.school4art/framework/include/03_icons/font-awesome/css/font-awesome.min.css','/bitrix/templates/simai.school4art/framework/include/04_template/b4util.css','/bitrix/templates/simai.school4art/framework/include/04_template/bg.css','/bitrix/templates/simai.school4art/framework/include/04_template/boomerang.css','/bitrix/templates/simai.school4art/framework/include/04_template/cards_fw4_anim.css','/bitrix/templates/simai.school4art/framework/include/04_template/flex.css','/bitrix/templates/simai.school4art/framework/include/04_template/helpers.css','/bitrix/templates/simai.school4art/framework/include/04_template/visual.css']);</script>
+<!--[if lt IE 9]><link href="/bitrix/templates/simai.school4art/framework/include/02_assets/sky-forms/sky-forms-ie8.css"<![endif]-->
+<link href="/bitrix/templates/simai.school4art/framework/color/color.css" type="text/css" data-template-style="true" rel="stylesheet" id="WpStyle">
+
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/simai.school4art/template_ef84bf879b81065e5b071af30c8fc595/template_ef84bf879b81065e5b071af30c8fc595_v1.js?1727088323648826"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "f0ea38ab3090dca3601e5ad42927078b"]); _ba.push(["host", "lip.tj"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+    	<title>Асосӣ</title>
+	<link rel="icon" href="/favicon.ico" type="image/ico">
+<link rel="stylesheet" type="text/css" href="https://popupsmart.com/freechat_style.css"><style type="text/css">.fancybox-margin{margin-right:17px;}</style></head>
+
+<body class="background-fixed body-bg-12" style="">
+
+
+
+<div class="body-wrap body-boxed">
+
+
+<script type="text/javascript">
+	$(function() {
+		$(".image-on").on("click",function(){
+			  $(".image-on").hide();
+			  $(".image-off").show();
+			  $.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=IMAGE&value=special-image-on",
+});
+			  
+		});
+		$(".image-off").on("click",function(){
+			  $(".image-off").hide();
+			  $(".image-on").show();
+			   $.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=IMAGE&value=special-image-off",
+});
+		});			
+		$(".return-normal").on("click",function(){
+			  $(".return-normal").hide();
+			  $(".return-eye").show();
+			   $.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=SPECIAL&value=off",
+});
+		});	
+		$(".return-eye").on("click",function(){
+			  $(".return-eye").hide();
+			  $(".return-normal").show();
+			  
+			  $.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=SPECIAL&value=on",
+});
+		});
+		
+		
+	$("[data-aa-on]").on("click",function(){	  
+		$.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=SPECIAL&value=on",});
+									
+		var specdefault="special-aaVersion-on special-color-white special-font-small special-image-on special-fonttype-default";
+        $('body').addClass(specdefault);
+        $("#WpStyle").attr("href", "/bitrix/templates/simai.school4art/framework/color/white.css");
+		$.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=special-color&value=white",
+});
+
+      	$.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=special-font&value=small",
+});
+
+       	$.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=special-image&value=on",
+});
+		return false;
+    });
+
+	$("[data-aa-off]").on("click",function(){	  
+			  $.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=SPECIAL&value=off",
+});
+
+    	var htmlCurrentClass = $('body').prop('class'),
+		clearSpecialClasses = htmlCurrentClass.replace(/special-([a-z,A-Z,-]+)/g, '');
+		$('body').prop('class', clearSpecialClasses);
+		$("#WpStyle").attr("href", "/bitrix/templates/simai.school4art/framework/color/color.css");
+		$(".image-on").hide();
+		$(".image-off").show();
+	    return false;
+		});	
+		
+		
+		
+		$(".special-settings a").on("click",function(){	
+		     data=$(this).data();
+			 console.log(data);
+             $html = $('body');
+			 htmlCurrentClass = $html.prop('class');
+             for (var key in data) {
+				var reg = new RegExp("special-"+key+"-[^ ]{1,}", "g");
+				htmlCurrentClass=htmlCurrentClass.replace(reg, "special-"+key+"-"+data[key]);
+							  $.ajax(
+									{type: "POST",
+									url: "/bitrix/modules/simai.school4art/include/set_setting.php",
+									data: "type=MAIN&param=special-"+key+"&value="+data[key],});
+				if(key=="color")
+				{
+					if(data[key]=="white")  $("#WpStyle").attr("href", "/bitrix/templates/simai.school4art/framework/color/white.css");
+				    if(data[key]=="black")$("#WpStyle").attr("href", "/bitrix/templates/simai.school4art/framework/color/black.css");
+				    if(data[key]=="yellow")$("#WpStyle").attr("href", "/bitrix/templates/simai.school4art/framework/color/yellow.css");
+				    if(data[key]=="blue")$("#WpStyle").attr("href", "/bitrix/templates/simai.school4art/framework/color/blue.css");
+				}
+			}
+        
+        $html.prop('class',htmlCurrentClass);
+	    return false;
+		});	
+		
+	});	
+</script>
+<div class="special-settings bg-lgrey">
+<div class="row pt-10 pb-5 f-18" style="letter-spacing:normal !important;">
+		<div class="col-md-2 lh-40 text-center">
+			<div><span style="font-size: 16px !important;">Цветовая схема: </span></div>
+			<div>
+			  <a href="#" style="font-size: 16px !important;" class="theme white" data-color="white">C</a>
+			  <a href="#" style="font-size: 16px !important;" class="theme black" data-color="black">C</a>
+			  <a href="#" style="font-size: 16px !important;" class="theme yellow" data-color="yellow">C</a>	
+			  <a href="#" style="font-size: 16px !important;" class="theme blue" data-color="blue">C</a>
+			</div>
+		</div>
+	    <div class="col-md-2 lh-40 text-center">
+		   <div>
+			 <span style="font-size: 16px !important;">Шрифт</span>
+		   </div>
+		   <div>
+		     <a href="#" data-fonttype="arial" class="theme white" style="font-size: 12px;">Arial</a>
+		     <a href="#" data-fonttype="times" class="theme white" style="font-size: 12px;">Times New Roman</a>
+		   </div>
+		</div>		
+		<div class="col-md-2 lh-40 text-center">
+			    <div>
+				  <span style="font-size: 16px !important;">Размер шрифта</span>
+				</div>
+			   <div>
+				<a href="#" data-font="small" style="font-size: 20px !important;" title="Нормальный размер шрифта">A</a>
+				<a href="#" data-font="medium" style="font-size: 24px !important;" title="Увеличенный размер шрифта">A</a>
+				<a href="#" data-font="big" style="font-size: 28px !important;" title="Большой размер шрифта">A</a>		
+              </div>				
+		</div>
+		<div class="col-md-2 lh-40 text-center">
+		   <div>
+			 <span style="font-size: 16px !important;">Кернинг</span>
+		   </div>
+		   <div>
+		     <a href="#" data-kerning="small" style="font-size: 20px;">1</a>
+		     <a href="#" data-kerning="normal" style="font-size: 20px;">2</a>
+			 <a href="#" data-kerning="big" style="font-size: 20px;">3</a>
+		   </div>
+		</div>
+	
+		<div class="col-md-2 lh-40 text-center">
+		  <div>
+			 <span style="font-size: 16px !important;">  Изображения: </span>
+		  </div>
+		  <div>
+			  <a class="image-on a-current" data-image="on" href="#" style="display: none;"> <i class="fa fa-toggle-off f-24"></i></a>
+			  <a class="image-off" data-image="off" href="#"><i class="fa fa-toggle-on f-24"></i></a>
+		  </div>
+		</div>	
+		<div class="col-md-2 text-left">
+			  <a href="/?set-aa=normal" data-aa-off="" class="btn btn-base return-normal f-18 mt-35">Обычная версия</a>
+		</div>	
+ </div>	
+</div>	
+<header class="header-light">
+    <div class="top-header-top ">
+        <div class="top-header-fixed"></div>
+        <div class="container pt-10">
+            <div class="row">
+                <div class="top-info col-md-8 navbar-header">
+					<div class="display-row vertical-al-logo-text">
+						<div class="middle hidden-sm hidden-xs" style="display: table-cell;">
+							<span class="navbar-brand relative">
+                                                                 <a href="/"><img alt="lip.png" src="/upload/medialibrary/0b6/0b60af38afebf7d844ab5702e7c3272b.png" align="left" title="ЛИТСЕЙ ПРЕЗИДЕНТӢ БАРОИ ХОНАНДАГОНИ БОЛАЁҚАТИ ТОҶИКИСТОН"></a>                              							</span>
+						</div>
+                        <div class="title display-cell middle">
+						   							<div style="text-align: center;">
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 13pt;"><b><span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 14pt;">МУАССИСАИ ДАВЛАТИИ ТАЪЛИМИИ </span><br>
+	<span style="font-size: 14pt;"> </span><span style="font-size: 14pt;"> </span><span style="color: #000000; font-size: 14pt;"> </span><span style="color: #000000; font-size: 14pt;"> </span></b></span><span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 13pt;"><b><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;, Times;"><span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 14pt;">"ЛИТСЕЙИ ПРЕЗИДЕНТӢ БАРОИ ХОНАНДАГОНИ БОЛАЁҚАТИ&nbsp;ТОҶИКИСТОН"</span><br>
+ </span></b></span><br>
+</div>
+ <br>                           							
+						</div>
+					</div>
+                </div>
+                <div class="top-info col-md-4 ">
+                    <div class="row">
+                        
+                        <div class="top-info col-md-12">
+                            <span class="menu-mobile right">
+                                <a href="#" class="navbar-toggle btn btn-b-white" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </span>
+                            
+                            <span data-aa-on="" class="right switch-vision return-eye">
+								<a class="btn btn-b-white" style="padding: 10px 15px;" title="Версия для слабовидящих" href="/?set-aa=special">
+									<i class="fa fa-eye-slash"></i>
+								</a>
+							</span>
+                            <span style="display: none;" class="right return-normal" data-aa-off="">
+								<a class="btn btn-b-white" style="padding: 10px 15px;" title="Обычная версия" href="/?set-aa=normal">
+									<i class="fa fa-eye"></i>
+								</a>
+							</span>
+							<span class="right">
+								<a class="btn btn-b-white" style="padding: 10px 15px;" title="RU" href="/ru/">
+									RU
+								</a>
+							</span>
+							<span class="right">
+								<a class="btn btn-b-white" style="padding: 10px 15px;" title="RU" href="/">
+									TJ
+								</a>
+							</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form action="/search/index.php" class="form-horizontal form-light" role="form">
+    <div class="input-group">
+                    <input type="text" name="q" value="" class="form-control" placeholder="Введите запрос...">
+                <span class="input-group-btn">
+              <button class="btn btn-base" type="submit"><i class="fa fa-search"></i></button>
+        </span>
+    </div>
+</form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-wp navbar-arrow mega-nav " role="navigation">
+        <div class="container">
+            <div class="navbar-collapse collapse top-menu" aria-expanded="true">
+                <ul class="nav navbar-nav navbar-left">
+
+	
+	
+					<li class="active "><a href="/">АСОСӢ</a></li>
+		
+	
+	
+
+	
+	
+					<li class=""><a href="/prezident/index.php">Президент</a></li>
+		
+	
+	
+
+	
+	
+					<li class="dropdown">
+				<a href="/about/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">ДАР БОРАИ ЛИТСЕЙ</a>
+				<a href="/about/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">ДАР БОРАИ ЛИТСЕЙ</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/about/">Дар бораи литсей</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/licenses">Литсензияи таълимӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/tarikhi-litsey/">Таърихи литсей</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/structure/">Сохт ва ташкилотҳои назоратии муассисаи таълимӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/docs/">Ҳуҷҷатҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/education/">Таълиму тарбия</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/obrazovatelnye-standarty.php">Стандартҳои соҳаи маориф</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/teachers/">Ҳайати кормандони литсей</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/logistical-support/">Таъминоти моддӣ-техникӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/material-support.php">Намудҳои дастгирии моддӣ барои хонандагону омӯзгорон</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/financial/">Фаъолияти молиявӣ-хоҷагӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/career/">Ҷойҳои холӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/antikorruptsionnaya-deyatelnost/">Амалҳои зиддикоррупсионӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/information-security">Бехатарии иттилоотӣ</a></li>
+		
+	
+	
+
+			</ul></li>	
+	
+					<li class="dropdown">
+				<a href="/life/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">Ҳаёти литсей</a>
+				<a href="/life/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Ҳаёти литсей</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/life/ramz-oi-davlat.php">Рамзҳои давлатӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/diploms">Дипломҳо ва мукофотҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/schedule/">Ҷадвали дарсҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/guruhoi_olimp">Гурӯҳҳои олимпӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/ma-fil-o">Маҳфилҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/afisha/">Чорабиниҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/news/">Хабарҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/announcing/">Эълонҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/faq/">Савол-ҷавоб</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/reviews/">Мулоҳизаҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/life/tabrikoti-direktori-litsey/">Табрикоти директори литсей</a></li>
+		
+	
+	
+
+			</ul></li>	
+	
+					<li class="dropdown">
+				<a href="/parents/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">Волидайн</a>
+				<a href="/parents/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Волидайн</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/Tartibiqabul.php">Тартиби қабули хонандагон</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/news/">Хабарҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/schedule/">Ҷадвали дарсҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/groups">Роҳбарони синфҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/stati/">Мақолаҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/announcing/">Эълонҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/postupaushim/index.php">Воридотӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="">Ҳуҷҷатнигорӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/parents/security.php">Бехатарӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="">Инфографика барои волидон</a></li>
+		
+	
+	
+
+			</ul></li>	
+	
+					<li class="dropdown">
+				<a href="/pupils/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">Хонандагон</a>
+				<a href="/pupils/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Хонандагон</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/news/">Хабарҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/announcing/">Эълонҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/schedule/">Ҷадвали дарсҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/pravila-vnutrennego-rasporyadka.php">Қоидаҳои тартиботи дохилии литсей</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/olimpiady/">Олимпиада ва озмунҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/logistical-support/elektronnye-obrazovatelnye-resursy.php">Далелҳои муфид</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/proforientatsiya/">Намунаи саволу масъалаҳои тестӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/docs/kitobhoi-darsi/">Китобҳои дарсӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="https://www.maorif.tj/asosi/kitoboi-bade">Китобҳои бадеӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="http://mjtik.tj/bibl.php">Китобҳои дарсӣ дар шакли 3D</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/kor-oi-e-odii-khonandagon">Корҳои эҷодии хонандагон</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/pupils/proforientatsiya/barnomahoi-yorirason.php">Барномаҳои ёрирасон</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="http://kitobhona.tj/index.html#">Китобхонаи электронӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="https://ntc.tj/tj/ba-dovtalab/rohnamoi-dovtalab.html">Роҳнамои довталаб</a></li>
+		
+	
+	
+
+			</ul></li>	
+	
+					<li class="dropdown">
+				<a href="/teachers/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">Омӯзгорон</a>
+				<a href="/teachers/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Омӯзгорон</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/">Аттестатсия</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/schedule/">Ҷадвали дарсҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/announcing/">Эълонҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/news/">Хабарҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/docs/">Маводҳои методӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="#">Иттиҳодияҳои методӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/vieomavod-oi-dars">Видеомаводҳои дарсӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/about/docs/naqshai-mohonai-litsei/">Нақшаи моҳонаи фаъолияти литсей</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/pravila/index.php">Қоидаҳои дохилӣ</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/teachers/ittifo-i-kasaba">Иттифоқи касаба</a></li>
+		
+	
+	
+
+			</ul></li>	
+	
+					<li class="dropdown">
+				<a href="/gallery/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">Суратҳо</a>
+				<a href="/gallery/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Суратҳо</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/gallery/">Суратҳо</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/gallery/videogallery">Наворҳои мо</a></li>
+		
+	
+	
+
+			</ul></li>	
+	
+					<li class="dropdown">
+				<a href="/contacts/" class="dropdown-toggle hidden-xs" data-hover="dropdown" data-close-others="true">Тамос</a>
+				<a href="/contacts/" class="dropdown-toggle visible-xs" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Тамос</a>
+				<ul class="dropdown-menu">
+		
+	
+	
+
+	
+	
+					<li><a href="/contacts/index.php">Тамос бо литсей</a></li>
+		
+	
+	
+
+	
+	
+					<li><a href="/contacts/control.php">Тамос бо ташкилотҳои назоратӣ</a></li>
+		
+	
+	
+
+	</ul></li></ul>
+            </div>
+        </div>
+    </div>
+	
+			
+
+</header>
+
+
+ 
+<div id="carouselTop" class="carousel auto-carousel carousel-3 slide animate-hover-slide bg-alt">
+    <script type="text/javascript">
+        $(function(){
+            $(".announcing-container .btn").on("click",function(){
+                $(".announcing-text").toggleClass("hidden").parents(".carousel-inner").prev().find(".btn").toggleClass("hidden");
+				$(".nameAD").toggleClass("mb-hidden");
+                return false;
+            });
+        });
+    </script>
+    <div class="announcing-container" style="height: 100%;">
+    <div class="row" style="height: 100%;">
+        <div class="col-md-12" style="height: 100%;">
+                        <div class="carousel-nav slider top-slider" style="height: 100%;">
+                <a href="" class="full-size btn"></a>
+                <a href="" class="full-size btn hidden"></a>
+                
+                <a data-slide="prev" class="left color-two" href="#carouselTop"><i class="fa fa-angle-left"></i></a>
+                <a data-slide="next" class="right color-two" href="#carouselTop"><i class="fa fa-angle-right"></i></a>
+            </div>
+                    </div>
+    </div>
+    </div>
+    <div class="carousel-inner">
+	    <div id="bx_3218110189_6773" class="item">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        ҒОЛИБИЯТ МУБОРАК БОШАД!                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            Зоиров Анушервон Ҷамшедович хонандаи синфи 11-уми МДТ "Литсейи президентӣ барои хонандагони болаёқати Тоҷикистон" бо роҳбарии омӯзгори фанни математика Баротов Ҷонибек дар даври чоруми озмуни ҷумҳуриявии "Илм фурӯғи маърифат", ки аз санаи 21 то 26 октябри соли 2024 дар Донишгоҳи миллии Тоҷикистон барпо гардид, аз номинатсияи математика дар байни муассисаҳои умумии типи нав сазовори ҷойи 3-юм гардид. <br>
+ Ин дастовард ба аҳли коллектив, падару модари Анушервон ва ҳаводорони литсей муборак бошад!<br>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6720" class="item active">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        ХОНАНДАГОНИ ТОҶИК ДАР 28-УМИН ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ МАТЕМАТИКИИ НАВРАСОНИ БАЛКАН «JBMO-2024» 6 ҶОЙИ ИФТИХОРӢ БА ДАСТ ОВАРДАНД                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="text-align: justify;">
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">6 нафар хонандагони синфҳои 7-9-и мамлакат дар 28-умин Олимпиадаи байналмилалии математикии наврасони Балкан «JBMO-2024» аз фанни математика иштирок намуда, сазовори ҷойҳои ифтихорӣ гардиданд.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Олимпиадаи мазкур аз 25 то 30 июни соли 2024 дар шаҳри Анталияи Ҷумҳурии Туркия баргузор шуда, дар он наврасони зиёда аз 20 давлати дунё иштирок намуданд. Дастаи мунтахаби Ҷумҳурии Тоҷикистонро дар ин Олимпиадаи бонуфузи байналмилалӣ 6 нафар хонанда намояндагӣ намуд. Хушбахтона, ҳамаи хонандагони тоҷик тавонистанд дар ин сабқати илмии байналмилалӣ шарафи ҷумҳуриро баланд бардошта, сазовори 6 ҷойи ифтихорӣ гарданд.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Ин дастовард шаҳодати он аст, ки рушди ҳаракати олимпӣ дар кишвар сол ба сол беҳтар гардида, хонандагони тоҷик аз фанҳои табиӣ-риёзӣ бо давлатҳои тараққикардаи дунё рақобати арзанда нишон дода, нуфузи кишварро дар арсаи ҷаҳонӣ баланд мебардоранд. Дар Олимпиада, аз ҷумла, аз Фаронса, Туркия, Хорватия, Сербия, Албания, Руминия, Македония, Югославия, Босния ва Герсоговина, Черногория, Молдавия, Юнон, Арабистони Саудӣ, Тоҷикистон, Қазоқистон, Қирғизистон, Туркманистон, Булғористон, Озарбойҷон, Филиппин, Кипр ва ғ. дар ҳайати як дастаи иборат аз 6 нафар хонандагони синфҳои 7-9 (то 15-сола) иштирок намуданд.</span>
+</p>
+<p style="text-align: justify;">
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;"><a href="https://www.maorif.tj/storage/posts/July2024/1SfnDDZxHmak7esKcQi9.jpg"><img width="100%" src="https://www.maorif.tj/storage/posts/July2024/1SfnDDZxHmak7esKcQi9.jpg" height="500" align="middle"></a><br>
+ </span>
+</p>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6686" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        МЕДАЛИ ТИЛЛОИИ ЮСУПОВ МЕҲРУБОН АЗ ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ АЛ-ХОРАЗМӢ                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="text-align: justify;">
+ <span style="color: #000000;">Аз санаи 27 то 30 майи соли ҷорӣ дар шаҳри Тошкенти Ҷумҳурии Ӯзбекистон 2-юмин Олимпиадаи байналмилалии Ал-Хоразмӣ аз фанни математика байни наврасон бо фарогири 140 иштирокчи аз 6 давлатҳои ИДМ бо ҳам сабқати илмӣ намуданд.</span>
+</p>
+<p style="text-align: justify;">
+	 Дар ин Олимпиадаи сатҳи баланд мунтахаби Ҷумҳурии Тоҷикистонро 12 нафар наврас аз муассисаҳои таълимии кишвар муаррифӣ намуда, сазовори 9 ҷойи ифтихорӣ, 1 ҷойи I, 2 ҷойи II ва 6 ҷойи III гардиданд.
+</p>
+<p style="text-align: justify;">
+ <span style="color: #000000;">Хушбахтона хонандаи синфи 9-уми МДТ "Литсейи президентӣ барои хонандагони болаёқати Тоҷикистон" ЮСУПОВ МЕҲРУБОН сазовори ҷойи 1-ум гардид.</span><br>
+ <span style="color: #000000;"> </span><span style="color: #000000;">
+	Аз номи ҷомеаи меҳнатии литсей ба Меҳрубон Юсупов, ба муаллим Баротов Ҷонибек ва падару модари онҳо изҳори сипос баён менамоем ва ин дастовардро ба кулли хонандагону омӯзгорон, падару модарон ва нафароне, ки ба илм таваҷҷуҳ доранд, муборак бод мегӯем.</span><br>
+ <span style="color: #000000;"> </span><span style="color: #000000;">
+	Инчунин, миннатдории коллективи омӯзгорони литсейро ба сарпарасти муассиса-Президенти Ҷумҳурии Тоҷикистон муҳтарам Эмомалӣ Раҳмон барои шароитҳои муҳайёгардонидаашон ҷаҳони сипос баён менамоем.</span>
+</p>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6680" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        ШАРАФИ ОЛИМПӢ: МАКТАББАЧАГОНИ ТОҶИК ДАР ОЛИМПИАДАИ TASIMO ХУДРО ДАР ЭЛИТАИ ҶАҲОНИИ МАТЕМАТИКА МУАРРИФӢ КАРДАНД                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="text-align: justify;">
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">Дастаи 12-нафараи мактаббачагони боистеъдод аз Ҷумҳурии Тоҷикистон дар Олимпиадаи байналмилалии TASIMO, ки рӯзҳои 18-20 майи соли 2024 дар шаҳри Тошканди Ӯзбекистон баргузор шуд, бомуваффақият иштирок карданд. Чорабинии мазкур 300 нафар иштирокчиёнро аз 10 кишвар гирд оварда, ба майдони намоиши қобилиятҳои барҷастаи риёзии нобиғаҳои наврас табдил ёфт.</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Дастаи мунтахаби Ҷумҳурии Тоҷикистон дар ин сабқати зеҳнӣ сазовори се мақоми ифтихорӣ гардид. Ин муваффақияти барҷаста на танҳо боиси ифтихор, балки тасдиқи қобилияти барҷастаи риёзй ва эътиқоди қавии шуури наврасони тоҷик хоҳад буд.</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Ғолибони Олимпиадаи байналмилалии TASIMO аз Ҷумҳурии Тоҷикистон инҳо мебошанд:</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	1. Душанов Азамат хонандаи синфи 11-и Литсейи Президентӣ барои хонандагони болаёқати Тоҷикистон, ҷойи II;</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Дар баробари ба даст овардани ҷоизаҳо, наврасони тоҷик дар байни ҷомеаи ҷаҳонии риёзӣ соҳиби эҳтиром ва эътироф гардиданд. Муваффақиятҳои онҳо сатҳи баланди таҳсил дар Тоҷикистонро нишон дода, барои наслҳои ояндаи риёзидонҳо намунаи воқеӣ хоҳад буд.</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Бояд гуфт, ки баргузории ин чорабинӣ на танҳо ба рушди илмии иштирокчиён мусоидат намуд, балки як қадами муҳим дар таҳкими робитаҳои фарҳангӣ ва маърифатии байни кишварҳо гардид.</span>
+</p>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6664" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        Даври чоруми (ҷумҳуриявӣ) олимпиадаҳои фаннӣ барои наврасон аз фанҳои ҷамъиятӣ-гуманитарӣ ва табиӣ-риёзӣ (синфҳои 7-8)                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            Муассисаи давлатии «Маркази дарёфт ва рушди истеъдодҳои шаҳри Душанбе»- ба диққати директорон, омӯзгорон ва хонандагони муассисаҳои таҳсилоти умумии пойтахт мерасонад, ки рӯзҳои 19-21 апрели соли 2024 даври чоруми (ҷумҳуриявӣ) олимпиадаҳои фаннӣ барои наврасон аз фанҳои ҷамъиятӣ-гуманитарӣ ва табиӣ-риёзӣ (синфҳои 7-8) дар Муассисаи таълимии давлатии «Мактаби байналмилалии Президентӣ» дар шаҳри Душанбе ташкил ва баргузор мегардад.<br>
+ <br>
+ Талабот:<br>
+ Иштирокчиёни олимпиадаҳои фаннӣ бо либоси мактабӣ, нусхаи шаҳодатномаи таваллуд ва маълумотномаи бо расм ва муҳри муассисаи таълимӣ тасдиқшуда ба Олимпиада роҳ дода мешаванд.<br>
+ <br>
+ Кумитаи тадорукот!<br>
+ Суроға: н.Сино, кӯчаи Карамов 101<br>
+ <br>
+ Вазорати маориф ва илми Ҷумҳурии Тоҷикистон<br>
+Маркази ҷумҳуриявии дарёфт ва рушди истеъдодҳо            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6669" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        Маросими ҷамъбаст ва ҳавасмандгардонии ғолибони даври шаҳрии олимпиадаҳои фаннии хонандагони муассисаҳои таълимии шаҳри Душанбе дар соли 2024                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="text-align: justify;">
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">Бо пайгирӣ аз сиёсати маорифпарваронаи Асосгузори сулҳу ваҳдати миллӣ, Пешвои миллат, Президенти Ҷумҳурии Тоҷикистон муҳтарам Эмомалӣ Раҳмон ва бо дастгирии Мақомоти иҷроияи ҳокимияти давлатии шаҳри Душанбе аз ҷониби Муассисаи давлатии “Маркази дарёфт ва рушди истеъдодҳои назди Сарраёсати маорифи шаҳри Душанбе 7 майи соли 2024 дар “Кохи Суруш” маросими ҷоизасупории ғолибони даври сеюми (шаҳрӣ) олимпиадаҳои фаннӣ, олимпиадаи даставии “Истеъдод”, олимпиада оид ба “Шоҳмот” ва “Spelling bee” баргузор гардид.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Дар маросими мазкур муовини Раиси шаҳри Душанбе, сарпарасти соҳа Одилзода Дилбар Раҳим, сардори Сарраёсати маорифи шаҳри Душанбе Исмоилзода Баҳром Мансур ва масъулини сохторҳои маорифи пойтахт иштирок намуданд.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Ташкили озмуну олимпиадаҳо яке аз воситаҳои муҳими дарёфти хонандагони боистеъдод ва лаёқатманд буда, дар ин самт бо дастгирии бевоситаи Раиси шаҳри Душанбе муҳтарам Рустами Эмомалӣ тадбирҳои судманду муассир амалӣ гардида, то рафт дар пойтахт ҳаракати олимпии хонандагон вусъат ва шумораи бештари хонандагонро фаро гирифта истодааст.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Танҳо дар ҳамин сол дар пойтахт 8 намуд олимпиадаҳои гуногуни фаннӣ ва зеҳнӣ бо ҷалби зиёда аз 5000 хонандагони синфҳои 5-11 баргузор гардиданд, ки ин нишондод аз солҳои қаблӣ ба маротиб бештар аст. Дар ин сабқатҳо аз чор ноҳияи пойтахт 5202 нафар иштирок намуда, аз ин шумора 1206 нафарашон сазовори ҷойҳои ифтихорӣ гардиданд, ки 188 нафари онҳо хонандагони синфҳои 11-ум мебошанд. Ҷамъбаст ва натиҷагирии даври сеюми олимпиадаҳои фаннии хонандагон нишон дод, ки ноҳияи Сино бо гирифтани 599 ҷойи ифтихорӣ мақоми аввал, ноҳияи Фирдавсӣ бо гирифтани 223 ҷойи ифтихорӣ мақоми ҷойи дуюм, ноҳияи Исмоили Сомонӣ ва Шоҳмансур бо гирифтани 218 ҷойи ифтихорӣ мақоми сеюмро ишғол намуданд.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Маросими ҷоизасупории ғолибони даври сеюми (шаҳрӣ) олимпиадаҳои фаннӣ аз рӯйи 12 номинатсия: “Мақомотҳои иҷроияи ҳокимияти давлатии фаъол дар самти ҳаракати олимпӣ", “Шуъбаҳои маорифи фаъол дар самти ҳаракати олимпӣ”, “Даҳгонаи муассисаҳои таҳсилоти типи нав дар самти ҳаракати олимпӣ”, “Даҳгонаи беҳтарин муассисаҳои таҳсилоти миёнаи умумӣ дар самти ҳаракати олимпӣ”, “Ноҳияи фаъол дар самти ҳаракати олимпӣ”, “Марказҳои дарёфт ва рушди истеъдодҳои дар самти ҳаракати олимпӣ фаъоли пойтахт”, “Беҳтарин дастаи муассисаҳои таҳсилоти миёнаи умумӣ дар олимпиадаи даставии «Истеъдод»”, “Беҳтарин дастаи муассисаҳои таҳсилоти типи нав дар олимпиадаи даставии «Истеъдод»”, “Беҳтарин дастаи шоҳмотбозони пойтахт”, “Беҳтарин дастаи муассисаҳои таҳсилоти миёнаи умумӣ дар олимпиадаи «Spelling Bee»”, “Беҳтарин дастаи муассисаҳои таҳсилоти типи нави олимпиадаи «Spelling Bee»”, “Ғолибони даври сеюми (шаҳрӣ) олимпиадаҳои фаннӣ” баргузор гардид.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Боиси хушнудиву фараҳмандии мост, ки имрӯз 248 нафар хонандагони муассисаҳои таълимии шаҳри Душанбе, ки ҷойҳои фахриии олимпиадаҳои фанниро сазовор гардиданд, қадрдонӣ гардиданд.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Боиси тазаккур аст, ки имрӯз наврасони пойтахт бо вуҷуди ҳанӯз хурдсол буданашон дар озмуну олимпиадаҳои байналмилалӣ ширкат намуда, бо дастовардҳои илмиву эҷодии худ имконияту қобилияти фарзандони Тоҷикистонро дар миёни кишварҳои дигар ба таври шоиста муаррифӣ менамоянд.</span><br>
+ <span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Маркази матбуотии Сарраёсати маорифи шаҳри Душанбе</span>
+</p>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6663" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        АЗ 17-УМИ ФЕВРАЛИ СОЛИ 2024, №71 “ДАР БОРАИ ГУЗАРОНИДАНИ РӮЗҲОИ ИСТИРОҲАТ БА ДИГАР РӮЗҲОИ КОРӢ ДАР СОЛИ 2024”                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="text-align: justify;">
+	ВАЗОРАТИ МАОРИФ ВА ИЛМИ ҶУМҲУРИИ ТОҶИКИСТОН ИТТИЛОЪ МЕДИҲАД, КИ ТИБҚИ ҚАРОРИ ҲУКУМАТИ ҶУМҲУРИИ ТОҶИКИСТОН АЗ 17-УМИ ФЕВРАЛИ СОЛИ 2024, №71 “ДАР БОРАИ ГУЗАРОНИДАНИ РӮЗҲОИ ИСТИРОҲАТ БА ДИГАР РӮЗҲОИ КОРӢ ДАР СОЛИ 2024” РӮЗИ ИСТИРОҲАТ АЗ РӮЗИ ШАНБЕИ 4-УМИ МАЙ БА РӮЗИ 10-УМИ МАЙ ГУЗАРОНИДА ШУДААСТ.<br>
+	 АЗ ИН РӮ, ДАР МУАССИСАҲОИ ТОМАКТАБӢ ВА ЗИНАИ ТАҲСИЛОТИ ИБТИДОИИ МУАССИСАҲОИ ТАҲСИЛОТИ УМУМӢ (СИНФҲОИ 1-4) НОВОБАСТА АЗ ШАКЛҲОИ МОЛИКИЯТ ВА ТОБЕИЯТИ ИДОРАВӢ МАШҒУЛИЯТ ВА ДАРСҲОИ РӮЗИ 10-УМИ МАЙ (ҶУМЪА) БА РӮЗИ ШАНБЕИ 4-УМИ МАЙ ГУЗАРОНИДА ШУДА, РӮЗИ 10-УМИ МАЙИ СОЛИ 2024 ИСТИРОҲАТӢ МЕБОШАД.<br>
+	 БАРОИ ХОНАНДАГОНИ СИНФҲОИ 5-11-И МУАССИСАҲОИ ТАҲСИЛОТИ УМУМӢ ВА ДОНИШҶӮЁНИ МУАССИСАҲОИ ТАҲСИЛОТИ ОЛИИ КАСБӢ ДАРСҲО ТИБҚИ РЕҶАИ МУҚАРРАРӢ ГУЗАРОНИДА МЕШАВАД.
+</p>
+<br>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6665" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        ДАСТАИ ОЛИМПИИ ШАҲРИ ДУШАНБЕ ДАР ҶОЙИ АВВАЛ                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            Тавре ки ба ҳамагон маълум аст тибқи фармоиши вазири маориф ва илми Ҷумҳурии Тоҷикистон рӯзҳои 19-21 апрели соли равон дар Муассисаи давлатии таълимии "Мактаби байналмилалии Президентӣ" дар шаҳри Душанбе даври ҷумҳуриявии олимпиадаҳои фаннии хонандагони синфҳои 7-8 баргузор гардид. Дар олимпиадаи мазкур 467 довталаб аз муассисаҳои таълимии шаҳри Душанбе ширкат варзида 254 медал ба даст оварданд, ки аз ин шумора:<br>
+ <img width="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/td2/2/16/2714.png" height="16" alt="✔️" referrerpolicy="origin-when-cross-origin"> 17 медали тилло&nbsp;<br>
+ <img width="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/td2/2/16/2714.png" height="16" alt="✔️" referrerpolicy="origin-when-cross-origin">50 медали нуқра&nbsp;<br>
+ <img width="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/td2/2/16/2714.png" height="16" alt="✔️" referrerpolicy="origin-when-cross-origin">187 медали биринҷи&nbsp;<br>
+ Муассисаи давлатии "Маркази дарёфт ва рушди истеъдодҳои назди Сарраёсати маорифи шаҳри Душанбе" дастоварди навбатии толибилмони шаҳри Душанберо ба кулли маорифчиёни пойтахт табрик намуда, минбаъд низ баҳри дар сафи пеш қарор гирифтани дастаи олимпии шаҳри Душанбе саъю кӯшишро ба харҷ медиҳад.<br>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6657" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        ОҒОЗИ ДАВРИ ҶУМҲУРИЯВИИ ОЛИМПИАДАҲОИ ФАННӢ БАРОИ ХОНАНДАГОНИ СИНФҲОИ 7-8                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="text-align: justify;">
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">Субҳи имрӯз дар Муассисаи давлатии таълимии «Мактаби байналмилалии президентӣ»-и шаҳри Душанбе марҳилаи чоруми олимпиадаҳои фаннӣ барои хонандагони синфҳои 7-8-и муассисаҳои таҳсилоти умумии кишвар оғоз гардид. Дар олимпиада аз ҳамаи шаҳру ноҳияҳои ҷумҳурӣ хонандагон ширкат варзида, малака, маҳорат ва донишҳои худро муаррифӣ хоҳанд кард.</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Дар қисмати ифтитоҳии чорабинӣ муовини вазири маориф ва илми кишвар Зиёдулло Абдулзода, намояндагони сохторҳои маорифи кишвар, хонандагону омӯзгорони мактабҳои таҳсилоти ҳамагонӣ ҳузур доштанд.</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Муовини вазири маориф ва илми Ҷумҳурии Тоҷикистон иштирокчиёни марҳилаи ниҳоии олимпиадаро табрику таҳният гуфта, таъкид намуд, ки тарбияи шахсиятҳои эҷодкор ва болаёқат яке аз муҳимтарин вазифаҳои низоми маориф мебошад.</span><br>
+	<span style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt;">
+	Дар олимпиада 1499 хонанда иштирок намуда, ҷамъбасти он 21-уми апрел дар назар дошта шудааст.</span>
+</p>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+	    <div id="bx_3218110189_6653" class="item ">
+    <div class="box-element white bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-md-12">
+                    <h4 class="nameAD mb-none c-white mb-hidden mb-0">
+                        «УМРИ АЙНӢ АЗ БАРОИ ХАЛҚ САРФИ ХОМА ШУД…». Садриддин Айнӣ тамоми умри бобаракаташро барои ҳамчун миллати қадимӣ эътироф гардидани тоҷикон сарф намудааст                    </h4>
+                </div>
+                <!-- <div class="col-md-4"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-element announcing-text light hidden bg-alt" style="margin: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+        <div class="announcing fix-48">
+            <p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">Имрӯз зодрӯзи сардафтари адабиёти муосири тоҷик Садриддин Айнӣ аст. Дар таърихи пешрафту тараққиёти маданияту адабиёти халқи тоҷик Устод Айнӣ шахсияте аст, ки бо асарҳояш хазинаи адабиёти халқи тоҷикро ғанӣ гардонидааст. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Хизматҳои Устод Айнӣ на танҳо дар рушди адабиёти тоҷик, балки дар пешрафти илмҳои адабиётшиносӣ, таърих, ҷомеашиносӣ низ беназир буда, осори ӯ ганҷинаи бебаҳои маънавии миллати тоҷик мебошад. Осори адабӣ ва илмии Садриддин Айнӣ дар куллиёти понздаҳҷилда гирд оварда шудааст. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Барои ҳар фарди бедордил мақом ва мартабаи Устод Айнӣ ва нақши беандозаи ӯ бисёр бузург мебошад. Устод Айнӣ тавонист, ки давоми фаъолият Тоҷикистон ва тоҷиконро ба ҷаҳониён муаррифӣ намояд ва дар таъсис ёфтани Тоҷикистон нақши бузург гузорад. Бешак, <b>«Намунаи адабиёти тоҷик»</b> шаҳодатномаи халқи тоҷик мебошад, ки тавассути ин асари безавол ва ниҳоят арзишманд &nbsp;тоҷикон тавонистанд ҳастӣ ва ҳувияташонро ҳифз намуда, барои расидан ба Истиқлолияти давлатӣ замина фароҳам оранд. Устод Садриддин Айнӣ ба сифати фарзанди хирадманду заковатпеша, фидокору қаҳрамон бо талошу муборизаҳояш дар шароити&nbsp; давраи нави таърихӣ номи тоҷиконро вирди забон ва шуҳрати ҷаҳониён гардонид. Дар замони барои тоҷикон тақдирсози садаи 20 Устод Садриддин Айнӣ бо осори гаронбаҳояшон соҳиби аслӣ ва ҳақиқии Ватан будани тоҷиконро дар сарзамини Осиёи Миёна ба таври барҷаста собит намудааст. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Президенти ҷумҳурӣ муҳтарам Эмомалӣ Раҳмон дар маросими баъди навсозӣ ба истифода супоридани Боғи фарҳангу фароғатии ба номи Садриддин Айнӣ 6 ноябри соли 2017 иброз доштанд, ки <b>«корномаи беназири устод дар таърихи миллати мо камназир буда, тамоми умри бобаракати ӯ барои ҳифзи ҳувияти тоҷикон ва ба сифати миллати қадимӣ эътироф гардидани онҳо сарф шудааст. Дар ин хусус худи Устод дар мақолааш бо номи «Тақдири як халқ» навишта буд: «Давоми умри худ ман китобҳои зиёде навиштаам, ки ҳамаи онҳо ба як мавзуъ бахшида шуда, аз як мавод фароҳам омадаанд. Ҳамаи ин китобҳо – дар бораи тоҷикон ва Тоҷикистон, дар бораи мамлакати кӯҳистони ман, дар бораи хоки муқаддас, дар бораи фарзандони ин сарзамин мебошанд, ки дар қарни ҳафт ба худ номи «тоҷик»-ро гирифт».</b> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Устод Айнӣ дар аввали асри ХХ дар мақолаву очеркҳо, шеъру достонҳо ва повесту романҳояш аз таърих, забон, адаб ва ҳунару фарҳанги миллати тоҷик озоду ошкоро дифоъ менамуд ва мардумро ба худшиносӣ даъват мекард. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Устод Садриддин Айнӣ он солҳо беш аз дигарон дар мақолаҳои <b>«Масъалаи тоҷикон»</b>, <b>«Дар бораи мактаб ва маорифи тоҷик», «Забони тоҷикӣ», «Дар атрофи забони тоҷикӣ»</b> ба дифои ҳуқуқу ҳастии тоҷикон баромада, қадимӣ, таърихӣ ва бумӣ будани миллаташро исбот намуд. Ӯ ба муқобили иддае аз зиёиёни он рӯзҳо, ки забони тоҷикиро забони кӯҳна мепиндоштанд, баромада, ботил ва беасос будани чунин ақидаҳоро фош мекард ва таъкиду исбот менамуд, ки тоҷикон забони адабии оммафаҳми беш аз ҳазорсола доранд ва он то кунун на танҳо дар муҳити халқи тоҷик, балки дар байни ҳамаи форсизабонони дунё роиҷ мебошад. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Дар андеша ва осори устод Айнӣ масъалаи ташаккули ҳувият ва баланд бардоштани худшиносии миллӣ дар ҷойи аввал қарор дошт. Маҳз аз баракати озодиву соҳибистиқлолии Тоҷикистон доираи васеи хонандагон имкон пайдо намуданд, ки бо китоби басе арзишманди устод Айнӣ <b>«Намунаи адабиёти тоҷик»</b> шинос шаванд. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Бояд гуфт, ки дар солҳои истиқлолияти давлатӣ бузургдошти фарзандони фарзонаи миллат, ки ба хотири истиқлолу озодии Ватан хизмати фидокорона намудаанд, ба яке аз самтҳои муҳими сиёсати фарҳангии мо табдил ёфтааст. </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Тавре шоир Бозор Собир навиштааст: </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="color: #000000; font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> <i><b>Умри Айнӣ аз барои халқ сарфи хома шуд,</b></i></span><br>
+ <span style="color: #000000;"><i><b>
+	Халқи моро дафтари Айнӣ шаҳодатнома шуд.</b></i></span><br>
+ <span style="color: #000000;"><i><b>
+	Сарзамини мо худ аз осори ӯ сар мешавад,</b></i></span><br>
+ <span style="color: #000000;"><i><b>
+	Ин замин бо ӯ ба дунёе баробар мешавад.</b></i> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;"> </span>
+</p>
+<p style="font-family: &quot;Palatino Linotype&quot;, Times; font-size: 12pt; text-align: justify;">
+ <span style="color: #000000;">
+	Соли 1997 бо Фармони Президенти Ҷумҳурии Тоҷикистон ба Садриддин Айнӣ&nbsp; унвони аввалин Қаҳрамони Тоҷикистон дода шуд.</span>
+</p>
+<p style="text-align: justify;">
+ <span><a href="https://khovar.tj/2024/04/umri-ajn-az-baroi-hal-sarfi-homa-shud-sadriddin-ajn-tamomi-umri-bobarakatashro-baroi-amchun-millati-adim-etirof-gardidani-to-ikon-sarf-namudaast/">https://khovar.tj/2024/04/umri-ajn-az-baroi-hal-sarfi-homa-shud-sadriddin-ajn-tamomi-umri-bobarakata...</a><br>
+ </span>
+</p>
+<p>
+</p>            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        </div>
+        </div>
+  
+
+<section class="slice bb p-0">
+<div class="wp-section">
+<div class="content"> <!-- container -->
+
+
+
+
+<section class="sf-main__section pt-30" wfd-id="12">
+<div class="container" wfd-id="13">
+	<div class="row" wfd-id="14">
+		<div class="col-md-8" wfd-id="52">
+			<div class="row mb-20" wfd-id="104">
+				 
+
+<div id="carousel-example-generic" class="carousel auto-carousel carousel-3 slide animate-hover-slide bg-alt" data-ride="carousel">	
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="8"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="9"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="10"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="11"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="12"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="13"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="14"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="15"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="16"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="17"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="18"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="19"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="20"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="21"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="22"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="23"></li>
+			</ol>
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		
+		  
+		<div class="item mask-dark-gradient-bottom" id="bx_3966226736_6709">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/medali-tilloii-yusupov-me-rubon-az-olimpiadai-baynalmilalii-al-khorazm/">
+					<img src="/upload/resize_cache/iblock/59c/800_343_2/gnhl9tv1veanyqe0u7dojk99b3n3ou9b.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/medali-tilloii-yusupov-me-rubon-az-olimpiadai-baynalmilalii-al-khorazm/">
+						<h3 class="text-uppercase c-white">
+							МЕДАЛИ ТИЛЛОИИ ЮСУПОВ МЕҲРУБОН АЗ ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ АЛ-ХОРАЗМӢ						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom active" id="bx_3966226736_6670">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/marosimi-ambast-va-avasmandgardonii-oliboni-davri-sha-rii-olimpiada-oi-fannii-khonandagoni-muassisa-/">
+					<img src="/upload/resize_cache/iblock/df0/800_343_2/vfqq64ye6vaxdws9jkwqec5pccvcl3km.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/marosimi-ambast-va-avasmandgardonii-oliboni-davri-sha-rii-olimpiada-oi-fannii-khonandagoni-muassisa-/">
+						<h3 class="text-uppercase c-white">
+							Маросими ҷамъбаст ва ҳавасмандгардонии ғолибони даври шаҳрии олимпиада...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_6595">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/dastovardi_navbatii_khonandagoni_litseyi_prezident_dar_20_umin_olimpiadai_jashnii_zhautikov_izho_2024_dar_JK/">
+					<img src="/upload/resize_cache/iblock/b0d/800_343_2/tc2dh02xjotx21j6o0fvv3oydfgiyh45.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/dastovardi_navbatii_khonandagoni_litseyi_prezident_dar_20_umin_olimpiadai_jashnii_zhautikov_izho_2024_dar_JK/">
+						<h3 class="text-uppercase c-white">
+							Дастоварди навбатии Литсейи президентӣ дар 20-умин Олимпиадаи ҷашнии Ж...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_6519">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/olibiyatu-adrdon-dar-davri-sha-rii-ozmuni-um-uriyavii-fur-i-sub-i-dono-kitob-ast-/">
+					<img src="/upload/resize_cache/iblock/4f2/800_343_2/4f2c73448941be0537405cad5228446e.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/olibiyatu-adrdon-dar-davri-sha-rii-ozmuni-um-uriyavii-fur-i-sub-i-dono-kitob-ast-/">
+						<h3 class="text-uppercase c-white">
+							Ғолибияту қадрдонии хонандагони литсей дар даври шаҳрии озмуни ҷумҳури...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_6229">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/litsey-internati-prezident-baroi-k-dakoni-bolaye-ati-um-urii-to-ikiston-be-tarin-litsey-dar-arakati-/">
+					<img src="/upload/resize_cache/iblock/c2e/800_343_2/c2e3f13ac27d6b4a89deb52267f9370a.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/litsey-internati-prezident-baroi-k-dakoni-bolaye-ati-um-urii-to-ikiston-be-tarin-litsey-dar-arakati-/">
+						<h3 class="text-uppercase c-white">
+							Литсей-интернати Президентӣ барои кӯдакони болаёқати Ҷумҳурии Тоҷикист...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_6204">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/3-omi-dastav-va-21-medali-khonadagoni-litsey-az-14-umin-olimpiadai-baynalmilalii-donish-dar-antaliya/">
+					<img src="/upload/resize_cache/iblock/2e0/800_343_2/2e0b5c096593792103b8b133ae673a3c.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/3-omi-dastav-va-21-medali-khonadagoni-litsey-az-14-umin-olimpiadai-baynalmilalii-donish-dar-antaliya/">
+						<h3 class="text-uppercase c-white">
+							3 ҶОМИ ДАСТАВӢ ВА 21 МЕДАЛИ ХОНАДАГОНИ ЛИТСЕЙ АЗ  14-УМИН ОЛИМПИАДАИ Б...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_6120">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/marosimi-ambasti-olimpiadai-baynalmilalii-isi-junior-2022-oid-ba-tekhnologiya-oi-informatsion-dar-sh/">
+					<img src="/upload/resize_cache/iblock/f57/800_343_2/f577fdf6b7b71ee397bda42a49f89cb6.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/marosimi-ambasti-olimpiadai-baynalmilalii-isi-junior-2022-oid-ba-tekhnologiya-oi-informatsion-dar-sh/">
+						<h3 class="text-uppercase c-white">
+							МАРОСИМИ ҶАМЪБАСТИ ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ "ISI JUNIOR-2022"...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5968">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/davtovardi-litsey-internati-prezident-baroi-k-dakoni-bolaye-ati-um-urii-to-ikiston-dar-davri-um-uriya/">
+					<img src="/upload/resize_cache/iblock/552/800_343_2/552dbb6d49df244a8681c45eccaccdde.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/davtovardi-litsey-internati-prezident-baroi-k-dakoni-bolaye-ati-um-urii-to-ikiston-dar-davri-um-uriya/">
+						<h3 class="text-uppercase c-white">
+							Дастоварди Литсей-интернати Президентӣ барои кӯдакони болаёқати Ҷумҳур...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5934">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/marosimi-oizasuporii-oliboni-davri-seyumi-sha-r-olimpiada-oi-fannii-khonandagoni-muassisa-oi-talimii/">
+					<img src="/upload/resize_cache/iblock/bfe/800_343_2/bfe52ecf11231a3bd4be265cc541d347.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/marosimi-oizasuporii-oliboni-davri-seyumi-sha-r-olimpiada-oi-fannii-khonandagoni-muassisa-oi-talimii/">
+						<h3 class="text-uppercase c-white">
+							Маросими ҷоизасупории ғолибони даври сеюми (шаҳрӣ) олимпиадаҳои фаннии...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5905">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/tashrifi-raisi-sh-roi-federatsiyai-ma-lisi-federalii-rusiya-valentina-matvienko-ba-litsey-internati-/">
+					<img src="/upload/resize_cache/iblock/780/800_343_2/7805c0be7098d48694d4e7f0fa6d3bbe.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/tashrifi-raisi-sh-roi-federatsiyai-ma-lisi-federalii-rusiya-valentina-matvienko-ba-litsey-internati-/">
+						<h3 class="text-uppercase c-white">
+							Ташрифи Маҷлиси миллии Маҷлиси Олии Ҷумҳурии Тоҷикистон, Раиси шаҳри Д...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5854">
+							<a class="" style="" target="_blank" href="https://lip.tj/life/news/amoishi-girandagoni-stipendiyai-prezidenti-um-urii-to-ikiston-dar-sha-ri-dushanbe-o-oz-gardid/">
+					<img src="/upload/resize_cache/iblock/07e/800_343_2/07ebbd53fc775215dbdc749998d89a72.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="https://lip.tj/life/news/amoishi-girandagoni-stipendiyai-prezidenti-um-urii-to-ikiston-dar-sha-ri-dushanbe-o-oz-gardid/">
+						<h3 class="text-uppercase c-white">
+							Ҳамоиши гирандагони стипендияи Президенти Ҷумҳурии Тоҷикистон дар шаҳр...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5813">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/ykhati-oliboni-stipendiyai-prezidenti-um-urii-to-ikiston-baroi-khonandagonu-donish-yeni-muassisa-oi-/">
+					<img src="/upload/resize_cache/iblock/894/800_343_2/894902cb6472f77f754edb083482910d.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/ykhati-oliboni-stipendiyai-prezidenti-um-urii-to-ikiston-baroi-khonandagonu-donish-yeni-muassisa-oi-/">
+						<h3 class="text-uppercase c-white">
+							Ғолибони стипендияи Президенти Ҷумҳурии Тоҷикистон барои хонандагону д...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5794">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/davri-duyumi-olimpiada-oi-fannii-khonandagoni-muassisa-oi-talimii-n-sino-dar-soli-ta-sili-2021-2022/">
+					<img src="/upload/resize_cache/iblock/469/800_343_2/4692ea819023fe82b6eba44b8c9683f9.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/davri-duyumi-olimpiada-oi-fannii-khonandagoni-muassisa-oi-talimii-n-sino-dar-soli-ta-sili-2021-2022/">
+						<h3 class="text-uppercase c-white">
+							Ғолибони даври дуюми олимпиадаҳои фаннии хонандагони муассисаҳои таъли...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5756">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/oliboni-aftai-ilm-tekhnologiya-innovatsiya-va-ikhtirokorii-navrasonu-avononi-sha-ri-dushanbe-va-be-t/">
+					<img src="/upload/resize_cache/iblock/9f3/800_343_2/9f3bddf9f1c0120da58c47320f20e499.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/oliboni-aftai-ilm-tekhnologiya-innovatsiya-va-ikhtirokorii-navrasonu-avononi-sha-ri-dushanbe-va-be-t/">
+						<h3 class="text-uppercase c-white">
+							Ғолибони Ҳафтаи илм, технология, инноватсия ва ихтироъкории наврасону ...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5725">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/39-oyi-iftikhorii-khonandagoni-poytakht-dar-olimpiadai-baynalmilalii-antaliya/">
+					<img src="/upload/resize_cache/iblock/0c9/800_343_2/0c928e63b5782f7fa75256ab91b37c9f.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/39-oyi-iftikhorii-khonandagoni-poytakht-dar-olimpiadai-baynalmilalii-antaliya/">
+						<h3 class="text-uppercase c-white">
+							39 ҶОЙИ ИФТИХОРИИ ХОНАНДАГОНИ ПОЙТАХТ ДАР ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ АНТ...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5708">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/adrdonii-khonandagon-va-om-zgoroni-litseyi-prezident-dar-davri-sha-rii-ozmuni-ilm-fur-i-marifat/">
+					<img src="/upload/resize_cache/iblock/6e4/800_343_2/6e4508216e30ba2bf74adb1d29fde44a.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/adrdonii-khonandagon-va-om-zgoroni-litseyi-prezident-dar-davri-sha-rii-ozmuni-ilm-fur-i-marifat/">
+						<h3 class="text-uppercase c-white">
+							Қадрдонии хонандагон ва омӯзгорони Литсейи Президентӣ дар даври шаҳрии...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5593">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/dastai-olimpii-sha-ri-dushanbe-sazovori-ma-omi-avval-gardid/">
+					<img src="/upload/resize_cache/iblock/25a/800_343_2/25a44521218080df972f14d7569bedb5.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/dastai-olimpii-sha-ri-dushanbe-sazovori-ma-omi-avval-gardid/">
+						<h3 class="text-uppercase c-white">
+							Дастаи олимпии шаҳри Душанбе сазовори мақоми аввал гардид						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5558">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/dastai-olimpii-khonandagoni-poytakht-olibi-mutla-dar-davri-um-uriyavii-olimpiada-o-donista-shud-/">
+					<img src="/upload/resize_cache/iblock/1f4/800_343_2/1f45650925cb19e68befd7e82da42a7d.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/dastai-olimpii-khonandagoni-poytakht-olibi-mutla-dar-davri-um-uriyavii-olimpiada-o-donista-shud-/">
+						<h3 class="text-uppercase c-white">
+							Дастаи олимпии хонандагони пойтахт ғолиби мутлақ дар даври ҷумҳуриявии...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5548">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/davri-um-uriyavii-olimpiadai-fannii-dastav-miyeni-khonandagoni-sinf-oi-9-10/">
+					<img src="/upload/resize_cache/iblock/226/800_343_2/22600ac252d0ac7f023d7923253d186a.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/davri-um-uriyavii-olimpiadai-fannii-dastav-miyeni-khonandagoni-sinf-oi-9-10/">
+						<h3 class="text-uppercase c-white">
+							ДАВРИ ҶУМҲУРИЯВИИ ОЛИМПИАДАИ ФАННИИ ДАСТАВӢ МИЁНИ ХОНАНДАГОНИ СИНФҲОИ ...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5500">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/afisha/5499/">
+					<img src="/upload/resize_cache/iblock/32a/800_343_2/32aacdde13f2343f5708644440d63c96.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/afisha/5499/">
+						<h3 class="text-uppercase c-white">
+							Қадрдонии хонандагон ва омӯзгорони Литсейи Президентӣ аз ҷониби Раёсат...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5427">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/davri-seyumi-olimpiada-oi-fannii-khonandagoni-muassisa-oi-talimii-sha-ri-dushanbe-ambast-gardid/">
+					<img src="/upload/resize_cache/iblock/c61/800_343_2/c61b338417505d172785a8ad98d01dc1.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/davri-seyumi-olimpiada-oi-fannii-khonandagoni-muassisa-oi-talimii-sha-ri-dushanbe-ambast-gardid/">
+						<h3 class="text-uppercase c-white">
+							Даври сеюми олимпиадаҳои фаннии хонандагони муассисаҳои таълимии шаҳри...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5422">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/litseyi-prezident-baroi-khonandagoni-bolaye-ati-to-ikiston-dar-soli-ta-sili-2020-2021-be-tarin-dasta/">
+					<img src="/upload/resize_cache/iblock/1ab/800_343_2/1aba6e1bddff0cec645340552bde2a2b.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/litseyi-prezident-baroi-khonandagoni-bolaye-ati-to-ikiston-dar-soli-ta-sili-2020-2021-be-tarin-dasta/">
+						<h3 class="text-uppercase c-white">
+							Литсейи Президентӣ барои хонандагони болаёқати Тоҷикистон дар соли таҳ...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_5424">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/adrdonii-oliboni-davri-sha-rii-ozmun-oi-fannii-khonandagoni-muassisa-oi-talimii-sha-ri-dushanbe/">
+					<img src="/upload/resize_cache/iblock/96b/800_343_2/96b2bf3860f2735911060e0ae44cfc73.jpg" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/adrdonii-oliboni-davri-sha-rii-ozmun-oi-fannii-khonandagoni-muassisa-oi-talimii-sha-ri-dushanbe/">
+						<h3 class="text-uppercase c-white">
+							ҚАДРДОНИИ ҒОЛИБОНИ ДАВРИ ШАҲРИИ ОЗМУНҲОИ ФАННИИ ХОНАНДАГОНИ МУАССИСАҲО...						</h3>
+					</a>
+									            		  </div>
+		</div>
+		
+		  
+		<div class="item mask-dark-gradient-bottom " id="bx_3966226736_4230">
+							<a class="" style="" target="_blank" href="http://lip.tj/life/news/khonandagoni-to-ik-87-medali-olimpiadai-baynalmilalii-imch-2020-ro-ba-dast-ovardand/">
+					<img src="/upload/resize_cache/iblock/8e3/800_343_2/8e3828bf21f2406cfaa47d77a068ee97.png" alt="">
+				</a>
+				
+			
+			<div class="carousel-caption">
+												<a href="http://lip.tj/life/news/khonandagoni-to-ik-87-medali-olimpiadai-baynalmilalii-imch-2020-ro-ba-dast-ovardand/">
+						<h3 class="text-uppercase c-white">
+							ХОНАНДАГОНИ ТОҶИК 87  МЕДАЛИ ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ “IMCh-2020”-РО Б...						</h3>
+					</a>
+									            		  </div>
+		</div>
+			</div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		<i class="fa fa-angle-left icon-prev f-40" aria-hidden="true"></i>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		<i class="fa fa-angle-right icon-next f-40" aria-hidden="true"></i>
+	</a>
+  
+</div>
+
+
+			</div>
+			<div class="mp section-title-wr mt-20" wfd-id="102">
+				<h2 class="section-title">
+				Хабарҳои охирин</h2>
+				<div class="aux-nav" wfd-id="103">
+ <a href="/life/news/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Ҳамаи хабарҳо </a>
+				</div>
+			</div>
+			 <div class="row">
+			<div class="col-md-4 col-sm-4" id="bx_1970176138_6773">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/life/news/olibiyat-muborak-boshad/"><img alt="ҒОЛИБИЯТ МУБОРАК БОШАД!" src="/upload/resize_cache/iblock/dc5/720_463_2/3se1bn7r7udp35cdycci302f61fxpf7z.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>31 октября 2024</small>
+                    					<h3 class="title">
+							<a href="/life/news/olibiyat-muborak-boshad/" hidefocus="true">ҒОЛИБИЯТ МУБОРАК БОШАД!</a>
+					</h3>
+					<p>
+                        											Зоиров Анушервон Ҷамшедович хонандаи синфи 11-уми МДТ "Литсейи президентӣ барои хонандагони болаёқати Тоҷикистон" бо роҳбарии омӯзгори фанни математика Баротов Ҷонибек дар даври чоруми озмуни ҷумҳуриявии "Илм фурӯғи маърифа...
+										</p>
+
+			</div>
+		</div>
+			<div class="col-md-4 col-sm-4" id="bx_1970176138_6720">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/life/news/khonandagoni-tojik-dar-28-umin-olimpiadai-baynalmilalii-matematikii-navrasoni-balkan-jbmo-2024-6-oyi/"><img alt="ХОНАНДАГОНИ ТОҶИК ДАР 28-УМИН ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ МАТЕМАТИКИИ НАВРАСОНИ БАЛКАН «JBMO-2024» 6 ҶОЙИ ИФТИХОРӢ БА ДАСТ ОВАРДАНД" src="/upload/resize_cache/iblock/882/720_463_2/jwnxgsotev3cozfzn76z73ecaiywp35u.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>29 июня 2024</small>
+                    					<h3 class="title">
+							<a href="/life/news/khonandagoni-tojik-dar-28-umin-olimpiadai-baynalmilalii-matematikii-navrasoni-balkan-jbmo-2024-6-oyi/" hidefocus="true">ХОНАНДАГОНИ ТОҶИК ДАР 28-УМИН ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ МАТЕМАТИКИИ НАВРАСОН...</a>
+					</h3>
+					<p>
+                        											
+ 6 нафар хонандагони синфҳои 7-9-и мамлакат дар 28-умин Олимпиадаи байналмилалии математикии наврасони Балкан «JBMO-2024» аз фанни математика иштирок намуда, ...
+										</p>
+
+			</div>
+		</div>
+			<div class="col-md-4 col-sm-4" id="bx_1970176138_6686">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/life/news/medali-tilloii-yusupov-me-rubon-az-olimpiadai-baynalmilalii-al-khorazm/"><img alt="МЕДАЛИ ТИЛЛОИИ ЮСУПОВ МЕҲРУБОН АЗ ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ АЛ-ХОРАЗМӢ" src="/upload/resize_cache/iblock/246/720_463_2/4fn11nqllg82x15enzi9y4re630e6s1z.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>31 мая 2024</small>
+                    					<h3 class="title">
+							<a href="/life/news/medali-tilloii-yusupov-me-rubon-az-olimpiadai-baynalmilalii-al-khorazm/" hidefocus="true">МЕДАЛИ ТИЛЛОИИ ЮСУПОВ МЕҲРУБОН АЗ ОЛИМПИАДАИ БАЙНАЛМИЛАЛИИ АЛ-ХОРАЗМӢ</a>
+					</h3>
+					<p>
+                        											
+ Аз санаи 27 то 30 майи соли ҷорӣ дар шаҳри Тошкенти Ҷумҳурии Ӯзбекистон 2-юмин Олимпиадаи байналмилалии Ал-Хоразмӣ аз фанни математика байни наврасон бо фарогири 140...
+										</p>
+
+			</div>
+		</div>
+</div>			<div class="mp section-title-wr mt-20" wfd-id="96">
+				<h2 class="section-title">
+				Чорабиниҳои охирин </h2>
+				<div class="aux-nav" wfd-id="97">
+ <a href="/life/afisha/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Ҳамаи чорабиниҳо </a>
+				</div>
+			</div>
+			 <div class="row">
+			<div class="col-md-4 col-sm-4" id="bx_40480796_6774">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/life/afisha/6774/"><img alt="ШАНБЕГӢ ДАР МУАССИСА" src="/upload/resize_cache/iblock/d4a/720_463_2/f2g5n1dj3qj3ml41srqxrw1k2t4uz718.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>2 ноября 2024</small>
+                    					<h3 class="title">
+							<a href="/life/afisha/6774/" hidefocus="true">ШАНБЕГӢ ДАР МУАССИСА</a>
+					</h3>
+					<p>
+                        											Имрӯз кормандони муассисаи давлатии таълимии "Литсейи президентӣ барои хонандагони болаёқати Тоҷикистон " ба шанбегии дастаҷамъона баромада, ба тоза намудани гирду атрофи муассиса аз хазонҳо, тоза намудани синфхонаҳо, нарм нам...
+										</p>
+
+			</div>
+		</div>
+			<div class="col-md-4 col-sm-4" id="bx_40480796_6768">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/life/afisha/6768/"><img alt="ВОХӮРИИ СУДМАНД" src="/upload/resize_cache/iblock/c45/720_463_2/hacu7m70plpa5xrxxzej6q5oe28wu2xw.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>10 октября 2024</small>
+                    					<h3 class="title">
+							<a href="/life/afisha/6768/" hidefocus="true">ВОХӮРИИ СУДМАНД</a>
+					</h3>
+					<p>
+                        											Санаи 10-уми октябри соли 2024 дар толори маҷлисгоҳи Муассисаи давлатии таълимии “Литсейи президентӣ барои хонандагони болаёқати Тоҷикистон” бо иштироки прокурори калони Раёсати муқовимат бо терроризм ва экстремизм ва назорати иҷрои...
+										</p>
+
+			</div>
+		</div>
+			<div class="col-md-4 col-sm-4" id="bx_40480796_6765">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/life/afisha/6765/"><img alt="Таҷлили рӯзи Мавлоно Ҷалолиддини Балхӣ дар Литсейи Президентӣ" src="/upload/resize_cache/iblock/ca0/720_463_2/icdtlx4653febe6wa140jb9fubjuqv0j.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>30 сентября 2024</small>
+                    					<h3 class="title">
+							<a href="/life/afisha/6765/" hidefocus="true">Таҷлили рӯзи Мавлоно Ҷалолиддини Балхӣ дар Литсейи Президентӣ</a>
+					</h3>
+					<p>
+                        											Бояд тазаккур дод, ки Мавлоно Ҷалолиддини Балхӣ 30 сентябри соли 1207 дар Балх ба дунё омада, дар шаҳри Қунияи Рум зиндагӣ ва эҷод намудааст. Шоир дар соли 1273 дар Рум вафот ка...
+										</p>
+
+			</div>
+		</div>
+</div>			<div class="section-title-wr mp mt-15" wfd-id="90">
+				<h2 class="section-title">
+				Дар бораи литсей </h2>
+				<div class="aux-nav" wfd-id="91">
+ <a href="/about/teachers/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Таркиби педагогӣ </a>
+				</div>
+			</div>
+			<h2 class="section-title"> <a href="/"><img width="100%" alt="payom.png" src="/upload/medialibrary/97f/97f6a23bcf9c703c34749c3f35950e7e.png" height="20%" title="(Аз Паём ба Маҷлиси Олӣ, 21.12.2021)"></a></h2>
+			<div class="light-gray p-20 ba mb-10" wfd-id="78">
+				<div class="row" wfd-id="79">
+					<div class="col-md-7" wfd-id="85">
+						 <div style="text-align: center;">
+	<h1>Сухани директор</h1>
+</div>
+<blockquote style="text-align: center;">
+	 МАРОМ: “Миқдор кам, сифат афзун”<br>
+</blockquote>
+<p style="text-align: center; font-size:15px;">
+ <i>Баланд бардоштани сифати таҳсилот бо роҳи ташаккули қобилияти азхудкунии хонандагон тавассути раванди салоҳияти кордонии омӯзгорон.</i>
+</p>
+ <br>
+ <a class="btn btn-block btn-base" href="/about/">Дар бораи литсей</a>					</div>
+					<div class="col-md-5" wfd-id="80">
+						                 <div class="row" id="bx_2618107327_811">
+            <div class="pl-20 pr-20">
+                                    <a href="/about/teachers/director_shkoli/ayratova-laylo-dilovarovna/"><img alt="Ғайратзода Лайло Диловар" src="/upload/resize_cache/iblock/0d8/570_600_1/0d828a86e0441519bcd30f44ad9b460c.jpg" class="img-responsive"></a>
+                                            </div>
+            <div class="pl-20 pr-20 text-center">
+                                <h4>
+                    <a href="/about/teachers/director_shkoli/ayratova-laylo-dilovarovna/" hidefocus="true">Ғайратзода Лайло Диловар</a>
+                </h4>
+            </div>
+        </div>
+		
+    					</div>
+				</div>
+			</div>
+			<div class="section-title-wr mp mt-15" wfd-id="76">
+				<h2 class="section-title">
+				Аксҳо </h2>
+				<div class="aux-nav" wfd-id="77">
+ <a href="/gallery/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Ҳамаи аксҳо </a>
+				</div>
+			</div>
+			 <div id="bxdynamic_rRprES_start" style="display:none"></div><script>
+$(document).ready(function() {
+	$(".theater").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
+    <div class="row">
+	      <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/27f/27fa43876aeb034480139cd375f6768f.jpg"><img id="bx_3943306537_1034" src="/upload/resize_cache/iblock/27f/100_100_2/27fa43876aeb034480139cd375f6768f.jpg" alt="46.jpg" title="46.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/0bf/0bfe063ffad52bfc5818cec3c1be50c9.jpg"><img id="bx_3943306537_1045" src="/upload/resize_cache/iblock/0bf/100_100_2/0bfe063ffad52bfc5818cec3c1be50c9.jpg" alt="62.jpg" title="62.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/b61/b618718eedeab91020598acd5a668412.JPG"><img id="bx_3943306537_1167" src="/upload/resize_cache/iblock/b61/100_100_2/b618718eedeab91020598acd5a668412.JPG" alt="6 А.JPG" title="6 А.JPG" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/a3f/a3fb773bca9f9ffad8e593fdfd9f9763.jpg"><img id="bx_3943306537_1174" src="/upload/resize_cache/iblock/a3f/100_100_2/a3fb773bca9f9ffad8e593fdfd9f9763.jpg" alt="11 А 1.jpg" title="11 А 1.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/41e/41efb4ba21d7d52ce6ce0e65264d6039.jpg"><img id="bx_3943306537_2352" src="/upload/resize_cache/iblock/41e/100_100_2/41efb4ba21d7d52ce6ce0e65264d6039.jpg" alt="FB_IMG_1574069304854.jpg" title="FB_IMG_1574069304854.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/8fb/8fbba834835572b590096a88cf7d9144.jpg"><img id="bx_3943306537_5631" src="/upload/resize_cache/iblock/8fb/100_100_2/8fbba834835572b590096a88cf7d9144.jpg" alt="241027595_403904924412082_7931750873708799751_n.jpg" title="241027595_403904924412082_7931750873708799751_n.jpg" height="100" width="100"></a>
+       </div>
+	   </div><div class="row">           <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/ab9/ab9e62209dc1a9f15c625c80aa975cdf.jpg"><img id="bx_3943306537_2706" src="/upload/resize_cache/iblock/ab9/100_100_2/ab9e62209dc1a9f15c625c80aa975cdf.jpg" alt="81876397_133394141463163_6224245362454953984_n.jpg" title="81876397_133394141463163_6224245362454953984_n.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/391/391ee73b2b8d13a5baf40874c7b85b6a.JPG"><img id="bx_3943306537_1172" src="/upload/resize_cache/iblock/391/100_100_2/391ee73b2b8d13a5baf40874c7b85b6a.JPG" alt="10 Г.JPG" title="10 Г.JPG" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/cc9/cc9374c49643082d8649db3875287e9a.jpg"><img id="bx_3943306537_1046" src="/upload/resize_cache/iblock/cc9/100_100_2/cc9374c49643082d8649db3875287e9a.jpg" alt="Азиза47.jpg" title="Азиза47.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/ac3/ac3a61fbece2ce0668f2479f0ddc502e.jpg"><img id="bx_3943306537_2367" src="/upload/resize_cache/iblock/ac3/100_100_2/ac3a61fbece2ce0668f2479f0ddc502e.jpg" alt="FB_IMG_1574225222655.jpg" title="FB_IMG_1574225222655.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/797/79729c1900852e804e13b157418da1cf.jpg"><img id="bx_3943306537_2964" src="/upload/resize_cache/iblock/797/100_100_2/79729c1900852e804e13b157418da1cf.jpg" alt="83545794_139996467469597_905915053490831360_n.jpg" title="83545794_139996467469597_905915053490831360_n.jpg" height="100" width="100"></a>
+       </div>
+	              <div class="col-md-2 col-xs-4 mb-20">
+          <a class="theater" rel="gallery1" title="" href="/upload/iblock/74a/74a92064003b0467063bdde438907530.JPG"><img id="bx_3943306537_1110" src="/upload/resize_cache/iblock/74a/100_100_2/74a92064003b0467063bdde438907530.JPG" alt="Шохмот 2.JPG" title="Шохмот 2.JPG" height="100" width="100"></a>
+       </div>
+	   </div><div class="row">         </div>
+
+	
+
+<div id="bxdynamic_rRprES_end" style="display:none"></div>			<div class="mp section-title-wr mt-20" wfd-id="70">
+				<h2 class="section-title">
+				Мақолаҳо </h2>
+				<div class="aux-nav" wfd-id="71">
+ <a href="/parents/stati/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Ҳамаи мақолаҳо </a>
+				</div>
+			</div>
+			 <div class="row">
+			<div class="col-md-4 col-sm-4" id="bx_1912816787_6576">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/parents/stati/fazilatu-mas-uliyatshinosii-direktor/"><img alt="Фазилату масъулиятшиносии директор" src="/upload/iblock/dac/7vqm9klqr72tkm8zmq582s9wknrrkt39.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>12 декабря 2023</small>
+                    					<h3 class="title">
+							<a href="/parents/stati/fazilatu-mas-uliyatshinosii-direktor/" hidefocus="true">Фазилату масъулиятшиносии директор</a>
+					</h3>
+					<p>
+                        											
+ Директори Литсей-интернати президентӣ барои кӯдакони болаёқати Ҷумҳурии Тоҷикис&shy;тон Лайло Ғайратзода шояд ягона роҳбари муассисаи таҳсилоти миёнаи умумӣ бошад, ки ҳар субҳ, новобаста аз вазъи ҳаво, дар даром...
+										</p>
+
+			</div>
+		</div>
+			<div class="col-md-4 col-sm-4" id="bx_1912816787_6531">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/parents/stati/dar_vasfi_A_Rudaki/"><img alt="Дар васфи Абуабдуллоҳи Рӯдакӣ" src="/upload/iblock/d27/d27e45e66f5ab4a6a625096d4f523cf0.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>21 сентября 2023</small>
+                    					<h3 class="title">
+							<a href="/parents/stati/dar_vasfi_A_Rudaki/" hidefocus="true">Дар васфи Абуабдуллоҳи Рӯдакӣ</a>
+					</h3>
+					<p>
+                        											
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Дар васфи Рӯдакӣ 
+
+  
+
+ 
+	Ба сухан монад шеъри шуаро, 
+
+  
+...
+										</p>
+
+			</div>
+		</div>
+			<div class="col-md-4 col-sm-4" id="bx_1912816787_6530">
+			<div class="wp-block article grid">
+				<div class="article-image">
+												 <a href="/parents/stati/sipahsolori_shuaroi_A_Rudaki/"><img alt="Бахшида ба рӯзи Сардафтари адабиёти класикии тоҷик Абуабдуллоҳи Рӯдакӣ «Сипаҳсолори шуаро»" src="/upload/resize_cache/iblock/204/720_463_2/204d8b1ca13d0e039b4ae3cb0cce024e.jpg" class="img-responsive"></a>
+									</div>
+
+                                            <small>21 сентября 2023</small>
+                    					<h3 class="title">
+							<a href="/parents/stati/sipahsolori_shuaroi_A_Rudaki/" hidefocus="true">Бахшида ба рӯзи Сардафтари адабиёти класикии тоҷик Абуабдуллоҳи Рӯдакӣ «Сип...</a>
+					</h3>
+					<p>
+                        											
+ "Сипаҳсолори шуаро" 
+
+  
+
+    
+
+  
+
+   &nbsp;&nbsp;&nbsp;&nbsp; Гар сарӣ ёбад ба олам кас ба некушоирӣ,  
+
+  
+
+    
+
+  
+
+  
+	&nbsp;&nbsp;&amp;nb...
+										</p>
+
+			</div>
+		</div>
+</div>			<div class="section-title-wr mp mt-15" wfd-id="64">
+				<h2 class="section-title">
+				Наворҳо </h2>
+				<div class="aux-nav" wfd-id="65">
+ <a href="/gallery/videogallery/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Ҳамаи наворҳо </a>
+				</div>
+			</div>
+			 <style>
+ .width-video{
+	 width:200px;
+ }
+</style>
+
+    <div class="row row-photogallery">
+        		    			<div class="col-md-4 col-sm-4">
+			<div class="">
+              <a class="theater  fancybox.iframe" title="Олимпиада Қатар" href="https://www.youtube.com/watch?v=m4uQNYKzlF4&amp;feature=youtu.be">
+			  <img id="bx_865927600_2754" src="/upload/resize_cache/iblock/97d/200_150_2/97ddade86992f9571ff93adcd9e1d1ae.jpg" width="100%" height="100%" alt="Олимпиада Қатар" style="border: 0px solid black; padding: 0px;">
+				</a>
+			  <small>17.12.2019 11:28:00</small>
+			  <a class="theater  fancybox.iframe" title="Олимпиада Қатар" href="https://www.youtube.com/watch?v=m4uQNYKzlF4&amp;feature=youtu.be">
+			  <p>Олимпиада Қатар</p></a>
+			  
+			</div>
+			</div>
+
+
+	           		    			<div class="col-md-4 col-sm-4">
+			<div class="">
+              <a class="theater  fancybox.iframe" title="Голибони олимпиада HIPPO-2018" href="https://www.youtube.com/watch?v=0RSKgCOCv_k&amp;feature=youtu.be">
+			  <img id="bx_865927600_2925" src="/upload/resize_cache/iblock/d15/200_150_2/d1595e2e990d989a0b185dd4389309d8.png" width="100%" height="100%" alt="Голибони олимпиада HIPPO-2018" style="border: 0px solid black; padding: 0px;">
+				</a>
+			  <small>01.02.2018</small>
+			  <a class="theater  fancybox.iframe" title="Голибони олимпиада HIPPO-2018" href="https://www.youtube.com/watch?v=0RSKgCOCv_k&amp;feature=youtu.be">
+			  <p>Голибони олимпиада HIPPO-2018</p></a>
+			  
+			</div>
+			</div>
+
+
+	           		    			<div class="col-md-4 col-sm-4">
+			<div class="">
+              <a class="theater  fancybox.iframe" title="Пешвои миллат Эмомалӣ Раҳмон бинои нави иловагӣ ва хобгоҳи Литсейи Президентӣ барои кӯдакони болаёқати Ҷумҳурии Тоҷикистонро дар шаҳри Душанбе мавриди баҳрабардорӣ қарор доданд" href="https://youtu.be/oj7f8mhFDdQ">
+			  <img id="bx_865927600_4109" src="/upload/resize_cache/iblock/52c/200_150_2/52cdec6b089b1db6317718f72afd3d66.png" width="100%" height="100%" alt="Пешвои миллат Эмомалӣ Раҳмон бинои нави иловагӣ ва хобгоҳи Литсейи Президентӣ барои кӯдакони болаёқати Ҷумҳурии Тоҷикистонро дар шаҳри Душанбе мавриди баҳрабардорӣ қарор доданд" style="border: 0px solid black; padding: 0px;">
+				</a>
+			  <small>17.08.2020 10:07:00</small>
+			  <a class="theater  fancybox.iframe" title="Пешвои миллат Эмомалӣ Раҳмон бинои нави иловагӣ ва хобгоҳи Литсейи Президентӣ барои кӯдакони болаёқати Ҷумҳурии Тоҷикистонро дар шаҳри Душанбе мавриди баҳрабардорӣ қарор доданд" href="https://youtu.be/oj7f8mhFDdQ">
+			  <p>Пешвои миллат Эмомалӣ Раҳмон бинои нави иловагӣ ва хобгоҳи Литсейи Президентӣ барои кӯдакони болаёқати Ҷумҳурии Тоҷикистонро дар шаҳри Душанбе мавриди баҳрабардорӣ қарор доданд</p></a>
+			  
+			</div>
+			</div>
+
+
+	                   </div>
+        <div class="clearfix"></div>
+		
+
+			<div class="section-title-wr mp mt-30" wfd-id="58">
+				<h2 style="width: 50%;" class="section-title">
+				Ҷадвали дарсҳо </h2>
+				<div class="aux-nav" wfd-id="59">
+ <a href="/pupils/schedule/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Ҳамаи ҷадвали дарсҳо </a>
+				</div>
+			</div>
+			 
+
+<script>
+$(function()
+{
+	$("#section").on(
+		"change", function()
+		{
+			if($("#section").val() != "")
+			{
+				$("#element").show();
+				$('[data-class]').hide();
+				qw = $("#section").val();
+				$('[data-class="' + qw + '"]').show();
+			}
+			else $("#element").hide();
+			
+			var strSelect = "<option value=''>Выберите класс</option>";
+			var result = $("#section option:selected").val();
+			$('#element').empty();
+							var result2 = 'sinfi1';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 1"' +
+						'value="162"> Синфи 1-А</option>';
+							var result2 = 'sinfi1';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 1"' +
+						'value="164"> Синфи 1-Б</option>';
+							var result2 = 'sinfi1';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 1"' +
+						'value="4299"> Синфи 1-В</option>';
+							var result2 = 'sinfi1';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 1"' +
+						'value="4301"> Синфи 1-Г</option>';
+							var result2 = 'sinfi1';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 1"' +
+						'value="4302"> Синфи 1-Д</option>';
+							var result2 = 'sinfi1';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 1"' +
+						'value="4303"> Синфи 1-Е</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="161"> Синфи 2-А</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="165"> Синфи 2-Б</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="3468"> Синфи 2-В</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="4305"> Синфи 2-Г</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="4306"> Синфи 2-Д</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="4307"> Синфи 2-Е</option>';
+							var result2 = 'sinfi-2';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 2 "' +
+						'value="4308"> Синфи 2-Ж</option>';
+							var result2 = '3-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 3"' +
+						'value="163"> Синфи 3-А</option>';
+							var result2 = '3-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 3"' +
+						'value="166"> Синфи 3-Б</option>';
+							var result2 = '3-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 3"' +
+						'value="4313"> Синфи 3-В</option>';
+							var result2 = '3-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 3"' +
+						'value="4314"> Синфи 3-Г</option>';
+							var result2 = '3-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 3"' +
+						'value="4315"> Синфи 3-Д</option>';
+							var result2 = '3-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 3"' +
+						'value="4316"> Синфи 3-Е</option>';
+							var result2 = '4-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 4"' +
+						'value="167"> Синфи 4-А</option>';
+							var result2 = '4-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 4"' +
+						'value="168"> Синфи 4-Б</option>';
+							var result2 = '4-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 4"' +
+						'value="3581"> Синфи 4-В</option>';
+							var result2 = '4-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 4"' +
+						'value="3582"> Синфи 4-Г</option>';
+							var result2 = '4-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 4"' +
+						'value="4321"> Синфи 4-Д</option>';
+							var result2 = '4-klass';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 4"' +
+						'value="4323"> Синфи 4-Е</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="3263"> Синфи 5 А</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="3264"> Синфи 5 Б</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="3265"> Синфи 5 В</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="3266"> Синфи 5 Г</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="3267"> Синфи 5 Д</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="4332"> Синфи 5 Е</option>';
+							var result2 = 'sinfi-5';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 5"' +
+						'value="4333"> Синфи 5 Ж</option>';
+							var result2 = 'sinfi-6';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 6"' +
+						'value="4334"> Синфи 6 А</option>';
+							var result2 = 'sinfi-6';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 6"' +
+						'value="4335"> Синфи 6 Б</option>';
+							var result2 = 'sinfi-6';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 6"' +
+						'value="4336"> Синфи 6 В</option>';
+							var result2 = 'sinfi-6';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 6"' +
+						'value="4338"> Синфи 6 Г</option>';
+							var result2 = 'sinfi-6';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 6"' +
+						'value="4337"> Синфи 6 Д</option>';
+							var result2 = 'sinfi-6';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 6"' +
+						'value="4339"> Синфи 6 Е</option>';
+							var result2 = 'sinfi-7';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 7"' +
+						'value="4340"> Синфи 7 А</option>';
+							var result2 = 'sinfi-7';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 7"' +
+						'value="4341"> Синфи 7 Б</option>';
+							var result2 = 'sinfi-7';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 7"' +
+						'value="4342"> Синфи 7 В</option>';
+							var result2 = 'sinfi-7';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 7"' +
+						'value="4343"> Синфи 7 Г</option>';
+							var result2 = 'sinfi-7';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 7"' +
+						'value="4344"> Синфи 7 Д</option>';
+							var result2 = 'sinfi-7';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 7"' +
+						'value="4345"> Синфи 7 Е</option>';
+							var result2 = 'sinfi-8';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 8"' +
+						'value="4346"> Синфи 8 А</option>';
+							var result2 = 'sinfi-8';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 8"' +
+						'value="4347"> Синфи 8 Б</option>';
+							var result2 = 'sinfi-8';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 8"' +
+						'value="4348"> Синфи 8 В</option>';
+							var result2 = 'sinfi-8';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 8"' +
+						'value="4349"> Синфи 8 Г</option>';
+							var result2 = 'sinfi-8';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 8"' +
+						'value="4350"> Синфи 8 Д</option>';
+							var result2 = 'sinfi-9';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 9"' +
+						'value="4352"> Синфи 9 А</option>';
+							var result2 = 'sinfi-9';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 9"' +
+						'value="4353"> Синфи 9 Б</option>';
+							var result2 = 'sinfi-9';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 9"' +
+						'value="4354"> Синфи 9 В</option>';
+							var result2 = 'sinfi-9';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 9"' +
+						'value="4355"> Синфи 9 Г</option>';
+							var result2 = 'sinfi-9';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 9"' +
+						'value="4356"> Синфи 9 Д</option>';
+							var result2 = 'sinfi-10';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 10"' +
+						'value="4358"> Синфи 10 А</option>';
+							var result2 = 'sinfi-10';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 10"' +
+						'value="4359"> Синфи 10 Б</option>';
+							var result2 = 'sinfi-10';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 10"' +
+						'value="4360"> Синфи 10 В</option>';
+							var result2 = 'sinfi-10';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 10"' +
+						'value="4361"> Синфи 10 Г</option>';
+							var result2 = 'sinfi-11';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 11"' +
+						'value="4364"> Синфи 11 А</option>';
+							var result2 = 'sinfi-11';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 11"' +
+						'value="4365"> Синфи 11 Б</option>';
+							var result2 = 'sinfi-11';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 11"' +
+						'value="4366"> Синфи 11 В</option>';
+							var result2 = 'sinfi-11';				
+				if(result == result2)
+					strSelect += '<option data-class="Синфи 11"' +
+						'value="4367"> Синфи 11 Г</option>';
+						$('#element').append(strSelect);
+			
+			
+			
+		});
+		
+	$("#element").on("change", function()
+		{
+			if($("#element").val()!="")
+			{
+				element=$("#element").val();
+				$.ajax(
+				{
+					type: "POST",
+					url: "/include/ajax/main_shedule.php",
+					data: "id=" + element,
+					success: function(data)
+					{
+						$("#currentschedule").html(data);
+					}
+				});
+			}
+		});
+});
+</script>
+
+
+
+
+
+<div class="light-gray p-20 ba mb-20"> 
+    <form id="classes_form" action="">
+		<div class="form-inline">
+			<div class="form-group">
+				<select name="section" id="section" class="form-control">
+				    <option value="">
+						Выберите паралелль				    </option>
+				    					    <option value="sinfi1">
+								Синфи 1					    </option>
+										    <option value="sinfi-2">
+								Синфи 2 					    </option>
+										    <option value="3-klass">
+								Синфи 3					    </option>
+										    <option value="4-klass">
+								Синфи 4					    </option>
+										    <option value="sinfi-5">
+								Синфи 5					    </option>
+										    <option value="sinfi-6">
+								Синфи 6					    </option>
+										    <option value="sinfi-7">
+								Синфи 7					    </option>
+										    <option value="sinfi-8">
+								Синфи 8					    </option>
+										    <option value="sinfi-9">
+								Синфи 9					    </option>
+										    <option value="sinfi-10">
+								Синфи 10					    </option>
+										    <option value="sinfi-11">
+								Синфи 11					    </option>
+									</select>
+			</div>
+			<div class="form-group">
+				<select name="element" id="element" class="form-control" style="display:none;
+					">
+				</select>
+			</div>
+		</div>
+	</form>
+</div>
+ <br>
+			<div id="currentschedule" wfd-id="53">
+			</div>
+		</div>
+		<div class="col-md-4" wfd-id="15">
+			<div class="mp section-title-wr" style="text-align:center;" wfd-id="50">
+ <a href="http://prezident.tj/node/32191" target="_blank"><img width="102%" alt="-------------------21122021_51761234679_o.jpg" src="//live.staticflickr.com/65535/53426287308_30d80401ae_h.jpg" height="68%" style="width: 100%;" title="Паёми Президенти Ҷумҳурии Тоҷикистон, Пешвои миллат муҳтарам Эмомалӣ Раҳмон «Дар бораи самтҳои асосии сиёсати дохилӣ ва хориҷии ҷумҳурӣ»"> <span style="display: block; padding:10px;" wfd-id="51"><strong>Паёми Президенти Ҷумҳурии Тоҷикистон, Пешвои миллат, муҳтарам Эмомалӣ Раҳмон ба Маҷлиси Олии Ҷумҳурии Тоҷикистон</strong></span></a>
+			</div>
+			<div class="mp section-title-wr mt-30" wfd-id="48">
+				<h2 class="section-title">
+				Охирин эълонҳо </h2>
+				<div class="aux-nav" wfd-id="49">
+ <a href="/life/announcing/"> <i class="fa fa-paperclip fa-lg ml-10"></i>
+					Эълонҳо </a>
+				</div>
+			</div>
+			 	    <div class="wp-block article grid" id="bx_651765591_6772">
+       <h3 class="title"><a href="/announcing/dlya-uchenikov/ELONI_TATILI_TIRAMOHI/">Эълон</a></h3>
+        <p>Аз 1 то 7 ноябр хонандагони тамоми муассисаҳои таҳсилоти миёнаи умумии Ҷумҳурии Тоҷикистон ба таътили тирамоҳӣ мебароянд.
+ 
+ Маркази матбуоти Вазорати маориф ва илм</p>
+    </div>
+	    <div class="wp-block article grid" id="bx_651765591_6599">
+       <h3 class="title"><a href="/announcing/dlya-uchenikov/ELON_BAROI_STIPENDIAI_SHAHRI_DUSHANBE/">ЭЪЛОН!</a></h3>
+        <p>
+ 
+ 
+
+
+ Мақомоти иҷроияи ҳокимияти давлатии шаҳри Душанбе бо мақсади дастгирӣ ва ҳавасманд намудани хонандагони муассисаҳои таҳсилоти миёнаи умумӣ, донишҷўёну унвонҷўёни муассисаҳои таҳсилоти ибт...</p>
+    </div>
+	    <div class="wp-block article grid" id="bx_651765591_6600">
+       <h3 class="title"><a href="/announcing/for-teachers/eloni_joi_kholi/">ЭЪЛОН!</a></h3>
+        <p>
+ 
+	
+ 
+
+
+	Муассисаи давлатии таълимии ''Литсейи президентӣ барои хонандагони болаёқати&nbsp; Тоҷикистон'' омӯзгорони зеринро ба кор қабул менамояд:&nbsp;
+
+
+ 
+ 
+	1. Омӯзгори фанни физика дар...</p>
+    </div>
+			<div class="section-title-wr mt-30 mp" wfd-id="43">
+				<h2 class="section-title">
+				Боду ҳаво дар шаҳри Душанбе </h2>
+			</div>
+ <a class="nuipogoda-iframe-informer" data-nuipogoda="informer3" href="https://dushanbe.nuipogoda.ru" style="width:100%px;height:265px;display:block;box-shadow: 0 0 5px #999;" data-nuipogoda-status="done"><iframe src="//nstatic.ru/m/informer3.html?d=dushanbe.nuipogoda.ru" scrolling="no" style="border: 0px; width: 100%; height: 100%;"></iframe></a><script>(function(a,f,g){var e=a.createElement(f);e.async=1;e.src=g; a=a.getElementsByTagName(f)[0];a.parentNode.insertBefore(e,a)})(document,'script','//nuipogoda.ru/informer/nuipogoda.js');</script>
+			<div class="mb-30" wfd-id="16">
+				<div class="section-title-wr mt-30 mp" wfd-id="38">
+					<h2 class="section-title">
+					ОЗМУНҲОИ ҶУМҲУРИЯВӢ</h2>
+				</div>
+				<h2 class="section-title"> <a href="https://khovar.tj/category/fur-i-sub-i-dono/"><img width="100%" alt="OZMUNi-TOCHIKISTON-VATANI-AZIZI-MAN-2V.jpg" src="https://khovar.tj/wp-content/uploads/2024/01/OZMUN.jpg" height="42%" title="Озмунҳои ҷумҳуриявӣ"></a></h2>
+				<div class="section-title-wr mt-30 mp" wfd-id="37">
+					<h2 class="section-title">
+					Тақвими руйдодҳо дар Литсей </h2>
+				</div>
+				 <div id="comp_093b17476606a62bfde9b86a613db322"><style>
+.news-calendar {position: relative;}
+.NewsCalNews {
+    position: absolute;
+    padding: 10px 15px;
+    z-index: 1010;
+    display: none;
+    max-width: 276px;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.NewsCalOtherMonth {background: #fcf8e3;}
+.table .NewsCalDefault {padding: 0;}
+a.dotted-link {border-bottom: 1px dashed #1F7BC6;text-decoration: none;}
+</style>
+
+<script type="text/javascript">
+    $(function(){
+        $(".news-calendar .events-block > a").each(function(){
+            var href=$(this).attr("data-href");
+            if(typeof href !== "undefined")
+            {
+                $(this).attr({"href":href,"onclick":""});
+            }
+        });
+        $(".news-calendar .events-block").on({
+            "mouseover": function(){
+            $(this).children(".NewsCalNews").css("display","block");
+        },
+            "mouseout": function(){
+            $(this).children(".NewsCalNews").css("display","none");
+        }});
+    });
+</script>
+<div class="news-calendar">
+	<table class="table" style="width: 100%;margin-bottom: 15px;">
+                    <tbody><tr>
+                <td style="width: 35%;">
+                                            <a href="/?month=11&amp;year=2023" onclick="BX.ajax.insertToNode('/?month=11&amp;year=2023&amp;bxajaxid=093b17476606a62bfde9b86a613db322', 'comp_093b17476606a62bfde9b86a613db322'); return false;" class="dotted-link" title="2023"><i class="fa fa-angle-left"></i> 2023</a>
+                                    </td>
+                <td class="text-center" style="width: 30%;">
+                    <b>2024</b>
+                </td>
+                <td style="width: 35%;">
+                                            <a href="/?month=11&amp;year=2025" onclick="BX.ajax.insertToNode('/?month=11&amp;year=2025&amp;bxajaxid=093b17476606a62bfde9b86a613db322', 'comp_093b17476606a62bfde9b86a613db322'); return false;" class="dotted-link pull-right" title="2025">2025 <i class="fa fa-angle-right"></i></a>
+                                    </td>
+            </tr>
+                    <tr>
+                <td colspan="3" class="NewsCalMonthNav">
+                                            <select onchange="b_result()" class="form-control" name="MONTH_SELECT" id="month_sel">
+                                                            <option value="/?month=1&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Январь</option>
+                                                            <option value="/?month=2&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Февраль</option>
+                                                            <option value="/?month=3&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Март</option>
+                                                            <option value="/?month=4&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Апрель</option>
+                                                            <option value="/?month=5&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Май</option>
+                                                            <option value="/?month=6&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Июнь</option>
+                                                            <option value="/?month=7&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Июль</option>
+                                                            <option value="/?month=8&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Август</option>
+                                                            <option value="/?month=9&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Сентябрь</option>
+                                                            <option value="/?month=10&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Октябрь</option>
+                                                            <option value="/?month=11&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322" selected="">Ноябрь</option>
+                                                            <option value="/?month=12&amp;year=2024&amp;bxajaxid=093b17476606a62bfde9b86a613db322">Декабрь</option>
+                                                    </select>
+                        <script language="JavaScript" type="text/javascript">
+                        <!--
+                        function b_result()
+                        {
+                            var idx=document.getElementById("month_sel").selectedIndex;
+                                                            BX.ajax.insertToNode(document.getElementById("month_sel").options[idx].value, 'comp_093b17476606a62bfde9b86a613db322', false);
+                                                    }
+                        -->
+                        </script>
+                                    </td>
+            </tr>
+	</tbody></table>
+	<table class="table table-bordered table-striped text-center">
+	<tbody><tr>
+			<td class="NewsCalHeader">Пн</td>
+			<td class="NewsCalHeader">Вт</td>
+			<td class="NewsCalHeader">Ср</td>
+			<td class="NewsCalHeader">Чт</td>
+			<td class="NewsCalHeader">Пт</td>
+			<td class="NewsCalHeader">Сб</td>
+			<td class="NewsCalHeader">Вс</td>
+		</tr>
+		<tr>
+				<td class="NewsCalOtherMonth" width="14%">
+                                                        <span class="events">28</span>
+                                		</td>
+				<td class="NewsCalOtherMonth" width="14%">
+                                                        <span class="events">29</span>
+                                		</td>
+				<td class="NewsCalOtherMonth" width="14%">
+                                                        <span class="events">30</span>
+                                		</td>
+				<td class="NewsCalOtherMonth" width="14%">
+                                                        <span class="events">31</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">1</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                            <div class="events-block">
+                                					                            <a href="/life/afisha/?date=02.11.2024" onclick="" data-href="/life/afisha/?date=02.11.2024" class="events btn btn-base">2</a>
+                                                <div class="NewsCalNews">
+							<a href="/life/afisha/6774/" title="ШАНБЕГӢ ДАР МУАССИСА">ШАНБЕГӢ ДАР МУАССИСА</a>
+                			                </div>
+                </div>
+            		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">3</span>
+                                		</td>
+			</tr>
+		<tr>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">4</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">5</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">6</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">7</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">8</span>
+                                		</td>
+				<td class="NewsCalToday" width="14%">
+                                                        <span class="events">9</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">10</span>
+                                		</td>
+			</tr>
+		<tr>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">11</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">12</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">13</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">14</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">15</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">16</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">17</span>
+                                		</td>
+			</tr>
+		<tr>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">18</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">19</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">20</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">21</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">22</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">23</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">24</span>
+                                		</td>
+			</tr>
+		<tr>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">25</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">26</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">27</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">28</span>
+                                		</td>
+				<td class="NewsCalDefault" width="14%">
+                                                        <span class="events">29</span>
+                                		</td>
+				<td class="NewsCalWeekend" width="14%">
+                                                        <span class="events">30</span>
+                                		</td>
+				<td class="NewsCalOtherMonth" width="14%">
+                                                        <span class="events">1</span>
+                                		</td>
+			</tr>
+		</tbody></table>
+</div>
+
+
+</div>				<div class="mb-30" wfd-id="17">
+					<div class="section-title-wr mt-30 mp" wfd-id="32">
+						<h2 class="section-title">
+						Асосӣ</h2>
+					</div>
+					 <div class="row">
+      
+        <div class="col-xs-12 mt-15 hidden-sm hidden-xs" id="bx_2512087444_132" data-ls="transition2d:1;timeshift:-1000;">
+                                                <a target="_blank" href="http://lip.tj/life/schedule/"><img class="img-responsive" src="/upload/iblock/858/858d4e59cc0a40b3c99d3d3d74a1180c.jpg" alt="Ҷадвали дарсҳо"></a>
+                					</div>    
+		      
+        <div class="col-xs-12 mt-15 hidden-sm hidden-xs" id="bx_2512087444_3176" data-ls="transition2d:1;timeshift:-1000;">
+                                                <a target="_blank" href="http://lip.tj/life/news/5500-solagii-sarazmi-boston-/"><img class="img-responsive" src="/upload/resize_cache/iblock/ccd/720_463_1/ccda1bf22f6c158513389698dd2d6595.jpg" alt="5500 - Солагии Саразми бостонӣ"></a>
+                					</div>    
+		    </div>
+
+					<div class="mb-30" wfd-id="22">
+						<div class="section-title-wr mt-30 mp" wfd-id="27">
+							<h2 class="section-title">
+							Аксҳо ба хотири пешгирии коронавирус</h2>
+						</div>
+						 
+
+					</div>
+					 <p>
+</p>
+			</div>
+		</div>
+	</div>
+</div>
+ </div></section> <section class="slice bg-lgrey mt-30" wfd-id="0">
+<div class="wp-section" wfd-id="1">
+	<div class="container" wfd-id="2">
+		<div class="row" wfd-id="3">
+			<div class="col-md-12 mp" wfd-id="4">
+				<div class="section-title-wr" wfd-id="9">
+ <br>
+					 &nbsp; &nbsp; &nbsp; <span style="font-size: 13pt;" wfd-id="11">&nbsp;</span><b><span style="font-size: 13pt;" wfd-id="10">Захираҳои иттилоотӣ</span></b>
+				</div>
+				 <script type="text/javascript" src="https://popupsmart.com/freechat.js"></script><script> window.start.init({ title: "Салом ", message: "Мо ба Шумо чи кумак кунем? Ҳоло ба мо паём фиристед, ва кӯмаки худро гиред.", color: "#1C86FA", position: "right", placeholder: "Паёми худро нависед", withText: "Нависед бо", viaWhatsapp: "Ё ба мо мустақиман тавассути Whatsapp нависед", gty: "Бо", awu: "худ ба мо нависед", connect: "Ҳоло пайваст шавед", button: "Ба мо нависед", device: "everywhere", logo: "https://d2r80wdbkwti6l.cloudfront.net/qmj6xTIx3o6qNPrU43KOghHut0IU5pQj.jpg", person: "https://d2r80wdbkwti6l.cloudfront.net/gHTjbmO1xjKQtdqp5fEHH6G9xx0eS3bN.jpg", services: [{"name":"whatsapp","content":"+992988179695"},{"name":"messenger","content":"+992988179695"},{"name":"telegram","content":"+992988179695"},{"name":"mail","content":"litseyi.prezidenti@mail.ru"},{"name":"phone","content":"+992 (37) 235-68-24"}]})</script> 
+<div id="carouselWork" class="carousel carousel-3 slide animate-hover-slide">
+			<div class="carousel-nav">
+			<a data-slide="prev" class="left" href="#carouselWork"><i class="fa fa-angle-left"></i></a>
+			<a data-slide="next" class="right" href="#carouselWork"><i class="fa fa-angle-right"></i></a>
+		</div>
+	    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="row">
+											<div id="bx_3538847836_358" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://www.president.tj/"><img alt="Хадамоти матбуоти Президенти Тоҷикистон" src="/upload/iblock/9c6/9c67449be5aecc79e06ea6f2936d824a.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_360" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://maorif.tj/"><img alt="Вазорати маориф ва илми Ҷумҳурии Тоҷикистон." src="/upload/iblock/a5d/a5d8c6458c7a739675bfe6a69ecc1585.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_363" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://www.kmt.tj/"><img alt="Китобхонаи миллии Тоҷикистон" src="/upload/iblock/a9b/a9bfbefbe57c1f3bc8e10fcfc49891f1.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_362" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://vfarhang.tj/"><img alt="Вазорати Фарҳанги Ҷумҳурии Тоҷикистон" src="/upload/iblock/02e/02eaa254066ae96625d1a3ffc1ce3abb.png" class="img-responsive"></a>											</div>
+				</div>
+							</div></div><div class="item"><div class="row">				<div id="bx_3538847836_361" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://khovar.tj/"><img alt="Агентии Миллии Иттилоотии Тоҷикистон" src="/upload/iblock/119/119225a1209490ece50559ab31976735.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_3010" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://ntc.tj/tj/"><img alt="МАРКАЗИ МИЛЛИ ТЕСТИИ НАЗДИ ПРЕЗИДЕНТИ ҶУМҲУРИИ ТОҶИКИСТОН" src="/upload/iblock/ccd/ccd7b05a4395fa9634c4dcbccbe0248a.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_6264" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="https://edonish.tj/"><img alt="еDonish" src="/upload/resize_cache/iblock/7cc/360_110_2/7ccfd286a8dc2fe66c7e018333d2dd0d.jpg" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_3343" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="https://tvb.tj/"><img alt="МУАССИСАИ ДАВЛАТИИ “ТЕЛЕВИЗИОНИИ КӮДАКОНУ НАВРАСОН - БАҲОРИСТОН”" src="/upload/iblock/48d/48d7a74cf2ff544f1f39a34ad333c9d5.png" class="img-responsive"></a>											</div>
+				</div>
+							</div></div><div class="item"><div class="row">				<div id="bx_3538847836_3109" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="https://dushanbe.tj/"><img alt="Мақомтои ҳокимияти давлатии шаҳри Душанбе" src="/upload/iblock/af1/af1d654d04e3b5e22c0e4ed0ba7cede2.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_3012" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="http://www.tvt.tj/"><img alt="Телевизиони Тоҷикистон" src="/upload/iblock/765/7652871b30b1725f3afc4f3b722ac5d8.png" class="img-responsive"></a>											</div>
+				</div>
+											<div id="bx_3538847836_3011" class="col-md-3 col-sm-6 col-xs-6">
+					<div class="client">
+													<a target="_blank" href="https://www.anticorruption.tj/index.php/tj/"><img alt="Корупсия" src="/upload/iblock/c22/c222de736216dd1131f3aa2e4a2e616c.png" class="img-responsive"></a>											</div>
+				</div>
+			            </div>
+        </div>
+    </div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+ </section> <br>
+	</div>
+
+
+	</div>
+
+<footer class="footer " style="background-color:#2a46b2;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="col">
+					<div class="contacts">
+						<h4>Алоқа бо мо</h4>
+						<ul class="mb-20" wfd-id="0">
+	<li wfd-id="12"><i class="fa fa-map-marker"></i> ш. Душанбе, кӯчаи Шерализода, 17А</li>
+	<li wfd-id="7"><i class="fa fa-phone"></i> +992 (37) 235-68-24</li>
+	<li wfd-id="2"><i class="fa fa-envelope"></i>  info@lip.tj</li>
+	<li wfd-id="1"><i class="fa fa-envelope"></i>litseyi.prezidenti@mail.ru</li>
+</ul>
+<p>
+	Хатогӣ пайдо кардед? Ба мо бигӯ! <br>
+	Таъқид ва пахш кунед тугмаи Ctrl+Enter!
+</p>					</div>
+					<div class="informer">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col">
+					<h4>Тақсимот</h4>
+					<div id="bottom-menu-block">
+    <div class="bottom-menu">
+        <ul class="nav col-md-6">
+            <li>
+                            </li><li class="active first-level"><a href="/">Асосӣ</a></li>
+                            <li class=" first-level"><a href="/about/">Дар бораи литсей</a></li>
+                            <li class=" first-level"><a href="/life/">Ҳаёти литсей</a></li>
+                            <li class=" first-level"><a href="/teachers/">Ба омӯзгорон</a></li>
+            </ul><ul class="nav col-md-6">                <li class=" first-level"><a href="/parents/">Ба волидайн</a></li>
+                            <li class=" first-level"><a href="/pupils/">Ба хонандагон</a></li>
+                            <li class=" first-level"><a href="/contacts/">Тамосҳо</a></li>
+                            <li class=" first-level"><a href="/map.php">Харитаи сомона</a></li>
+                        
+        </ul>
+    </div>
+</div>				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col col-social-icons">
+					<h4>Бо мо пайравӣ кунед!</h4>
+					
+     <a target="_blank" href="https://www.facebook.com/profile.php?id=100043777321526"><i class="fa fa-facebook"></i></a>
+
+   <a target="_blank" href="https://www.vk.com"><i class="fa fa-vk"></i></a> 
+
+  <a target="_blank" href="https://Instagram.com/"><i class="fa fa-instagram"></i></a>
+
+  <a target="_blank" href="https://www.ok.ru"><i class="fa fa-odnoklassniki"></i></a>
+
+  <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col">
+					<h4>Бозгашт</h4>
+					<p>Агар Шумо ягон савол дошта бошед, метавонед тавассути шакли махсус ба мо ирсол намоед. 
+						<br><br>
+						<a class="btn btn-block btn-base" href="/contacts/"><span>Бозгашт</span></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row bottom-row">
+			<div class="col-lg-5 copyright">
+				© 2024 Литсейи президентӣ барои хонандагони болаёқати Тоҷикистон			</div>
+			
+		</div>
+	</div>
+	
+</footer></section></div><div id="freechatpopup" style="left: unset; right: 0px; align-items: flex-end;">
+      <div class="freechat-popup false" id="freechat-popup">
+        <div class="freechat-popup-header" style="background-color: #1C86FA20">
+          <div class="freechat-popup-top">
+            <img src="https://d2r80wdbkwti6l.cloudfront.net/qmj6xTIx3o6qNPrU43KOghHut0IU5pQj.jpg">
+            <h1> Салом </h1>
+          </div>
+          <div class="freechat-popup-bottom">
+            <span class="fc-icon fc-icon-whatsapp active" id="fc-icon-whatsapp">
+                    <p class="icon-hover-message" style="background-color: #1C86FA">Нависед бо Whatsapp</p>
+                    
+    <svg width="1em" height="1em" viewBox="0 0 60 60" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M49.131 10.8467C44.5436 6.21119 38.4251 3.4049 31.9191 2.9524C25.4132 2.4999 18.9651 4.43214 13.7801 8.38795C8.59512 12.3438 5.02815 18.0524 3.74594 24.4468C2.46373 30.8412 3.55405 37.4837 6.81305 43.1327L2.99902 56.9987L17.252 53.2777C21.1974 55.4153 25.6138 56.5348 30.101 56.5347H30.112C37.223 56.5413 44.0464 53.7282 49.0865 48.7119C54.1266 43.6956 56.972 36.8856 56.999 29.7747C57.0086 26.2552 56.318 22.769 54.9672 19.5191C53.6164 16.2692 51.6325 13.3204 49.131 10.8447V10.8467ZM30.112 52.0157H30.103C26.1029 52.0167 22.1755 50.9463 18.729 48.9157L17.913 48.4337L9.45505 50.6417L11.713 42.4347L11.182 41.5937C8.53242 37.3992 7.35245 32.443 7.82779 27.5046C8.30313 22.5662 10.4068 17.926 13.8078 14.3139C17.2089 10.7019 21.7142 8.32308 26.6151 7.55171C31.516 6.78033 36.5342 7.66018 40.8804 10.0528C45.2265 12.4455 48.6538 16.2152 50.6232 20.7688C52.5925 25.3224 52.9921 30.4015 51.759 35.207C50.526 40.0126 47.7302 44.2718 43.8117 47.3146C39.8932 50.3575 35.0743 52.0112 30.113 52.0157H30.112ZM42.37 35.3587C41.698 35.0237 38.395 33.4067 37.779 33.1837C37.163 32.9607 36.715 32.8487 36.267 33.5187C35.819 34.1887 34.532 35.6937 34.14 36.1397C33.748 36.5857 33.3561 36.6397 32.6841 36.3067C30.7054 35.522 28.8782 34.3993 27.284 32.9887C25.816 31.6381 24.5566 30.0771 23.547 28.3567C23.155 27.6877 23.505 27.3257 23.842 26.9917C24.142 26.6917 24.514 26.2107 24.85 25.8207C25.1263 25.4828 25.3526 25.107 25.522 24.7047C25.6112 24.5204 25.6528 24.3166 25.6431 24.112C25.6333 23.9075 25.5724 23.7087 25.466 23.5337C25.298 23.1987 23.9551 19.9077 23.3951 18.5697C22.8501 17.2697 22.295 17.4427 21.883 17.4217C21.492 17.4027 21.043 17.3987 20.595 17.3987C20.255 17.4075 19.9204 17.4864 19.6123 17.6304C19.3041 17.7745 19.029 17.9805 18.804 18.2357C18.0453 18.9504 17.4443 19.8158 17.0394 20.7764C16.6346 21.7369 16.4348 22.7715 16.453 23.8137C16.453 27.1047 18.86 30.2837 19.196 30.7297C19.532 31.1757 23.933 37.9297 30.672 40.8297C31.9231 41.366 33.2015 41.8359 34.502 42.2377C35.8732 42.6524 37.3219 42.7431 38.734 42.5027C40.025 42.3107 42.709 40.8857 43.269 39.3237C43.7085 38.3253 43.8448 37.2199 43.661 36.1447C43.493 35.8657 43.045 35.6987 42.373 35.3637L42.37 35.3587Z"></path>
+    </svg>
+  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </span><span class="fc-icon fc-icon-messenger" id="fc-icon-messenger">
+                    <p class="icon-hover-message" style="background-color: #1C86FA">Нависед бо Messenger</p>
+                    
+                    
+                    
+    <svg width="1em" height="1em" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M29.999 5C15.087 5 2.99902 16.193 2.99902 30C3.0335 33.782 3.95052 37.5037 5.67706 40.8687C7.4036 44.2338 9.89197 47.1493 12.944 49.383V49.383V59L22.006 53.888C24.6056 54.6288 27.2959 55.0031 29.999 55C44.912 55 56.999 43.806 56.999 30C56.999 16.194 44.912 5 29.999 5ZM32.73 38.452L25.806 31.237L12.554 38.452L27.115 23.152L34.104 30.241L47.204 23.152L32.73 38.452Z"></path>
+      <defs>
+        <linearGradient id="normal-messenger" x1="29.999" y1="8.672" x2="29.999" y2="56.624" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#aaa"></stop>
+          <stop offset="1" stop-color="#aaa"></stop>
+        </linearGradient>
+      </defs>
+      <defs>
+        <linearGradient id="colorful-messenger" x1="29.999" y1="8.672" x2="29.999" y2="56.624" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00C6FF"></stop>
+          <stop offset="1" stop-color="#0068FF"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </span><span class="fc-icon fc-icon-telegram" id="fc-icon-telegram">
+                    <p class="icon-hover-message" style="background-color: #1C86FA">Нависед бо Telegram</p>
+                    
+                    
+    <svg width="1em" height="1em" viewBox="0 0 60 60" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.07502 27.9761C5.07502 27.9761 26.809 19.056 34.347 15.915C37.237 14.659 47.036 10.639 47.036 10.639C47.036 10.639 51.559 8.88002 51.182 13.152C51.056 14.911 50.051 21.067 49.046 27.725C47.538 37.147 45.905 47.449 45.905 47.449C45.905 47.449 45.654 50.339 43.518 50.841C41.382 51.343 37.865 49.0821 37.237 48.5801C36.737 48.2031 27.815 42.55 24.548 39.786C23.669 39.032 22.664 37.525 24.674 35.766C29.197 31.62 34.599 26.466 37.865 23.203C39.373 21.695 40.88 18.178 34.599 22.449C25.679 28.605 16.885 34.384 16.885 34.384C16.885 34.384 14.875 35.64 11.106 34.51C7.33702 33.38 2.94004 31.872 2.94004 31.872C2.94004 31.872 -0.0749743 29.987 5.07603 27.977L5.07502 27.9761Z"></path>
+    </svg>
+  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </span><span class="fc-icon fc-icon-mail" id="fc-icon-mail">
+                    <p class="icon-hover-message" style="background-color: #1C86FA">Нависед бо Mail</p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+    <svg width="1em" height="1em" viewBox="0 0 60 60" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.85802 12.9999H53.143C53.4758 12.9947 53.8074 13.0392 54.127 13.1319L35.169 31.6829C33.7811 33.0279 31.9242 33.78 29.9915 33.78C28.0588 33.78 26.202 33.0279 24.814 31.6829L5.87402 13.1319C6.19362 13.0392 6.52528 12.9947 6.85802 12.9999Z"></path>
+      <path d="M3.13502 15.8139L17.635 29.9999L3.13502 44.1859C3.04054 43.8742 2.99499 43.5496 3.00002 43.2239V16.7769C2.99489 16.4509 3.04043 16.126 3.13502 15.8139Z"></path>
+      <path d="M56.865 15.8139C56.9596 16.126 57.0052 16.4509 57 16.7769V43.2239C57.0052 43.55 56.9596 43.8749 56.865 44.1869L42.343 29.9999L56.865 15.8139Z"></path>
+      <path d="M20.358 32.6629L22.076 34.3629C24.1992 36.4094 27.0331 37.5529 29.982 37.5529C32.9309 37.5529 35.7649 36.4094 37.888 34.3629L39.624 32.6629L54.124 46.8629C53.8044 46.9557 53.4728 47.0002 53.14 46.9949H6.85802C6.52528 47.0002 6.19362 46.9557 5.87402 46.8629L20.358 32.6629Z"></path>
+    </svg>
+  
+                    
+                    
+                    
+                  </span><span class="fc-icon fc-icon-phone" id="fc-icon-phone">
+                    <p class="icon-hover-message" style="background-color: #1C86FA">Нависед бо Phone</p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+    <svg width="1em" height="1em" viewBox="0 0 60 60" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40.952 36.4829C40.5723 36.2612 40.14 36.1454 39.7003 36.1477C39.2605 36.15 38.8294 36.2702 38.452 36.4959L34.538 38.8279C34.1132 39.0844 33.6206 39.2059 33.1252 39.1763C32.6299 39.1466 32.1552 38.9673 31.764 38.6619C29.8146 37.1528 27.9545 35.5317 26.193 33.8069C24.4682 32.0455 22.8472 30.1853 21.338 28.2359C21.0327 27.8448 20.8533 27.3701 20.8237 26.8747C20.794 26.3794 20.9155 25.8867 21.172 25.4619L23.5 21.5479C23.7265 21.1685 23.8469 20.7352 23.8487 20.2933C23.8505 19.8514 23.7335 19.4172 23.51 19.0359L17.767 9.22593C17.4972 8.76444 17.0854 8.40265 16.5929 8.19465C16.1005 7.98664 15.554 7.94359 15.035 8.07193C13.5809 8.46583 12.2652 9.25667 11.235 10.3559C6.80603 14.7829 4.45503 22.2499 21.1 38.8999C37.745 55.5499 45.212 53.1999 49.64 48.7689C50.7401 47.7355 51.5315 46.4168 51.926 44.9599C52.0541 44.4434 52.0114 43.8993 51.8045 43.409C51.5976 42.9187 51.2375 42.5085 50.778 42.2399C48.417 40.8539 43.316 37.8679 40.952 36.4829Z"></path>
+    </svg>
+  
+                    
+                  </span>
+          </div>
+        </div>
+        <div class="freechat-popup-content">
+          <img src=" https://d2r80wdbkwti6l.cloudfront.net/gHTjbmO1xjKQtdqp5fEHH6G9xx0eS3bN.jpg">
+          <p style="background-color: #1C86FA20"> Мо ба Шумо чи кумак кунем? Ҳоло ба мо паём фиристед, ва кӯмаки худро гиред.</p>
+          <span>5:43 pm</span>
+        </div>
+        <div id="freechat-popup-message">
+      <div class="freechat-popup-input">
+        <input type="text" id="freechat-popup-input" placeholder="Паёми худро нависед">
+        <svg id="freechat-popup-input-svg" width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.6868 12.2663C23.6138 12.1964 23.5314 12.1371 23.4418 12.0903C23.4148 12.0763 23.3898 12.0623 23.3618 12.0503L1.50981 1.08978C1.31172 1.0015 1.09184 0.974141 0.878155 1.01117C0.664466 1.0482 0.466627 1.14795 0.30981 1.29773C0.181472 1.42162 0.0880969 1.57716 0.0391107 1.74867C-0.00987548 1.92017 -0.0127391 2.10155 0.0308099 2.27451L1.07181 11.0336L18.9718 12.9931L1.07181 14.9527L0.0318103 23.7107C-0.0127844 23.8844 -0.0104536 24.0668 0.0385652 24.2393C0.0875841 24.4118 0.181534 24.5682 0.310811 24.6925C0.467627 24.8423 0.665467 24.942 0.879156 24.9791C1.09284 25.0161 1.31272 24.9887 1.51081 24.9005V24.9005L23.3808 13.9329L23.4418 13.9029C23.5314 13.8561 23.6138 13.7968 23.6868 13.727C23.7855 13.6326 23.864 13.5192 23.9176 13.3937C23.9712 13.2682 23.9989 13.1331 23.9989 12.9966C23.9989 12.8601 23.9712 12.725 23.9176 12.5995C23.864 12.474 23.7855 12.3606 23.6868 12.2663V12.2663Z"></path>
+        </svg>
+      </div>
+    </div>
+        <div class="freechat-popup-credit">
+          <a class="freechat-popup-credit-popupsmart" href="https://popupsmart.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 60 60" fill="currentColor"><path id="popupsmart" d="M56.627,12.279a22.441,22.441,0,0,0-9.549-9.074c-4.122-2.088-8.951-3.2-15.722-3.2H28.644c-6.769,0-11.6,1.112-15.72,3.2a22.425,22.425,0,0,0-9.551,9.072C1.174,16.191,0,20.783,0,27.214v5.578c0,6.434,1.173,11.024,3.373,14.934A22.412,22.412,0,0,0,12.924,56.8c4.12,2.094,8.949,3.206,15.72,3.206h2.711c6.771,0,11.6-1.112,15.72-3.206a22.427,22.427,0,0,0,9.551-9.072c2.2-3.91,3.373-8.5,3.373-14.934V27.216C60,20.78,58.827,16.19,56.627,12.279ZM30,45.006c-.237,0-.473-.005-.708-.015l-.211-.012c-.14-.008-.28-.019-.419-.031-.123-.011-.245-.022-.367-.036l-.191-.024a14.979,14.979,0,0,1-2.672-.59V44.3a14.861,14.861,0,0,1-6.294-3.955,1.406,1.406,0,1,0-2.036,1.94,17.648,17.648,0,0,0,8.33,4.944v.354a5.214,5.214,0,1,1-10.428,0V30.046c0-.013,0-.026,0-.039a15,15,0,1,1,15,15Z" transform="translate(0 -0.005)"></path></svg><span>Powered by Popupsmart</span></a>
+          <div class="livechatai-wrapper">
+            <button class="livechatai-tooltip">
+              <span class="livechatai-tooltip-content-wrapper ">
+                <span class="livechatai-tooltip-content">
+                Dear Website Administrator,<br><br>
+                Enjoying FreeChat? We've now upgraded it to <a href="https://livechatai.com?utm_source=freechat&amp;utm_medium=credit&amp;utm_campaign=freechat" target="_blank">LiveChatAi.com</a>, providing you with even more features. Register for free at our site to enjoy these new enhancements and remove the current tag.<br><br>
+                Details about migration:<br>
+                <a href="https://livechatai.com/free-live-chat" target="_blank">https://livechatai.com/free-live-chat</a>
+               </span>
+              </span>
+              
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_1715_34050)">
+      <path d="M10 0.9375C5 0.9375 0.9375 5 0.9375 10C0.9375 15 5 19.0625 10 19.0625C15 19.0625 19.0625 15 19.0625 10C19.0625 5 15 0.9375 10 0.9375ZM10 1.875C14.4844 1.875 18.125 5.51562 18.125 10C18.125 14.4844 14.4844 18.125 10 18.125C5.51562 18.125 1.875 14.4844 1.875 10C1.875 5.51562 5.51562 1.875 10 1.875ZM10 4.6875C9.62704 4.6875 9.26935 4.83566 9.00563 5.09938C8.74191 5.3631 8.59375 5.72079 8.59375 6.09375C8.59375 6.46671 8.74191 6.8244 9.00563 7.08812C9.26935 7.35184 9.62704 7.5 10 7.5C10.373 7.5 10.7306 7.35184 10.9944 7.08812C11.2581 6.8244 11.4062 6.46671 11.4062 6.09375C11.4062 5.72079 11.2581 5.3631 10.9944 5.09938C10.7306 4.83566 10.373 4.6875 10 4.6875ZM10 9.21875C9.21875 9.21875 8.59375 9.84375 8.59375 10.625V14.375C8.59375 15.1562 9.21875 15.7812 10 15.7812C10.7812 15.7812 11.4062 15.1562 11.4062 14.375V10.625C11.4062 9.84375 10.7812 9.21875 10 9.21875Z" fill="#F1C40F"></path>
+      </g>
+      <defs>
+      <clipPath id="clip0_1715_34050">
+      <rect width="20" height="20" fill="white"></rect>
+      </clipPath>
+      </defs>
+    </svg>
+
+            </button>
+            <a class="freechat-popup-credit-livechatai" href="https://livechatai.com?utm_source=freechat&amp;utm_medium=credit&amp;utm_campaign=freechat" target="_blank"><span>AI bot &amp; live chat for Website</span><img src="https://popupsmart.com/images/livechatai.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="freechat-bottom">
+        <p class="freechat-bottom-cta false freechat-bottom-cta-right" id="freechat-bottom-cta">Ба мо нависед</p>
+        <span class="freechat-icon" id="freechat-icon" style="background-color: #1C86FA; color: #1C86FA90">
+          
+    <svg width="2em" height="2em" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M41.697 10.8942H14.308C11.8371 10.8814 9.46221 11.8497 7.70466 13.5864C5.94712 15.3231 4.95062 17.6864 4.93396 20.1572V51.5422C4.93593 52.0122 5.03045 52.4772 5.21213 52.9107C5.39381 53.3441 5.65909 53.7376 5.99282 54.0685C6.32656 54.3995 6.72221 54.6614 7.15719 54.8395C7.59217 55.0175 8.05796 55.1081 8.52796 55.1062C9.2679 55.1054 9.98987 54.8782 10.597 54.4552L19.451 48.0972L23.651 45.0802L32.472 38.7462C32.7964 38.5134 33.1993 38.4175 33.5938 38.479C33.9883 38.5405 34.3428 38.7546 34.581 39.0752V39.0752C34.6973 39.2334 34.7811 39.4132 34.8273 39.6041C34.8736 39.795 34.8814 39.9932 34.8503 40.1871C34.8192 40.381 34.7499 40.5669 34.6463 40.7338C34.5427 40.9006 34.407 41.0452 34.247 41.1592L28.797 45.0802H41.697C44.1678 45.0929 46.5427 44.1247 48.3003 42.3879C50.0578 40.6512 51.0543 38.288 51.071 35.8172V20.1572C51.0546 17.6863 50.0581 15.3229 48.3005 13.5861C46.5429 11.8493 44.1679 10.8811 41.697 10.8942Z" fill="white"></path>
+    </svg>
+  
+        </span>
+      </div>
+    </div>
+
+
+  <script type="text/javascript">
+BX.bind(document, "keypress", SendError);
+
+function SendError(event, formElem)
+{
+        event = event || window.event;
+
+        if((event.ctrlKey) && ((event.keyCode == 0xA)||(event.keyCode == 0xD)))
+        {
+            var Dialog = new BX.CDialog({
+                                title: "На сайте обнаружена ошибка",
+                                head: "В чём заключается ошибка?",
+                                content: 	'<form method="POST" id="help_form">\
+                                            <textarea class="form-control" placeholder="Описание ошибки" rows="3" name="error_desc" style="height:  131px; width: 374px;"></textarea>\
+                                            <input type="hidden" name="error_message"value="'+getSelectedText()+'">\
+                                            <input type="hidden" name="error_url" value="'+window.location+'">\
+                                            <input type="hidden" name="error_referer" value="'+document.referrer+'">\
+                                            <input type="hidden" name="error_useragent" value="'+navigator.userAgent+'">\
+                                            <input type="hidden" name="sessid" value="'+BX.bitrix_sessid()+'"></form>',
+                                resizable: false,
+                                height: '198',
+                                width: '400'});
+
+            Dialog.SetButtons([
+            {
+                'title': 'Отправить',
+                'id': 'action_send',
+                'name': 'action_send',
+                'action': function(){
+                    BX.ajax.submit(BX("help_form"));
+                    this.parentWindow.Close();
+                }
+            },
+            {
+                'title': 'Отмена',
+                'id': 'cancel',
+                'name': 'cancel',
+                'action': function(){
+                    this.parentWindow.Close();
+                }
+            }
+            ]);
+            Dialog.Show();
+        }
+}
+function getSelectedText(){
+  if (window.getSelection){
+    txt = window.getSelection();
+  }
+  else if (document.getSelection) {
+    txt = document.getSelection();
+  }
+  else if (document.selection){
+    txt = document.selection.createRange().text;
+  }
+  else return;
+  return txt;
+}
+  </script>
+
+<script>
+	$(function(){
+		$("#layerslider").layerSlider({
+			pauseOnHover: true,
+			autoPlayVideos: false,
+			skinsPath: '/bitrix/templates/simai.school4art/framework/include/02_assets/layerslider/_skins/',
+			responsive: true,
+			responsiveUnder: 1920,
+			layersContainer: 1920,
+			skin: 'fullwidth',
+			hoverPrevNext: true,
+			thumbnailNavigation: 'disabled',
+			navButtons: true,
+			imgPreload: false,
+			showBarTimer : false,
+			showCircleTimer : false,
+			navStartStop: false
+		});
+	});
+</script>
+
+<div style="position: relative;"><a target="_blank" class="bx-composite-btn bx-btn-white bx-composite-btn-fixed" href="http://www.1c-bitrix.ru/composite/" style="background-color: rgb(233, 69, 36);">Быстро с 1С-Битрикс</a></div><a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span><span id="toTopHover"></span>To Top</a><a href="#" id="toTop">To Top</a></body></html>
