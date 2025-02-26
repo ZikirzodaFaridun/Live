@@ -3,239 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Hacking Popups</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Space Dodge</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        body {
-            font-family: "Courier New", Courier, monospace;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-            color: #0f0;
-            animation: flicker 2s infinite;
-        }
-
-        @keyframes flicker {
-            0%, 18%, 22%, 25%, 53%, 57%, 100% {
-                text-shadow: 0 0 4px #0f0, 0 0 11px #0f0, 0 0 19px #0f0, 0 0 40px #0f0;
-            }
-            20%, 24%, 55% {
-                text-shadow: 0 0 2px #0f0, 0 0 8px #0f0, 0 0 14px #0f0, 0 0 22px #0f0;
-            }
-        }
-
-        #startButton {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #000;
-            background-color: #0f0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        #startButton:hover {
-            background-color: #00d600;
-        }
-
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .popup {
-            position: absolute;
-            width: 300px;
-            background-color: #111;
-            border: 1px solid #0f0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px #0f0;
-            animation: popupAnimation 0.5s ease-out;
-            cursor: move;
-        }
-
-        @keyframes popupAnimation {
-            0% {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .popup-header {
-            background-color: #0f0;
-            color: #000;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-
-        .popup-header .close {
-            cursor: pointer;
-        }
-
-        .popup-content {
-            padding: 15px;
-            font-size: 12px;
-            color: #0f0;
-        }
-
-        .popup-content span {
-            font-family: monospace;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { text-align: center; background: black; font-family: Arial, sans-serif; overflow: hidden; }
+        canvas { display: block; margin: auto; border: 2px solid white; background: black; }
+        h1 { color: white; padding: 10px; }
+        .game-container { display: flex; flex-direction: column; align-items: center; }
+        .score-board { color: white; font-size: 22px; margin-bottom: 10px; font-weight: bold; }
+        .button { background: linear-gradient(45deg, #ff9800, #ff5722); color: white; padding: 12px 24px; font-size: 20px; border: none; cursor: pointer; border-radius: 10px; margin-top: 15px; transition: 0.3s; }
+        .button:hover { background: linear-gradient(45deg, #ff5722, #e64a19); }
+        .controls { display: flex; justify-content: center; margin-top: 10px; }
+        .control-button { background: linear-gradient(45deg, #4caf50, #388e3c); color: white; padding: 18px; font-size: 22px; margin: 8px; border: none; cursor: pointer; border-radius: 50%; transition: 0.3s; }
+        .control-button:hover { background: linear-gradient(45deg, #388e3c, #2e7d32); }
     </style>
 </head>
 <body>
-    <button id="startButton">Start Hacking</button>
-
-    <div id="overlay"></div>
-
+    <div class="game-container">
+        <h1>🚀 Space Dodge!</h1>
+        <div class="score-board">Score: <span id="score">0</span></div>
+        <canvas id="gameCanvas"></canvas>
+        <button class="button" onclick="restartGame()"><i class="fas fa-redo"></i> Restart Game</button>
+        <div class="controls">
+            <button class="control-button" onclick="moveLeft()"><i class="fas fa-arrow-left"></i></button>
+            <button class="control-button" onclick="moveRight()"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
     <script>
-        const startButton = document.getElementById('startButton');
-        const overlay = document.getElementById('overlay');
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = 400;
+        canvas.height = 500;
 
-        let popupCounter = 0;
-        let x = 0, y = 0;
-        const step = 20;
-        const maxX = window.innerWidth;
-        const maxY = window.innerHeight;
-        const randomTexts = [
-            "Accessing mainframe... Initiating secure connection... Target system identified, preparing to bypass network defenses... Securing initial entry point...",
-            "Decrypting passwords... Bypass sequence initiated... Scanning through various authentication methods... Cracking encrypted login credentials... Backdoor access established...",
-            "Uploading virus... ",
-            "Uploading payload... Establishing persistent backdoor... Initial payload transmitted successfully... Ensuring continued system access with root-level control...",
-            "Firewall breached! Network defenses compromised...Encrypted files unlocked... Decrypting files that were previously inaccessible... Gaining access to highly encrypted information...",
-            "Bypassing security protocols... Tracing intrusion paths... ",
-            "System access granted... Elevating privileges... Gaining root access to the system... Increasing control over critical system processes and services...",
-            "Extracting sensitive data... Compressing files... ",
-            "Stealth mode activated... Avoiding detection... ",
-            "Injecting malware... Payload deployment successful... Encrypted files unlocked... Decrypting files that were previously inaccessible... Gaining access to highly encrypted information...",
-            "Reconnaissance complete... Target structure mapped... ",
-            "Bypassing encryption... Key obtained... Decryption ",
-            "Breaking into secondary network... Escalating breach... ",
-            "Deep system penetration... User account cloned...",
-            "Injecting keyloggers... Stealth operations online... ",
-            "Privilege escalation... Admin access acquired... ",
-            "Bypassing antivirus... Nullifying security software... ",
-            "Uploading additional payloads... Spreading infection... Launching second wave of payloads to further infiltrate the network... Infecting connected devices and systems...Encrypted files unlocked... Decrypting files that were previously inaccessible... Gaining access to highly encrypted information...",
-            "Data exfiltration in progress... Downloading sensitive files... ",
-            "Exploiting zero-day vulnerability... System response overridden... ",
-            "Backup systems disabled... Manual intervention blocked... Backup protocols deactivated to prevent system restoration... Blocking access to disaster recovery systems...",
-            "Decryption in progress... ",
-            "Remote execution enabled... Code injection successful... Remotely executing commands to take control over system functions... Injecting code into running processes for full control..."
-        ];
+        let player = { x: 175, y: 450, width: 50, height: 50, dx: 0 };
+        let obstacles = [];
+        let score = 0;
+        let gameRunning = true;
+        let stars = Array.from({ length: 100 }, () => ({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, size: Math.random() * 2 }));
 
-        startButton.addEventListener('click', () => {
-            // Hide the start button and expand the website to full screen
-            startButton.style.display = 'none';
-            overlay.style.display = 'flex';
-            document.body.style.height = '100vh';
-            generatePopups();
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") player.dx = -5;
+            if (e.key === "ArrowRight") player.dx = 5;
         });
+        document.addEventListener("keyup", () => player.dx = 0);
 
-        function generatePopups() {
-            const intervalId = setInterval(() => {
-                if (popupCounter >= 10000) {
-                    clearInterval(intervalId);
-                    return;
+        function moveLeft() { player.dx = -5; setTimeout(() => player.dx = 0, 200); }
+        function moveRight() { player.dx = 5; setTimeout(() => player.dx = 0, 200); }
+
+        function createObstacle() {
+            let x = Math.random() * (canvas.width - 50);
+            obstacles.push({ x, y: 0, width: 50, height: 50, speed: 2 + score * 0.03 });
+        }
+
+        function drawBackground() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "white";
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
+                ctx.fill();
+                star.y += 0.5;
+                if (star.y > canvas.height) star.y = 0;
+            });
+        }
+
+        function drawSpaceship() {
+            ctx.fillStyle = "#FFD700";
+            ctx.beginPath();
+            ctx.moveTo(player.x + 25, player.y);
+            ctx.lineTo(player.x, player.y + 50);
+            ctx.lineTo(player.x + 50, player.y + 50);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function updateGame() {
+            if (!gameRunning) return;
+            player.x += player.dx;
+            if (player.x < 0) player.x = 0;
+            if (player.x > canvas.width - player.width) player.x = canvas.width - player.width;
+            drawBackground();
+            drawSpaceship();
+            obstacles.forEach((obstacle, index) => {
+                obstacle.y += obstacle.speed;
+                ctx.fillStyle = "gray";
+                ctx.beginPath();
+                ctx.arc(obstacle.x + 25, obstacle.y + 25, 25, 0, 2 * Math.PI);
+                ctx.fill();
+                if (obstacle.y > canvas.height) {
+                    obstacles.splice(index, 1);
+                    score++;
+                    document.getElementById("score").innerText = score;
                 }
-
-                const popup = document.createElement('div');
-                popup.className = 'popup';
-                popup.style.left = `${x}px`;
-                popup.style.top = `${y}px`;
-
-                const header = document.createElement('div');
-                header.className = 'popup-header';
-
-                const title = document.createElement('span');
-                title.textContent = `Error ${popupCounter + 1}`;
-
-                const closeIcon = document.createElement('i');
-                closeIcon.className = 'fas fa-times close';
-                closeIcon.addEventListener('click', () => popup.remove());
-
-                header.appendChild(title);
-                header.appendChild(closeIcon);
-
-                const content = document.createElement('div');
-                content.className = 'popup-content';
-                content.innerHTML = `<span>${getRandomText()}</span>`;
-
-                popup.appendChild(header);
-                popup.appendChild(content);
-                overlay.appendChild(popup);
-
-                enableDrag(popup);
-                popupCounter++;
-
-                // Move diagonally
-                x += step;
-                y += step;
-
-                // Reset position if out of bounds
-                if (x > maxX - 250 || y > maxY - 150) {
-                    x = Math.random() * (maxX - 250);
-                    y = Math.random() * (maxY - 150);
+                if (
+                    player.x < obstacle.x + obstacle.width &&
+                    player.x + player.width > obstacle.x &&
+                    player.y < obstacle.y + obstacle.height &&
+                    player.y + player.height > obstacle.y
+                ) {
+                    gameRunning = false;
+                    alert("Game Over! Score: " + score);
                 }
-            }, 40);
+            });
+            requestAnimationFrame(updateGame);
         }
 
-        function getRandomText() {
-            return randomTexts[Math.floor(Math.random() * randomTexts.length)];
+        function restartGame() {
+            player.x = 175;
+            obstacles = [];
+            score = 0;
+            document.getElementById("score").innerText = score;
+            gameRunning = true;
+            updateGame();
         }
 
-        function enableDrag(element) {
-            let posX = 0, posY = 0, mouseX = 0, mouseY = 0;
-
-            const header = element.querySelector('.popup-header');
-
-            header.onmousedown = dragMouseDown;
-
-            function dragMouseDown(e) {
-                e.preventDefault();
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                document.onmousemove = elementDrag;
-                document.onmouseup = stopDrag;
-            }
-
-            function elementDrag(e) {
-                e.preventDefault();
-                posX = mouseX - e.clientX;
-                posY = mouseY - e.clientY;
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-
-                element.style.top = `${element.offsetTop - posY}px`;
-                element.style.left = `${element.offsetLeft - posX}px`;
-            }
-
-            function stopDrag() {
-                document.onmousemove = null;
-                document.onmouseup = null;
-            }
-        }
+        setInterval(createObstacle, 1200);
+        updateGame();
     </script>
 </body>
 </html>
