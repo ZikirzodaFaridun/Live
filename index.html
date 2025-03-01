@@ -3,550 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Network - About</title>
-  <meta name="google-site-verification" content="Mc8LxsQoK-5uW934UJLarnvuiH3NMNkiFuhE047OMe4" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Eo_circle_purple_white_letter-n.svg/2048px-Eo_circle_purple_white_letter-n.svg.png" type="image/x-icon">
-
+  <title>Darts Game 🎯 Level 2</title>
   <style>
     body {
-      font-family: Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-color); /* Dark background for cyber theme */
-      color: #ffffff; /* Light text color */
-      margin-bottom: 140px;
-    }
-
-    /* Header */
-    header {
-      background-color: var(--header-color); /* Cyber purple */
-      color: var(--new-color);
-      padding: 10px 15px;
-      display: flex;
-      justify-content: center; /* Center the content horizontally */
-      align-items: center; /* Center the content vertically */
-    }
-
-    header h1 {
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-    header nav a {
-      color: var(--container-color);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    header nav a:hover {
-      color: #e0aaff; /* Slightly lighter purple */
-      text-decoration: underline;
-    }
-
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      border: 1px solid var(--border-color); /* Dark purple border */
-      display: flex;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 30%;
-      padding: 10px;
-      border-right: 1px solid #5a189a; /* Dark purple border */
-      background-color: #2a2a3d; /* Slightly lighter dark background */
-    }
-
-    .sidebar h3 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: #a42eff; /* Cyber purple */
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar ul li {
-      margin-bottom: 10px;
-    }
-
-    .sidebar ul li a {
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 14px;
-    }
-
-    .sidebar ul li a:hover {
-      color: #e0aaff; /* Hover effect */
-      text-decoration: underline;
-    }
-
-    /* Main Content */
-    .main-content {
-      flex: 1;
-      padding: 15px;
-
-    }
-
-    .main-content h2 {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: var(--header-color);
-    }
-
-    .section-title {
-      background-color: var(--header-color); /* Dark purple */
-      color: var(--new-color);
-      padding: 5px 10px;
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .section-content {
-      border: 1px solid var(--border-color); /* Border for sections */
-      padding: 10px;
-      font-size: 14px;
-      background-color: var(--hover-color);
-      color: var(--text-color);
-    }
-
-    .person a {
-      color: var(--header-color);
-      text-decoration: none;
-    }
-
-    .person a:hover {
-      color: var(--header-color); /* Hover effect */
-      text-decoration: underline;
-    }
-
-    .contact-link {
-      margin-top: 20px;
+      background: #121212;
       text-align: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .contact-link a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 14px;
+    h1 {
+      margin-top: 20px;
+      color: #a42eff;
+      text-shadow: 0 0 10px #a42eff;
+      animation: glow 2s infinite alternate;
     }
 
-    .contact-link a:hover {
-      color: var(--text-color);
-      text-decoration: underline;
-    }
-	.sidebar label {
-      font-size: 12px;
-      display: block;
-      margin-bottom: 5px;
-      color: #ffffff;
-    }
-
-    .sidebar input[type="text"],
-    .sidebar input[type="password"] {
-      width: calc(100% - 10px);
-      padding: 5px;
-      margin-bottom: 10px;
-      font-size: 12px;
-      border: 1px solid #5a189a;
-      background-color: #3e3e56;
-      color: #ffffff;
-    }
-    .bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffffff; /* White background for a clean look */
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0.6rem 0;
-      z-index: 1000;
-    }
-
-    .bottom-bar a {
-      text-decoration: none;
-      color: #555; /* Neutral text color */
-      font-size: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .bottom-bar a:hover {
-      color: #6a0dad; /* Purple hover color */
-    }
-
-    .bottom-bar a .icon {
-      font-size: 1.8rem;
-    }
-
-    .badge {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      background-color: #ff3b3b;
-      color: #ffffff;
-      font-size: 0.7rem;
-      font-weight: bold;
+    #board {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #a42eff, #000);
       border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      box-shadow: 0 0 30px #a42eff;
+      position: relative;
+      cursor: crosshair;
+      overflow: hidden;
     }
-    .button {
-      border: 1px solid var(--header-color);
-      background-color: var(--container-color);
-      color: var(--text-color);
-      padding: 5px;
-      cursor: pointer;
+
+    #score {
+      font-size: 24px;
+      margin: 20px 0;
+      animation: pulse 1s infinite;
     }
-    .button2 {
-      border: 1px solid var(--header-color);
-      background-color: var(--container-color);
-      color: var(--text-color);
-      padding: 5px;
+
+    .dart {
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 0 0 10px red;
+      transition: 0.5s ease-in-out;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #a42eff;
+      border: none;
       cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #a42eff;
+    }
+
+    button:hover {
+      background: #9000ff;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #a42eff; }
+      100% { text-shadow: 0 0 20px #a42eff; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
     }
   </style>
-  <style>
-    /* Beautiful Scrollbar Styling */
-    ::-webkit-scrollbar {
-        width: 8px; /* Adjust width of the scrollbar */
-        background-color: var(--bg-color); /* Light background for the track */
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--header-color); /* Default color for the scrollbar thumb */
-        border: 2px solid var(--header-color); /* Border around the thumb */
-        transition: background-color 0.3s ease; /* Smooth transition for color change */
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--bg-color); /* Darker color on hover */
-    }
-
-    ::-webkit-scrollbar-track {
-        background: transparent; /* Transparent background for the track */
-    }
-</style>
 </head>
 <body>
-  <header>
-    <h1>The future?</h1>
-  </header>
+<h1>Darts Game 🎯 - Level 2</h1>
+<div id="board"></div>
+<div id="score">Score: 0</div>
+<button onclick="restart()">Restart Game</button>
 
-  
+<audio id="hitSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+<audio id="missSound" src="https://www.soundjay.com/button/beep-03.wav"></audio>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <h2>[ About The future? ]</h2>
-      <div class="section-title">The future? </div>
-      <div class="section-content">
-        The future? is only like a simple web application and test what say to you who are you will be in future.Thats really amazing.You can be a Businessman or Programmer or rich man or poor This is The future it's like a test
-        <div class="section-title">Who will you be in the future? Answer these questions!</div>
-        <div class="section-content">
-          <p class="person"><div id="question"></div></p>
-        <div class="section-content">
-            <div id="result"></div>
-        </div>
-        <div class="contact-link">
-        <button onclick="answer('YES')" class="button">YES</button>
-        <button onclick="restartTest()" class="button">Restart</button>
-
-        <button onclick="answer('NO')" class="button">NO</button>
-
-    </div>
-        </div>
-      </div>
-      
-      <div class="section-title">The people</div>
-      <div class="section-content">
-        <div class="section-content">
-          <p class="person"><a href="https://faridun01.pythonanywhere.com/person/Zikirzoda%20Faridun/">Zikirzoda Faridun</a>: Founder, Master and Commander, Programmer<br>Main character in the network</p>
-        </div>
-      </div>
-      <div class="contact-link">
-        <a href=""><button class="button2" onclick="toggleTheme()"></a>
-            <i class="fas fa-adjust"></i>
-          </button>
-        <a href="https://faridun01.pythonanywhere.com/"><button class="button2">Home</button></a>
-
-      </div>
-
-      <div class="contact-link">
-        <a href="">Product by Zikirzoda Faridun 2025-2026 &copysr;</a>
-      </div>
-      <div class="contact-link">
-        <a href="https://faridun01.pythonanywhere.com/get-started/">The future? &copy; 2025</a>
-
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    let currentTheme = localStorage.getItem('theme') || 'dark'; // Default to 'dark' if not set in localStorage
-  
-    // Set the theme on page load based on the saved theme
-    const themes = {
-      violet: {
-        '--bg-color': '#1e1e2f',
-        '--text-color': '#fff',
-        '--container-color': '#2a2a3d',
-        '--hover-color': '#2a2a3d',
-        '--border-color': '#5a189a',
-        '--header-color': '#5a189a',
-        '--new-color':'#fafafa',
-      },
-      light: {
-        '--bg-color': '#ffffff',
-        '--text-color': '#000',
-        '--container-color': '#f9f9f9',
-        '--hover-color': '#f1f1f1',
-        '--border-color': '#ddd',
-        '--header-color': '#212121',
-        '--new-color':'#f9f9f9',
-      },
-      dark: {
-        '--bg-color': '#000',
-        '--text-color': '#fafafa',
-        '--container-color': '#1e1e1e',
-        '--hover-color': '#000',
-        '--border-color': '#fafafa',
-        '--header-color': '#fafafa',
-        '--new-color':'#1e1e1e',
-      },
-      green: {
-        '--bg-color': '#ffffff',
-        '--text-color': '#333',
-        '--container-color': '#eaf7e5',
-        '--hover-color': '#c6f2b2',
-        '--border-color': '#88d49f',
-        '--header-color': '#4caf50',
-        '--new-color':'#eaf7e5',
-
-      },
-      orange: {
-        '--bg-color': '#ffffff',
-        '--text-color': '#333',
-        '--container-color': '#fff4e5',
-        '--hover-color': '#ffcc99',
-        '--border-color': '#ff9966',
-        '--header-color': '#ff9800',
-        '--new-color':'#fff4e5',
-
-      },
-      blue: {
-        '--bg-color': '#ffffff',
-        '--text-color': '#333',
-        '--container-color': '#e0f7fa',
-        '--hover-color': '#80deea',
-        '--border-color': '#4dd0e1',
-        '--header-color': '#2196f3',
-        '--new-color':'#e0f7fa',
-
-      },
-    };
-  
-    const root = document.documentElement;
-  
-    function applyTheme() {
-      const selectedTheme = themes[currentTheme];
-      for (const [key, value] of Object.entries(selectedTheme)) {
-        root.style.setProperty(key, value);
-      }
-    }
-  
-    // Apply the default or saved theme on page load
-    applyTheme();
-  
-    function toggleTheme() {
-      // Toggle between themes
-      if (currentTheme === 'violet') currentTheme = 'light';
-      else if (currentTheme === 'light') currentTheme = 'dark';
-      else if (currentTheme === 'dark') currentTheme = 'green';
-      else if (currentTheme === 'green') currentTheme = 'orange';
-      else if (currentTheme === 'orange') currentTheme = 'blue';
-      else currentTheme = 'violet';
-  
-      // Save the selected theme to localStorage
-      localStorage.setItem('theme', currentTheme);
-  
-      // Apply the new theme
-      applyTheme();
-    }
-    
-  </script>
 <script>
-    const questionTree = {
-        "Do you like hard work?": {
-            "YES": "Do you enjoy business?",
-            "NO": "Do you like art?"
-        },
-        "Do you enjoy business?": {
-            "YES": "Do you enjoy risk-taking?",
-            "NO": "Do you like technology?"
-        },
-        "Do you enjoy risk-taking?": {
-            "YES": "Would you start your own company?",
-            "NO": "Do you prefer stable jobs?"
-        },
-        "Would you start your own company?": {
-            "YES": "You should be an Entrepreneur!",
-            "NO": "Do you like investing?"
-        },
-        "Do you like investing?": {
-            "YES": "You should be a Venture Capitalist!",
-            "NO": "Do you like financial planning?"
-        },
-        "Do you like financial planning?": {
-            "YES": "You should be a Financial Advisor!",
-            "NO": "You should be a Business Analyst!"
-        },
-        "Do you like technology?": {
-            "YES": "Do you like programming?",
-            "NO": "Do you like working with machines?"
-        },
-        "Do you like programming?": {
-            "YES": "Do you like coding alone?",
-            "NO": "Do you like software architecture?"
-        },
-        "Do you like coding alone?": {
-            "YES": "You should be a Software Engineer!",
-            "NO": "Do you like managing development teams?"
-        },
-        "Do you like managing development teams?": {
-            "YES": "You should be a CTO!",
-            "NO": "You should be a Project Manager!"
-        },
-        "Do you like software architecture?": {
-            "YES": "You should be a Software Architect!",
-            "NO": "You should be a Backend Developer!"
-        },
-        "Do you like working with machines?": {
-            "YES": "Do you enjoy AI and robotics?",
-            "NO": "Do you like network engineering?"
-        },
-        "Do you enjoy AI and robotics?": {
-            "YES": "You should be a Robotics Engineer!",
-            "NO": "You should be a Data Engineer!"
-        },
-        "Do you like network engineering?": {
-            "YES": "You should be a Network Engineer!",
-            "NO": "You should be a Cybersecurity Analyst!"
-        },
-        "Do you like math?": {
-            "YES": "Do you enjoy solving problems?",
-            "NO": "Do you like analyzing trends?"
-        },
-        "Do you enjoy solving problems?": {
-            "YES": "You should be a Data Scientist!",
-            "NO": "Do you like theoretical mathematics?"
-        },
-        "Do you like theoretical mathematics?": {
-            "YES": "You should be a Mathematician!",
-            "NO": "You should be an Economist!"
-        },
-        "Do you like analyzing trends?": {
-            "YES": "You should be a Financial Analyst!",
-            "NO": "You should be a Statistician!"
-        },
-        "Do you enjoy teaching others?": {
-            "YES": "Do you like working with kids?",
-            "NO": "Do you enjoy researching?"
-        },
-        "Do you like working with kids?": {
-            "YES": "You should be a Teacher!",
-            "NO": "Do you like mentoring students?"
-        },
-        "Do you like mentoring students?": {
-            "YES": "You should be a College Professor!",
-            "NO": "You should be an Educational Consultant!"
-        },
-        "Do you enjoy researching?": {
-            "YES": "You should be a Scientist!",
-            "NO": "You should be a Consultant!"
-        },
-        "Do you like art?": {
-            "YES": "Are you interested in music?",
-            "NO": "Do you like designing?"
-        },
-        "Are you interested in music?": {
-            "YES": "Do you play an instrument?",
-            "NO": "Do you like composing?"
-        },
-        "Do you play an instrument?": {
-            "YES": "You should be a Musician!",
-            "NO": "You should be a Composer!"
-        },
-        "Do you like composing?": {
-            "YES": "You should be a Music Producer!",
-            "NO": "You should be a Sound Engineer!"
-        },
-        "Do you like designing?": {
-            "YES": "Do you prefer digital or traditional art?",
-            "NO": "Do you like photography?"
-        },
-        "Do you prefer digital or traditional art?": {
-            "DIGITAL": "You should be a Graphic Designer!",
-            "TRADITIONAL": "You should be an Illustrator!"
-        },
-        "Do you like photography?": {
-            "YES": "You should be a Photographer!",
-            "NO": "You should be a Digital Artist!"
-        }
+  let score = 0;
+  let darts = 0;
+
+  function createRandomDart() {
+    const dart = document.createElement("div");
+    dart.classList.add("dart");
+    const x = Math.random() * 380;
+    const y = Math.random() * 380;
+
+    dart.style.left = x + "px";
+    dart.style.top = y + "px";
+    document.getElementById("board").appendChild(dart);
+
+    dart.onclick = function () {
+      const hitSound = document.getElementById("hitSound");
+      hitSound.play();
+      let distance = Math.sqrt(
+        Math.pow(x - 200, 2) +
+        Math.pow(y - 200, 2)
+      );
+
+      let points = 0;
+      if (distance < 50) points = 50;
+      else if (distance < 100) points = 30;
+      else if (distance < 150) points = 20;
+      else if (distance < 200) points = 10;
+
+      score += points;
+      darts++;
+      document.getElementById("score").innerText = "Score: " + score;
+
+      dart.style.background = "green";
+      setTimeout(() => dart.remove(), 1000);
+
+      if (darts >= 5) {
+        setTimeout(() => alert("🎯 Game Over! Your Score: " + score), 500);
+      }
     };
 
-    let currentQuestion = "Do you like hard work?";
-
-    function loadQuestion() {
-        if (typeof questionTree[currentQuestion] === 'string') {
-            document.getElementById("question").innerHTML = `<h2>${currentQuestion}</h2>`;
-        } else {
-            showResult(currentQuestion);
+    setTimeout(() => {
+      if (dart.parentNode) {
+        document.getElementById("missSound").play();
+        dart.remove();
+        darts++;
+        if (darts >= 5) {
+          setTimeout(() => alert("🎯 Game Over! Your Score: " + score), 500);
         }
-    }
+      }
+    }, 2000);
+  }
 
-    function answer(response) {
-        if (questionTree[currentQuestion][response]) {
-            currentQuestion = questionTree[currentQuestion][response];
-            loadQuestion();
-        }
-    }
+  function restart() {
+    score = 0;
+    darts = 0;
+    document.getElementById("score").innerText = "Score: 0";
+    document.getElementById("board").innerHTML = "";
+    gameLoop();
+  }
 
-    function showResult(result) {
-        document.getElementById("result").innerHTML = `<h2>${result}</h2>`;
+  function gameLoop() {
+    if (darts < 5) {
+      createRandomDart();
+      setTimeout(gameLoop, 1000);
     }
+  }
 
-    function restartTest() {
-        currentQuestion = "Do you like hard work?";
-        document.getElementById("result").innerHTML = '';
-        loadQuestion();
-    }
-
-    window.onload = loadQuestion;
+  gameLoop();
 </script>
-
-
-
 </body>
 </html>
