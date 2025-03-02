@@ -1,155 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darts Game 🎯 Level 2</title>
-  <style>
-    body {
-      background: #121212;
-      text-align: center;
-      color: white;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
 
-    h1 {
-      margin-top: 20px;
-      color: #a42eff;
-      text-shadow: 0 0 10px #a42eff;
-      animation: glow 2s infinite alternate;
-    }
-
-    #board {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, #a42eff, #000);
-      border-radius: 50%;
-      margin: 20px auto;
-      box-shadow: 0 0 30px #a42eff;
-      position: relative;
-      cursor: crosshair;
-      overflow: hidden;
-    }
-
-    #score {
-      font-size: 24px;
-      margin: 20px 0;
-      animation: pulse 1s infinite;
-    }
-
-    .dart {
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 50%;
-      position: absolute;
-      box-shadow: 0 0 10px red;
-      transition: 0.5s ease-in-out;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: #a42eff;
-      border: none;
-      cursor: pointer;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #a42eff;
-    }
-
-    button:hover {
-      background: #9000ff;
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 10px #a42eff; }
-      100% { text-shadow: 0 0 20px #a42eff; }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-<h1>Darts Game 🎯 - Level 2</h1>
-<div id="board"></div>
-<div id="score">Score: 0</div>
-<button onclick="restart()">Restart Game</button>
-
-<audio id="hitSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
-<audio id="missSound" src="https://www.soundjay.com/button/beep-03.wav"></audio>
-
-<script>
-  let score = 0;
-  let darts = 0;
-
-  function createRandomDart() {
-    const dart = document.createElement("div");
-    dart.classList.add("dart");
-    const x = Math.random() * 380;
-    const y = Math.random() * 380;
-
-    dart.style.left = x + "px";
-    dart.style.top = y + "px";
-    document.getElementById("board").appendChild(dart);
-
-    dart.onclick = function () {
-      const hitSound = document.getElementById("hitSound");
-      hitSound.play();
-      let distance = Math.sqrt(
-        Math.pow(x - 200, 2) +
-        Math.pow(y - 200, 2)
-      );
-
-      let points = 0;
-      if (distance < 50) points = 50;
-      else if (distance < 100) points = 30;
-      else if (distance < 150) points = 20;
-      else if (distance < 200) points = 10;
-
-      score += points;
-      darts++;
-      document.getElementById("score").innerText = "Score: " + score;
-
-      dart.style.background = "green";
-      setTimeout(() => dart.remove(), 1000);
-
-      if (darts >= 5) {
-        setTimeout(() => alert("🎯 Game Over! Your Score: " + score), 500);
+    <style>
+      body {
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: var(--border-color);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  img {
+    width: 175px;
+    height: 250px;
+    border: 2px solid #aaa;
+    object-fit: cover;
+  }
+  #header {
+    background-color: #8C1B08;
+    color: #fff;
+    padding: 5px;
+  }
+  #header a{
+    color: #fff;
+    text-decoration: none;
+  }
+  #main table {
+    margin: 0 auto;
+  }
+  #footer {
+    font: 12px Tahoma;
+    margin: 25px 0 50px 0;
+  }
+  #footer a {
+    margin-right: 10px;
+  }
+  #header {
+        background-color: var(--header-color); /* Cyber purple */
+        color: var(--new-color);
+        padding: 10px 15px;
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
       }
-    };
+  
+      #header h1 {
+        color: var(--bg-color);
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+      }
+  
+      #header nav a {
+        color: var(--container-color);
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 14px;
+      }
+      @media (max-width: 768px) {
+        body {
+          font-size: 10px;
+        }
+        img {
+        width: 130px;
+        height: 250px;
+        border: 2px solid var(--header-color);
+  }
+      }
+      button {
+      border: 1px solid var(--header-color);
+      background-color: var(--container-color);
+      color: var(--text-color);
+      padding: 5px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+    <body>
+        <div id="header">
+            <h1><a href="index.html">FACEMASH</a></h1>
+        </div>
+        <div id="main">
+            <h2></h2>
+            <h2>Who is Better ? Click to choose</h2>
+            <table>
+                <tr>
+                    <td><div class="image-container"><img id = "image" src="https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/480811126_1138110744728044_6356518736245940005_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bph03j5Qj9UQ7kNvgGPs9R-&_nc_oc=AdiHIyDMsuiwZ_rIx3tyAXoDiZ6Wnhd8vt_x4Jvi-WERh1_KTxP8G0haHPcUhRX-YBU&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=ArbvmZfYJAklXL9Baopyg9A&oh=00_AYAWThmjwmkZ6Z2GFEdFgquCPqeluy_HytwGFIvcGvHwnw&oe=67CA4AB5" height="300px"/></div></td>
+                    <td>VS</td>
+                    <td><div class="image-container"><img id = "changeImageBtn" src="https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/464568038_8296828373778543_8879222951876799579_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=kIQIZt6JHeoQ7kNvgGh4DXb&_nc_oc=AdhHYnVWnmgv93VndxQTEyD7o3ssNKy76FyTx7bDl8Nf6Qw4UinsbmFSOxUV2AF5-mQ&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AomGm_oWK_MmBTCFHrLedRx&oh=00_AYA3dEGOcj-RBsfwTcHaqiVHB8bkDvw3ONeLsnX5SxzWew&oe=67CA5359" height="300px"/></div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="footer">
+            <a href="https://face-mash.tiiny.site/" target="_blank">Network</a>
+            <a href="https://faridun01.pythonanywhere.com/register" target="_blank">Submit</a>
+            <button class="button" onclick="toggleTheme()">
+        Change theme
+      </button>
+        </div>
+        <script>
+            const imageUrls = [
+            'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-1/106538182_2655574611380244_5447153317828028520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Z3qJ-hUK4-QQ7kNvgGcmINJ&_nc_oc=Adghdz7F5UUSZIPWW5KYqV5A1e6LL29DAoebp5B3mnWVIVbWKMRUYMBNcoDzVtHilG8&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AV_805Ov-EWpXqeSAB1mZ4C&oh=00_AYADqs8PlTbrNe6mHYXdb8FhBhBjr696T9MZfBuJDIlL3Q&oe=67EBF788',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-1/73204871_146484193333696_7087221583483240448_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=47CCA0T5JZoQ7kNvgF5N2Wo&_nc_oc=AdhdfxXrSmiKxLxPdF6A53FLmRuLI6LE3BBV6t540ABZch2yb3_lvJ9vVZ8gqw_qqJQ&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AStm6lX4AsO1E9N-H1tPoCA&oh=00_AYAeiUL1duKfcHJQVAsKs4ND-BXkrgStUlDky57-NlbMBg&oe=67EBF0B1',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/450361886_1929086300883587_8598045983150088374_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=oaFKGGUerQMQ7kNvgHAbOKZ&_nc_oc=AdjHh-ZbZBUp75qqaAueFCYHHER8hb3yxNLlXysa0DsAIoJvQJea5EqnQ2f856vKjQo&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AB4RqPZ2GLjhBjnAtkG959-&oh=00_AYAQoF2IwQcc13-h3XTlXeN7J5fgYCkqjyvDeF6a89QSjQ&oe=67CA70ED',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/464846269_1270722670721644_4811079826300465968_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=6DTDQbQoMkMQ7kNvgHcCoK9&_nc_oc=Adj4p75FYNswVJ6LB2n7JKplpKjNcIw3wYCKTyL363fpTjvh1NCXtEPxYHjMgsKHNcI&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AHZdBZ80rOxAVHZEX5RKYf2&oh=00_AYDJEBoBTOxQPx9aw7A3IcnRYULHOwYV3I_qOMJUbG8WRQ&oe=67CA4EDC',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/330113296_3548511845473409_703849422329517607_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=F8TZBs2vYGwQ7kNvgEc4oMk&_nc_oc=AdjdMykGt61NRQZsZHIOxnohCE2tyYQEq381SdPpnnCsS67Q_RLNIBCRfxCo0KN2Sz0&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AaqNJb_5XoDwU8gF5XifkvY&oh=00_AYAxa1TAyEmu0GywuWUlruxWwFJA8Buo1uFWe0jBKzdfsw&oe=67CA7D52',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-9/96081119_920063958437462_8382971108827070464_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fCZ9Vtkl2tAQ7kNvgGWOgBL&_nc_oc=AdjY8pMuGr0ffCIZ73uGOGN2WJoeB5jvaCREH6PeqHRCZSOGBBPeqOFRVpHzJxjLO3M&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AeMuprPQybHEMHS-uM65Pt3&oh=00_AYA-p0MwsNfihUqA6WcRb7ORYsJB7GECgzfYOPPGZix7sQ&oe=67EBF06F',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/470565514_1576452856574172_1897944979735387574_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Q49K8hDN9UsQ7kNvgF9BsgV&_nc_oc=AdglgmpQoYYu60gfO83VU7FOj1XcQXwtyQ9GgaUUOPyQqEqI_IA3ZspA-FoLPDNW_dg&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AxW2PNlx_a8tEsqcA-5cano&oh=00_AYAWyyAGuRPDVVLPzPgX0c1iRBPYRr75pr8-CWNgQwbcPA&oe=67CA7AAA',
+            ];
+            let currentIndex = 0;
+            const imageUrls1 = [
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/464568038_8296828373778543_8879222951876799579_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=kIQIZt6JHeoQ7kNvgGh4DXb&_nc_oc=AdhHYnVWnmgv93VndxQTEyD7o3ssNKy76FyTx7bDl8Nf6Qw4UinsbmFSOxUV2AF5-mQ&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AomGm_oWK_MmBTCFHrLedRx&oh=00_AYA3dEGOcj-RBsfwTcHaqiVHB8bkDvw3ONeLsnX5SxzWew&oe=67CA5359',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/307714064_3993612280864246_914641146213251931_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=1d2534&_nc_ohc=FSNkB0YQWf4Q7kNvgE4v2se&_nc_oc=AdjeS39PiLpGX4O_J_G1miAUAazNiq9PZJfMp3Z31ehjElyvB6C5-M3KIak0N8CwK-A&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=A291uF8Rs-qNNaHgxCPuoHn&oh=00_AYA9q7fCWc5Aq5pof0ivzKG-xKCtXwSsRhsqFJ-EXXSoSQ&oe=67CA7522',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/465024516_122205958760026688_6942778651112336682_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_ohc=y5nL5e0MQ1EQ7kNvgHD3wBI&_nc_oc=AdjbGk8l-Uwo3Oupx8v4kLgzjBkgUAcWM8EbYENxRobWODWC6frP2BJnRzQUWOyqnc8&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AanKF5RQceKPGsfjK8Z_quc&oh=00_AYCc9AdIDLmsIy5aK5unDc6LXKiQnh6FKCEYJRqTbKktNw&oe=67CA4837',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/326240101_1431638354040111_1659440263130773653_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=15OB0l7G9bAQ7kNvgEwH3SC&_nc_oc=AdimnMv08x_vP4sgKn2bqJwasri323wBXrzZ78WtgDKNGHlgc-QZM87wCBDqJM0phIM&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AQTp1_YNlwShWQdcSN6SQsd&oh=00_AYA0MThPeQBBLHK8CGhKBx1uQxB9m-V45RYiAwkskY2csQ&oe=67CA7854',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-1/184816080_2891550524427319_2803823843853969701_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ljdSBIrN1xsQ7kNvgHzKfam&_nc_oc=Adi865Z_fLhZZ9HaVtR_3jXnnrMCZAo3lwSQ33lGqgTglMxEkRiU68dIHuE_4OnkEME&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AApYWcFnrkRAkO3I4uslzXX&oh=00_AYDi-RV-9jxPgXp6tWWMYqCihsM-if-75G-uXa7rWvbBAA&oe=67EC0079',
+                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-9/125763874_737247413802526_2216701230519307898_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=oKd5FpbS6AMQ7kNvgHcXwCe&_nc_oc=AdhCgiJF3zOlHvmtEGDM-DKxXfqdSD1j0lA1UdUTMjzHju_PyuBieBt2jMymVmsqMNc&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AMwU62ngOy1l5ipqyePd2EL&oh=00_AYAaWttsqRl3Ba-R05l4I942yRD7XefAV7FO4b8atgA-kg&oe=67EC0749',
 
-    setTimeout(() => {
-      if (dart.parentNode) {
-        document.getElementById("missSound").play();
-        dart.remove();
-        darts++;
-        if (darts >= 5) {
-          setTimeout(() => alert("🎯 Game Over! Your Score: " + score), 500);
+            ]; // Replace with actual image URLs
+            let currentIndex1 = 0;
+    
+            document.getElementById('changeImageBtn').addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % imageUrls.length;
+                document.getElementById('image').src = imageUrls[currentIndex];
+            });
+            document.getElementById('image').addEventListener('click', function() {
+                currentIndex1 = (currentIndex1 + 1) % imageUrls1.length;
+                document.getElementById('changeImageBtn').src = imageUrls1[currentIndex1];
+            });
+        </script>
+            <script>
+      let currentTheme = localStorage.getItem('theme') || 'dark'; // Default to 'dark' if not set in localStorage
+    
+      // Set the theme on page load based on the saved theme
+      const themes = {
+        violet: {
+          '--bg-color': '#1e1e2f',
+          '--text-color': '#fff',
+          '--container-color': '#2a2a3d',
+          '--hover-color': '#2a2a3d',
+          '--border-color': '#5a189a',
+          '--header-color': '#5a189a',
+          '--new-color':'#fafafa',
+        },
+        light: {
+          '--bg-color': '#ffffff',
+          '--text-color': '#000',
+          '--container-color': '#f9f9f9',
+          '--hover-color': '#f1f1f1',
+          '--border-color': '#ddd',
+          '--header-color': '#212121',
+          '--new-color':'#f9f9f9',
+        },
+        dark: {
+          '--bg-color': '#000',
+          '--text-color': '#fafafa',
+          '--container-color': '#1e1e1e',
+          '--hover-color': '#000',
+          '--border-color': '#fafafa',
+          '--header-color': '#fafafa',
+          '--new-color':'#1e1e1e',
+        },
+        green: {
+          '--bg-color': '#ffffff',
+          '--text-color': '#333',
+          '--container-color': '#eaf7e5',
+          '--hover-color': '#c6f2b2',
+          '--border-color': '#88d49f',
+          '--header-color': '#4caf50',
+          '--new-color':'#eaf7e5',
+  
+        },
+        orange: {
+          '--bg-color': '#ffffff',
+          '--text-color': '#333',
+          '--container-color': '#fff4e5',
+          '--hover-color': '#ffcc99',
+          '--border-color': '#ff9966',
+          '--header-color': '#ff9800',
+          '--new-color':'#fff4e5',
+  
+        },
+        blue: {
+          '--bg-color': '#ffffff',
+          '--text-color': '#333',
+          '--container-color': '#e0f7fa',
+          '--hover-color': '#80deea',
+          '--border-color': '#4dd0e1',
+          '--header-color': '#2196f3',
+          '--new-color':'#e0f7fa',
+  
+        },
+      };
+    
+      const root = document.documentElement;
+    
+      function applyTheme() {
+        const selectedTheme = themes[currentTheme];
+        for (const [key, value] of Object.entries(selectedTheme)) {
+          root.style.setProperty(key, value);
         }
       }
-    }, 2000);
-  }
-
-  function restart() {
-    score = 0;
-    darts = 0;
-    document.getElementById("score").innerText = "Score: 0";
-    document.getElementById("board").innerHTML = "";
-    gameLoop();
-  }
-
-  function gameLoop() {
-    if (darts < 5) {
-      createRandomDart();
-      setTimeout(gameLoop, 1000);
-    }
-  }
-
-  gameLoop();
-</script>
-</body>
+    
+      // Apply the default or saved theme on page load
+      applyTheme();
+    
+      function toggleTheme() {
+        // Toggle between themes
+        if (currentTheme === 'violet') currentTheme = 'light';
+        else if (currentTheme === 'light') currentTheme = 'dark';
+        else if (currentTheme === 'dark') currentTheme = 'green';
+        else if (currentTheme === 'green') currentTheme = 'orange';
+        else if (currentTheme === 'orange') currentTheme = 'blue';
+        else currentTheme = 'violet';
+    
+        // Save the selected theme to localStorage
+        localStorage.setItem('theme', currentTheme);
+    
+        // Apply the new theme
+        applyTheme();
+      }
+      
+    </script>
+    </body>
 </html>
