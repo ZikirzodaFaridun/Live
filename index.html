@@ -3,234 +3,1213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football</title>
-
+    <title>The Network presentation</title>
     <style>
-      body {
-    font-family: Tahoma;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+        :root {
+  --primary: #de5cff;
+  --dark: #1a1a1a;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--light);
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  background-color: var(--primary);
+  border-radius: 30px 20px 12px 20px;
+}
+
+.contact-btn {
+  display: none;
+  background: var(--dark);
+  color: var(--light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px 20px 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #333;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-menu-btn span {
+  width: 100%;
+  height: 2px;
+  background: var(--dark);
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  padding-left: 20px;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sparkle {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.thumbnail {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.thumbnail img {
+  width: 80px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 30px 20px;
+}
+
+.cta-container {
+  position: relative;
+  display: inline-block;
+}
+
+.booking-btn {
+  background: var(--primary);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-btn:hover {
+  background-color: #9545f0;
+}
+
+.curved-arrow {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  width: 120px;
+  opacity: 0.8;
+}
+
+.hero-image {
+  position: relative;
+  left: 50px;
+  /* width: 1000px; */
+  padding-bottom: 400px;
+}
+
+.circular-image {
+  position: absolute;
+  inset: 0;
+  border-radius: 190px 0px 0px 140px;
+  border-left: 3.5px dotted #979696;
+  border-top: 3.5px dotted #979696;
+  border-bottom: 3.5px dotted #979696;
+  padding: 0.7rem;
+  overflow: hidden;
+}
+
+.circular-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 170px 140px;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 98%,
+    #e5e7eb 98%,
+    #e5e7eb 100%
+  );
+}
+
+.circular-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 180px 0px 0px 135px;
+}
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem 2rem;
   }
-  a {
-    text-decoration: none;
-    color: var(--border-color);
+
+  h1 {
+    font-size: 3.5rem;
   }
-  a:hover {
-    text-decoration: underline;
+
+  .hero-content {
+    flex: 1;
   }
-  img {
-    width: 175px;
-    height: 250px;
-    border: 2px solid #aaa;
-    object-fit: cover;
+
+  .hero-image {
+    flex: 1;
   }
-  #header {
-    background-color: #8C1B08;
-    color: #fff;
-    padding: 5px;
+}
+/* Media Queries */
+@media (min-width: 1024px) {
+  .mobile-menu-btn {
+    display: none;
   }
-  #header a{
-    color: #fff;
-    text-decoration: none;
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
   }
-  #main table {
-    margin: 0 auto;
+
+  .contact-btn {
+    display: block;
   }
-  #footer {
-    font: 12px Tahoma;
-    margin: 25px 0 50px 0;
+}
+
+.difference-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.heading .subheading {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.heading h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+.features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 30px auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 750px; /* Show one full item and half of the two surrounding items */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle.orange {
+  background-color: #ebccff;
+}
+
+.circle.yellow {
+  background-color: #d699ff;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.icon.wavy {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4c6 16 15-4 21 12"></path></svg>');
+  background-size: cover;
+}
+
+.icon.star {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><polygon stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="12 2 15 8 22 9 17 14 18 22 12 18 6 22 7 14 2 9 9 8 12 2"></polygon></svg>');
+  background-size: cover;
+}
+
+.description {
+  max-width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.description h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: #555;
+}
+/* .carousel-item{
+    border:1px solid red;
+} */
+.description {
+  border: 2px solid rgb(170, 170, 170);
+  padding: 20px 50px;
+  border-radius: 100px;
+  margin: 20px;
+}
+
+.pink {
+  background-color: #dea6ff;
+}
+
+/* Services section styles */
+.constr-services {
+  padding: 64px 24px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.constr-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.constr-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.constr-title {
+  font-size: 48px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.constr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  padding: 20px;
+}
+
+.constr-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 32px 50px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.constr-card:hover {
+  transform: translateY(-5px);
+}
+
+.constr-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  width: 58%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.constr-blob-1 {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFEB80' d='M47.1,-57.1C59.9,-45.6,68.5,-29.2,71.5,-11.5C74.4,6.2,71.7,25.2,62.1,39.4C52.5,53.6,36,63,17.8,69.1C-0.4,75.2,-20.3,78,-36.9,71.1C-53.5,64.2,-66.8,47.6,-73.5,28.3C-80.2,9,-80.3,-13,-71.8,-30.6C-63.3,-48.2,-46.2,-61.3,-29.2,-70.5C-12.2,-79.7,4.7,-85,19.1,-78.8C33.5,-72.7,45.3,-55.1,47.1,-57.1Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+}
+
+.constr-blob-2 {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFDD40' d='M54.6,-64.1C70.1,-54.5,81.4,-36.5,84.2,-17.2C87,2.1,81.3,22.7,70.8,39.7C60.2,56.7,44.8,70.1,26.4,77.2C8,84.3,-13.4,85.1,-31.9,77.8C-50.4,70.5,-66,55.1,-74.3,36.3C-82.6,17.5,-83.7,-4.7,-77.3,-24.2C-70.9,-43.7,-57,-60.5,-41,-68.4C-25,-76.3,-6.9,-75.3,11.5,-73.1C29.9,-70.9,48.4,-67.5,54.6,-64.1Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+}
+
+.constr-blob-3 {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFE45C' d='M47.7,-57.2C62,-47.3,74.2,-32.6,78.9,-15.2C83.5,2.2,80.6,22.2,71.3,38.8C62,55.4,46.3,68.6,28.7,73.7C11.1,78.8,-8.3,75.8,-26.9,69.2C-45.5,62.5,-63.3,52.3,-71.8,36.3C-80.3,20.3,-79.5,-1.5,-73.3,-20.6C-67,-39.7,-55.3,-56.2,-40.5,-65.8C-25.8,-75.5,-7.9,-78.4,4.9,-74.1C17.7,-69.9,35.4,-58.5,47.7,-57.2Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+}
+
+.constr-content {
+  position: relative;
+  top: 30%;
+  z-index: 2;
+  left: 10%;
+  padding-right: 50px;
+}
+
+.constr-content h3 {
+  font-size: 24px;
+  color: #111827;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.constr-content p {
+  color: #4b5563;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .constr-services {
+    padding: 48px 16px;
   }
-  #footer a {
-    margin-right: 10px;
+
+  .constr-title {
+    font-size: 36px;
   }
-  #header {
-        background-color: var(--header-color); /* Cyber purple */
-        color: var(--new-color);
-        padding: 10px 15px;
-        display: flex;
-        justify-content: center; /* Center the content horizontally */
-        align-items: center; /* Center the content vertically */
-      }
-  
-      #header h1 {
-        color: var(--bg-color);
-        font-size: 22px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 0;
-      }
-  
-      #header nav a {
-        color: var(--container-color);
-        text-decoration: none;
-        margin-left: 20px;
-        font-size: 14px;
-      }
-      @media (max-width: 768px) {
-        body {
-          font-size: 10px;
-        }
-        img {
-        width: 130px;
-        height: 250px;
-        border: 2px solid var(--header-color);
+
+  .constr-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-      }
-      button {
-      border: 1px solid var(--header-color);
-      background-color: var(--container-color);
-      color: var(--text-color);
-      padding: 5px;
-      cursor: pointer;
-    }
+
+  .constr-blob {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .constr-card {
+    padding: 24px;
+  }
+
+  .constr-content h3 {
+    font-size: 20px;
+  }
+}
+.hero-section {
+  text-align: center;
+  width: 99%;
+  /* max-width: 600px; */
+}
+.hero-container {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  /* border:1px solid red; */
+  width: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#next-btn {
+  margin-top: 20px;
+  padding: 15px 20px;
+  border: none;
+  background-color: #3a3938;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+  background-color: #8a19e6;
+}
+.one,
+.two,
+.three {
+  width: 33.33%;
+  /* border:1px solid white; */
+  height: 99%;
+}
+.oneImg {
+  background-color: rgb(183, 0, 255);
+  width: 300px;
+  height: 400px;
+  border-radius: 100px 300px 200px;
+}
+.one {
+  display: flex;
+  flex-direction: row;
+}
+.oneTxt {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  /* border:1px solid red; */
+  width: 300px;
+  padding-left: 20px;
+  /* position:absolute;
+    width:200px;
+    top:5%;
+    left:21%; */
+}
+.ab {
+  display: flex;
+  flex-direction: column;
+}
+/* .oneTxt div{
+    display: flex;
+    text-align:center;
+    justify-content: space-between;
+  } */
+h2 {
+  font-size: 30px;
+}
+.twoImg {
+  border-radius: 300px 200px 300px 400px;
+}
+.two {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.twoTxt {
+  position: relative;
+  width: 270px;
+  top: -100px;
+  text-align: left;
+  padding-left: 20px;
+}
+.three {
+  display: flex;
+}
+.threeImg {
+  border-radius: 400px 500px 600px;
+}
+.threeTxt {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.one {
+  position: relative;
+  left: 100px;
+}
+.three {
+  position: relative;
+  left: -100px;
+}
+.oneImg {
+  background-image: url("https://images.unsplash.com/photo-1596003906949-67221c37965c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.twoImg {
+  background-image: url("https://images.unsplash.com/photo-1525373698358-041e3a460346?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.threeImg {
+  background-image: url("https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg");
+}
+@media (max-width: 1024px) {
+  .three {
+    display: none;
+  }
+}
+
+.info-section {
+  display: flex;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.info-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.stat {
+  text-align: center;
+  background-color: rgb(246, 239, 249);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 10px;
+}
+.info-header .background-shape {
+  position: absolute;
+  left: 150px;
+  transform: translateY(-25%);
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(135deg, #ae00ff, #ff00c8);
+  border-radius: 100px 200px 100px 300px;
+  opacity: 0.2;
+  /* z-index: -1; */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
     </style>
 </head>
     <body>
-        <div id="header">
-            <h1><a href="index.html">FACEMASH</a></h1>
-        </div>
-        <div id="main">
-            <h2></h2>
-            <h2>Who is Better ? Click to choose</h2>
-            <table>
-                <tr>
-                    <td><div class="image-container"><img id = "image" src="https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/480811126_1138110744728044_6356518736245940005_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bph03j5Qj9UQ7kNvgGPs9R-&_nc_oc=AdiHIyDMsuiwZ_rIx3tyAXoDiZ6Wnhd8vt_x4Jvi-WERh1_KTxP8G0haHPcUhRX-YBU&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=ArbvmZfYJAklXL9Baopyg9A&oh=00_AYAWThmjwmkZ6Z2GFEdFgquCPqeluy_HytwGFIvcGvHwnw&oe=67CA4AB5" height="300px"/></div></td>
-                    <td>VS</td>
-                    <td><div class="image-container"><img id = "changeImageBtn" src="https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/464568038_8296828373778543_8879222951876799579_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=kIQIZt6JHeoQ7kNvgGh4DXb&_nc_oc=AdhHYnVWnmgv93VndxQTEyD7o3ssNKy76FyTx7bDl8Nf6Qw4UinsbmFSOxUV2AF5-mQ&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AomGm_oWK_MmBTCFHrLedRx&oh=00_AYA3dEGOcj-RBsfwTcHaqiVHB8bkDvw3ONeLsnX5SxzWew&oe=67CA5359" height="300px"/></div></td>
-                </tr>
-            </table>
-        </div>
-        <div id="footer">
-            <a href="https://face-mash.tiiny.site/" target="_blank">Network</a>
-            <a href="https://faridun01.pythonanywhere.com/register" target="_blank">Submit</a>
-            <button class="button" onclick="toggleTheme()">
-        Change theme
-      </button>
-        </div>
-        <script>
-            const imageUrls = [
-            'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-1/106538182_2655574611380244_5447153317828028520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Z3qJ-hUK4-QQ7kNvgGcmINJ&_nc_oc=Adghdz7F5UUSZIPWW5KYqV5A1e6LL29DAoebp5B3mnWVIVbWKMRUYMBNcoDzVtHilG8&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AV_805Ov-EWpXqeSAB1mZ4C&oh=00_AYADqs8PlTbrNe6mHYXdb8FhBhBjr696T9MZfBuJDIlL3Q&oe=67EBF788',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-1/73204871_146484193333696_7087221583483240448_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=47CCA0T5JZoQ7kNvgF5N2Wo&_nc_oc=AdhdfxXrSmiKxLxPdF6A53FLmRuLI6LE3BBV6t540ABZch2yb3_lvJ9vVZ8gqw_qqJQ&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AStm6lX4AsO1E9N-H1tPoCA&oh=00_AYAeiUL1duKfcHJQVAsKs4ND-BXkrgStUlDky57-NlbMBg&oe=67EBF0B1',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/450361886_1929086300883587_8598045983150088374_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=oaFKGGUerQMQ7kNvgHAbOKZ&_nc_oc=AdjHh-ZbZBUp75qqaAueFCYHHER8hb3yxNLlXysa0DsAIoJvQJea5EqnQ2f856vKjQo&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AB4RqPZ2GLjhBjnAtkG959-&oh=00_AYAQoF2IwQcc13-h3XTlXeN7J5fgYCkqjyvDeF6a89QSjQ&oe=67CA70ED',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/464846269_1270722670721644_4811079826300465968_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=6DTDQbQoMkMQ7kNvgHcCoK9&_nc_oc=Adj4p75FYNswVJ6LB2n7JKplpKjNcIw3wYCKTyL363fpTjvh1NCXtEPxYHjMgsKHNcI&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AHZdBZ80rOxAVHZEX5RKYf2&oh=00_AYDJEBoBTOxQPx9aw7A3IcnRYULHOwYV3I_qOMJUbG8WRQ&oe=67CA4EDC',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/330113296_3548511845473409_703849422329517607_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=F8TZBs2vYGwQ7kNvgEc4oMk&_nc_oc=AdjdMykGt61NRQZsZHIOxnohCE2tyYQEq381SdPpnnCsS67Q_RLNIBCRfxCo0KN2Sz0&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AaqNJb_5XoDwU8gF5XifkvY&oh=00_AYAxa1TAyEmu0GywuWUlruxWwFJA8Buo1uFWe0jBKzdfsw&oe=67CA7D52',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-9/96081119_920063958437462_8382971108827070464_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fCZ9Vtkl2tAQ7kNvgGWOgBL&_nc_oc=AdjY8pMuGr0ffCIZ73uGOGN2WJoeB5jvaCREH6PeqHRCZSOGBBPeqOFRVpHzJxjLO3M&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AeMuprPQybHEMHS-uM65Pt3&oh=00_AYA-p0MwsNfihUqA6WcRb7ORYsJB7GECgzfYOPPGZix7sQ&oe=67EBF06F',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/470565514_1576452856574172_1897944979735387574_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Q49K8hDN9UsQ7kNvgF9BsgV&_nc_oc=AdglgmpQoYYu60gfO83VU7FOj1XcQXwtyQ9GgaUUOPyQqEqI_IA3ZspA-FoLPDNW_dg&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AxW2PNlx_a8tEsqcA-5cano&oh=00_AYAWyyAGuRPDVVLPzPgX0c1iRBPYRr75pr8-CWNgQwbcPA&oe=67CA7AAA',
-            ];
-            let currentIndex = 0;
-            const imageUrls1 = [
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/464568038_8296828373778543_8879222951876799579_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=kIQIZt6JHeoQ7kNvgGh4DXb&_nc_oc=AdhHYnVWnmgv93VndxQTEyD7o3ssNKy76FyTx7bDl8Nf6Qw4UinsbmFSOxUV2AF5-mQ&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AomGm_oWK_MmBTCFHrLedRx&oh=00_AYA3dEGOcj-RBsfwTcHaqiVHB8bkDvw3ONeLsnX5SxzWew&oe=67CA5359',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/307714064_3993612280864246_914641146213251931_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=1d2534&_nc_ohc=FSNkB0YQWf4Q7kNvgE4v2se&_nc_oc=AdjeS39PiLpGX4O_J_G1miAUAazNiq9PZJfMp3Z31ehjElyvB6C5-M3KIak0N8CwK-A&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=A291uF8Rs-qNNaHgxCPuoHn&oh=00_AYA9q7fCWc5Aq5pof0ivzKG-xKCtXwSsRhsqFJ-EXXSoSQ&oe=67CA7522',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-1/465024516_122205958760026688_6942778651112336682_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_ohc=y5nL5e0MQ1EQ7kNvgHD3wBI&_nc_oc=AdjbGk8l-Uwo3Oupx8v4kLgzjBkgUAcWM8EbYENxRobWODWC6frP2BJnRzQUWOyqnc8&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AanKF5RQceKPGsfjK8Z_quc&oh=00_AYCc9AdIDLmsIy5aK5unDc6LXKiQnh6FKCEYJRqTbKktNw&oe=67CA4837',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t39.30808-6/326240101_1431638354040111_1659440263130773653_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=15OB0l7G9bAQ7kNvgEwH3SC&_nc_oc=AdimnMv08x_vP4sgKn2bqJwasri323wBXrzZ78WtgDKNGHlgc-QZM87wCBDqJM0phIM&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AQTp1_YNlwShWQdcSN6SQsd&oh=00_AYA0MThPeQBBLHK8CGhKBx1uQxB9m-V45RYiAwkskY2csQ&oe=67CA7854',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-1/184816080_2891550524427319_2803823843853969701_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ljdSBIrN1xsQ7kNvgHzKfam&_nc_oc=Adi865Z_fLhZZ9HaVtR_3jXnnrMCZAo3lwSQ33lGqgTglMxEkRiU68dIHuE_4OnkEME&_nc_zt=24&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AApYWcFnrkRAkO3I4uslzXX&oh=00_AYDi-RV-9jxPgXp6tWWMYqCihsM-if-75G-uXa7rWvbBAA&oe=67EC0079',
-                'https://scontent.fdyu1-1.fna.fbcdn.net/v/t1.6435-9/125763874_737247413802526_2216701230519307898_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=oKd5FpbS6AMQ7kNvgHcXwCe&_nc_oc=AdhCgiJF3zOlHvmtEGDM-DKxXfqdSD1j0lA1UdUTMjzHju_PyuBieBt2jMymVmsqMNc&_nc_zt=23&_nc_ht=scontent.fdyu1-1.fna&_nc_gid=AMwU62ngOy1l5ipqyePd2EL&oh=00_AYAaWttsqRl3Ba-R05l4I942yRD7XefAV7FO4b8atgA-kg&oe=67EC0749',
+        <nav class="navbar">
+            <div class="logo">Network presentation</div>
+          
+            <div class="nav-links">
+              <a href="https://faridun01.pythonanywhere.com/" class="active">Home</a>
+              <a href="https://faridun01.pythonanywhere.com/helper/">Our Home Models</a>
+              <a href="https://faridun01.pythonanywhere.com/person/Zikirzoda%20Faridun/">Who We Are</a>
+              <a href="https://faridun01.pythonanywhere.com/get-started/">What We Do & Why</a>
+              <a href="https://faridun01.pythonanywhere.com/login/?next=/">FAQs</a>
+            </div>
+          
+            <button class="contact-btn">Contact us</button>
+          
+            <button class="mobile-menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+          
+          <div class="mobile-menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Our Home Models</a>
+            <a href="#">Who We Are</a>
+            <a href="#">What We Do & Why</a>
+            <a href="#">FAQs</a>
+            <button class="contact-btn">Contact us</button>
+          </div>
+          
+          <main class="hero">
+            <div class="hero-content">
+              <h1>The Network presentation
+                <span class="thumbnail">
+                  <img src="https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvZGVyfGVufDB8fDB8fHww" alt="Modern interior thumbnail">
+                </span>
+              </h1>
+              <div class="cta-container">
+                <button class="booking-btn" onclick="window.location.href='https://faridun01.pythonanywhere.com/'">
+                  Views Network
+                </button>
+              </div>
+            </div>
+          
+            <div class="hero-image">
+              <div class="circular-image">
+                <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/7231f073-42cb-4372-bb2f-caa7dc75dbed.png" alt="Modern interior">
+              </div>
+            </div>
+          </main>
+          <section class="difference-section">
+            <div class="features-header">
+              <span class="features-label">Using programming languages</span>
+              <h2 class="features-title">
+                <span class="decorative-dash">~</span>
+                The back-end of Network
+                <span class="decorative-dash">~</span>
+              </h2>
+            </div>
+          
+            <div class="carousel">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <div class="circle orange">
+                    <div class="icon wavy"></div>
+                  </div>
+                  <div class="description">
+                    <h2>Django (Back-end of Network)</h2>
+                    <p>Django is software you can use to develop web applications quickly and efficiently. Most web applications have several common functions, like authentication, information retrieval from a database, and cookie management. Developers have to code similar functionality into every web app they write.</p>
+                  </div>
+                  <div class="circle yellow">
+                    <svg viewBox="0 0 24 24" class="icon">
+                      <path d="M12 3l4 7h-8l4-7z"></path>
+                      <path d="M12 21l-4-7h8l-4 7z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="circle yellow">
+                    <div class="icon star"></div>
+                  </div>
+                  <div class="description">
+                    <h2>Python (Back-end of Network)</h2>
+                    <p>Python is a programming language that is widely used in web applications, software development, data science, and machine learning (ML). Developers use Python because it is efficient and easy to learn and can run on many different platforms...</p>
+                  </div>
+                  <div class="circle pink">
+                    <div class="feature-icon pink">
+                      <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M3 6c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+                        <path d="M3 12c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+                        <path d="M3 18c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="circle orange">
+                    <div class="icon wavy"></div>
+                  </div>
+                  <div class="description">
+                    <h2>Html, Css (Front-end of the Network)</h2>
+                    <p>HTML and CSS are scripting languages used to create a web page and web applications. HTML provides web page structure, whereas CSS is mainly used to control web page styling. This article will discuss the significant differences between HTML and CSS.25 янв. 2025 г.</p>
+                  </div>
+                  <div class="circle yellow">
+                    <svg viewBox="0 0 24 24" class="icon">
+                      <path d="M12 3l4 7h-8l4-7z"></path>
+                      <path d="M12 21l-4-7h8l-4 7z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation">
+              <button class="nav-btn prev">&larr;</button>
+              <button class="nav-btn next">&rarr;</button>
+            </div>
+          </section>
+          <section class="constr-services">
+            <div class="features-header">
+              <span class="features-label">NEED TO KNOW</span>
+              <h2 class="features-title">
+                <span class="decorative-dash">~</span>
+                Our Services
+                <span class="decorative-dash">~</span>
+              </h2>
+            </div>
+          
+            <div class="constr-grid">
+              <div class="constr-card">
+                <div class="constr-blob constr-blob-1"></div>
+                <div class="constr-content">
+                  <h3>Chating systeme</h3>
+                  <p>The Network is a online social Network where users can talk together</p>
+                </div>
+              </div>
+          
+              <div class="constr-card">
+                <div class="constr-blob constr-blob-2"></div>
+                <div class="constr-content">
+                  <h3>Functionality of Network</h3>
+                  <p>The Network is very functionality you can sure about this using single time Network</p>
+                </div>
+              </div>
+          
+              <div class="constr-card">
+                <div class="constr-blob constr-blob-3"></div>
+                <div class="constr-content">
+                  <h3>How simple is Network</h3>
+                  <p>Why Network is simple then other projects.The founder of Network Z.Faridun make a page about everything of how to work in network</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="features-header">
+              <span class="features-label">SEE</span>
+              <h2 class="features-title">
+                <span class="decorative-dash">~</span>
+                Our Projects
+                <span class="decorative-dash">~</span>
+              </h2>
+            </div>
+            <div class="hero-section">
+              <div class="hero-container">
+                <div class="hero-slide active">
+                  <div class="one">
+                    <div class="oneImg">
+          
+                    </div>
+                    <div class="oneTxt">
+                      <h2>Network<br /> Is a social platform</h2>
+                      <div>
+                        <div>
+                          Chats, profiles, informations<br>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="two">
+                    <div class="oneImg twoImg">
+          
+                    </div>
+                    <div class="twoTxt">
+                      <h2>Time<br />
+                        How much time it's take</h2>
+                      <div class="ab">
+                        <div>
+                          Well this is very good questions beccause time for idea take very more.I  mean that when i start to creating network i m study in this moment progrmming.Thaths why this use more time now it's use 2 weeks<br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="three">
+                    <div class="threeTxt">
+                      <h2>Founder of Network<br />
+                        </h2>
+                        The only person who code network is Z.Faridun / 14 years old boy with 1 year experiens in programming
+                    
+                    </div>
+                    <div class="oneImg twoImg threeImg">
+                    </div>
+                  </div>
+                </div>
+                <div class="hero-slide">
+                  <h1>Explore the Second Slide</h1>
+                  <p>This is the second division.</p>
+                </div>
+                <div class="hero-slide">
+                  <h1>Discover the Third Slide</h1>
+                  <p>This is the third division.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="info-section">
+            <div class="info-header">
+              <div class="background-shape"></div>
+              <h2>Information About Network</h2>
+              <p>Join our team and work with us</p>
+            </div>
+            <div class="info-stats">
+              <div class="stat">
+                <h3 class="stat-number" data-target="230">120</h3>
+                <p>Complete projects</p>
+              </div>
+              <div class="stat">
+                <h3 class="stat-number" data-target="24">1</h3>
+                <p>Locations</p>
+              </div>
+              <div class="stat">
+                <h3 class="stat-number" data-target="500">30</h3>
+                <p>Clients / users</p>
+              </div>
+            </div>
+          </section>
 
-            ]; // Replace with actual image URLs
-            let currentIndex1 = 0;
-    
-            document.getElementById('changeImageBtn').addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % imageUrls.length;
-                document.getElementById('image').src = imageUrls[currentIndex];
-            });
-            document.getElementById('image').addEventListener('click', function() {
-                currentIndex1 = (currentIndex1 + 1) % imageUrls1.length;
-                document.getElementById('changeImageBtn').src = imageUrls1[currentIndex1];
-            });
-        </script>
-            <script>
-      let currentTheme = localStorage.getItem('theme') || 'dark'; // Default to 'dark' if not set in localStorage
-    
-      // Set the theme on page load based on the saved theme
-      const themes = {
-        violet: {
-          '--bg-color': '#1e1e2f',
-          '--text-color': '#fff',
-          '--container-color': '#2a2a3d',
-          '--hover-color': '#2a2a3d',
-          '--border-color': '#5a189a',
-          '--header-color': '#5a189a',
-          '--new-color':'#fafafa',
-        },
-        light: {
-          '--bg-color': '#ffffff',
-          '--text-color': '#000',
-          '--container-color': '#f9f9f9',
-          '--hover-color': '#f1f1f1',
-          '--border-color': '#ddd',
-          '--header-color': '#212121',
-          '--new-color':'#f9f9f9',
-        },
-        dark: {
-          '--bg-color': '#000',
-          '--text-color': '#fafafa',
-          '--container-color': '#1e1e1e',
-          '--hover-color': '#000',
-          '--border-color': '#fafafa',
-          '--header-color': '#fafafa',
-          '--new-color':'#1e1e1e',
-        },
-        green: {
-          '--bg-color': '#ffffff',
-          '--text-color': '#333',
-          '--container-color': '#eaf7e5',
-          '--hover-color': '#c6f2b2',
-          '--border-color': '#88d49f',
-          '--header-color': '#4caf50',
-          '--new-color':'#eaf7e5',
-  
-        },
-        orange: {
-          '--bg-color': '#ffffff',
-          '--text-color': '#333',
-          '--container-color': '#fff4e5',
-          '--hover-color': '#ffcc99',
-          '--border-color': '#ff9966',
-          '--header-color': '#ff9800',
-          '--new-color':'#fff4e5',
-  
-        },
-        blue: {
-          '--bg-color': '#ffffff',
-          '--text-color': '#333',
-          '--container-color': '#e0f7fa',
-          '--hover-color': '#80deea',
-          '--border-color': '#4dd0e1',
-          '--header-color': '#2196f3',
-          '--new-color':'#e0f7fa',
-  
-        },
-      };
-    
-      const root = document.documentElement;
-    
-      function applyTheme() {
-        const selectedTheme = themes[currentTheme];
-        for (const [key, value] of Object.entries(selectedTheme)) {
-          root.style.setProperty(key, value);
-        }
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    mobileMenu.classList.toggle("active");
+
+    // Animate hamburger to X
+    const spans = mobileMenuBtn.querySelectorAll("span");
+    if (isMenuOpen) {
+      spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+      spans[1].style.opacity = "0";
+      spans[2].style.transform = "rotate(-45deg) translate(7px, -7px)";
+    } else {
+      spans[0].style.transform = "none";
+      spans[1].style.opacity = "1";
+      spans[2].style.transform = "none";
+    }
+  }
+
+  mobileMenuBtn.addEventListener("click", toggleMenu);
+
+  // Close mobile menu when clicking on a link
+  const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      isMenuOpen &&
+      !mobileMenu.contains(e.target) &&
+      !mobileMenuBtn.contains(e.target)
+    ) {
+      toggleMenu();
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768 && isMenuOpen) {
+      toggleMenu();
+    }
+  });
+});
+
+class Carousel {
+  constructor() {
+    this.container = document.querySelector(".carousel-container");
+    this.track = document.querySelector(".carousel-track");
+    this.cards = Array.from(document.querySelectorAll(".feature-card"));
+    this.prevButton = document.querySelector(".carousel-button.prev");
+    this.nextButton = document.querySelector(".carousel-button.next");
+
+    this.cardWidth = this.cards[0].offsetWidth;
+    this.currentIndex = 0;
+    this.totalCards = this.cards.length;
+
+    this.init();
+  }
+
+  init() {
+    // Clone cards for infinite loop
+    const firstCardClone = this.cards[0].cloneNode(true);
+    const lastCardClone = this.cards[this.totalCards - 1].cloneNode(true);
+
+    this.track.appendChild(firstCardClone);
+    this.track.insertBefore(lastCardClone, this.cards[0]);
+
+    // Update cards array with clones
+    this.cards = Array.from(document.querySelectorAll(".feature-card"));
+
+    // Set initial position
+    this.currentIndex = 1;
+    this.updatePosition();
+
+    // Add event listeners
+    this.prevButton.addEventListener("click", () => this.slide("prev"));
+    this.nextButton.addEventListener("click", () => this.slide("next"));
+
+    // Add transition end listener
+    this.track.addEventListener("transitionend", () =>
+      this.handleTransitionEnd()
+    );
+
+    // Add resize listener
+    window.addEventListener("resize", () => {
+      this.cardWidth = this.cards[0].offsetWidth;
+      this.updatePosition();
+    });
+  }
+
+  slide(direction) {
+    this.track.style.transition = "transform 0.3s ease-in-out";
+
+    if (direction === "next") {
+      this.currentIndex++;
+    } else {
+      this.currentIndex--;
+    }
+
+    this.updatePosition();
+  }
+
+  updatePosition() {
+    const position = -this.currentIndex * (this.cardWidth + 24); // 24px is the gap
+    this.track.style.transform = `translateX(${position}px)`;
+  }
+
+  handleTransitionEnd() {
+    // If we're at the clone of the last card
+    if (this.currentIndex === 0) {
+      this.track.style.transition = "none";
+      this.currentIndex = this.cards.length - 2;
+      this.updatePosition();
+    }
+    // If we're at the clone of the first card
+    if (this.currentIndex === this.cards.length - 1) {
+      this.track.style.transition = "none";
+      this.currentIndex = 1;
+      this.updatePosition();
+    }
+  }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  new Carousel();
+});
+
+const track = document.querySelector(".carousel-track");
+const items = Array.from(document.querySelectorAll(".carousel-item"));
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentIndex = 1;
+
+// Update carousel position
+function updateCarousel() {
+  const itemWidth = items[0].getBoundingClientRect().width;
+  const trackOffset = (track.parentElement.offsetWidth - itemWidth) / 3;
+
+  // Center the current item
+  track.style.transform = `translateX(calc(-${
+    currentIndex * itemWidth
+  }px + ${trackOffset}px))`;
+
+  // Update active item
+  items.forEach((item, index) => {
+    item.classList.remove("active");
+    if (index === currentIndex) {
+      item.classList.add("active");
+    }
+  });
+}
+
+// Go to the next slide
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % items.length;
+  updateCarousel();
+});
+
+// Go to the previous slide
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + items.length) % items.length;
+  updateCarousel();
+});
+
+// Initialize the carousel with the middle item centered
+updateCarousel();
+
+// Add subtle animation to blobs on hover
+document.querySelectorAll(".constr-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    const blob = card.querySelector(".constr-blob");
+    blob.style.transform = "translate(-50%, -50%) scale(1.3)";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    const blob = card.querySelector(".constr-blob");
+    blob.style.transform = "translate(-50%, -50%) scale(1.2)";
+  });
+});
+
+const slides = document.querySelectorAll(".hero-slide");
+const nextButton = document.getElementById("next-btn");
+
+let currentSlide = 0;
+
+nextButton.addEventListener("click", () => {
+  // Hide the current slide smoothly
+  slides[currentSlide].classList.remove("active");
+
+  // Increment slide index and loop back if necessary
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  // Show the next slide with a smooth transition
+  slides[currentSlide].classList.add("active");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stat-number");
+
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+      const increment = target / 100;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 30);
+      } else {
+        counter.innerText = target;
       }
-    
-      // Apply the default or saved theme on page load
-      applyTheme();
-    
-      function toggleTheme() {
-        // Toggle between themes
-        if (currentTheme === 'violet') currentTheme = 'light';
-        else if (currentTheme === 'light') currentTheme = 'dark';
-        else if (currentTheme === 'dark') currentTheme = 'green';
-        else if (currentTheme === 'green') currentTheme = 'orange';
-        else if (currentTheme === 'orange') currentTheme = 'blue';
-        else currentTheme = 'violet';
-    
-        // Save the selected theme to localStorage
-        localStorage.setItem('theme', currentTheme);
-    
-        // Apply the new theme
-        applyTheme();
-      }
-      
-    </script>
+    };
+
+    updateCount();
+  });
+});
+
+          </script>
     </body>
 </html>
